@@ -46,11 +46,11 @@ Die Bestimmung der Parameter $a_0, ... a_6$ erfolgt durch Lösen des linearen Gl
 	\end{matrix}\right]
 \end{equation}
 %
-Die Bestimmung der Roboterdynamik setzt voraus, dass die berechnete Bewegungsbahn $\theta(t)$, sowie die dazugehörigen Verläufe $\dot{\theta}(t) ~\ddot{\theta}(t)$  die, von der KUKA Robotersteuerung berechnete Trajektorie möglichst genau approximieren. Die Abbildungen \ref{fig:gelenkwinkel}
+Die Bestimmung der Roboterdynamik setzt voraus, dass die berechnete Bewegungsbahn $\theta(t)$, sowie die dazugehörigen Verläufe $\dot{\theta}(t) ~\ddot{\theta}(t)$  die, von der KUKA Robotersteuerung berechnete Trajektorie möglichst genau approximieren. Hierzu wird eine Bewegung aus dem Programm $Kleben-Seitenwand$, welches auf der KRC5 des Roboters abgelegt ist und bereits für den Roboter validiert ist, getestet. 
 
 
 werden die zeitlichen Verläufe der implementierten Trajektorien mit den, von der KUKA Robotersteuerung berechneten Bahnverläufen verglichen. Nachfolgend sind die Start- und Zielwinkel definiert. Die Implementierung ist im Anhang \ref{add:sim} hinterlegt.
-%
+%Die Abbildungen \ref{fig:gelenkwinkel}
 Startwert Gelenkwinkel\\
 $\theta_{s1} = -53,8$\\
 $\theta_{s2} = -70,34^{\circ}$\\
