@@ -47,7 +47,7 @@ Die Bestimmung der Parameter $a_0, ... a_6$ erfolgt durch Lösen des linearen Gl
 \end{equation}
 %
 Die Bestimmung der Roboterdynamik setzt voraus, dass die simulierte Bewegungsbahn $\theta(t)$, inklusive die zeitlichen Verläufe von $\dot{\theta}(t) ~\ddot{\theta}(t)$  die, von der KUKA Robotersteuerung berechnete Bahnverläufen möglichst genau approximieren. Hierzu wird eine Bewegung aus dem Programm $Kleben-Seitenwand$, welches auf der KRC5 des Roboters abgelegt ist und bereits für den Roboter auf Kollisionsfreiheit validiert ist, getestet. Die Bewegung ist in der Bewegungsart  Punkt-zu-Punkt (Point-To-Point)(PTP)) programmiert und sieht vor, den Roboter von dem letzten Prozesspunkt auf seine Warteposition (Home-Position) zu verfahren. Die Start- und Zielwinkel sind wie folgt definiert. Die MATLAB\textsuperscript{\textregistered}-Implementierung der Bewegung im Anhang \ref{add:sim} hinterlegt.
-%&
+%
 \begin{tabular}{|c|c|c|}
 	\hline
 	Startwert Gelenkwinkel&  Zielwert Gelenkwinkel&  Via-Punkte\\
