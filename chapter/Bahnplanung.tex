@@ -46,7 +46,7 @@ Die Bestimmung der Parameter $a_0, ... a_6$ erfolgt durch Lösen des linearen Gl
 	\end{matrix}\right]
 \end{equation}
 %
-Nachfolgend werden die zeitlichen Verläufe der implementierten Trajektorien mit den, von der  KUKA Robotersteuerung berechneten Bahnverläufen verglichen. Nachfolgend sind die Start- und Zielwinkel definiert. Die Implementierung ist im Anhang \ref{add:sim} hinterlegt.
+Die Berechnung der Roboterdynamik setz voraus, dass die Gelenkvariablen $\theta(t), ~\dot{\theta}(t) ~\ddot{\theta}(t)$ werden die zeitlichen Verläufe der implementierten Trajektorien mit den, von der KUKA Robotersteuerung berechneten Bahnverläufen verglichen. Nachfolgend sind die Start- und Zielwinkel definiert. Die Implementierung ist im Anhang \ref{add:sim} hinterlegt.
 %
 Startwert Gelenkwinkel\\
 $\theta_{s1} = -53,8$\\
@@ -99,7 +99,7 @@ $\theta_{v1}$ = $\tfrac{\theta_{s6}+\theta_{e6}}{2}$\\
 	\centering
 	\includegraphics[width=1\linewidth]{images/winkelgeschwindigkeit_py}
 	\caption{Winkelgeschwindigkeit}
-	\label{fig:winkelgeschwindigkeit_py}
+	\label{fig:winkelgeschwindigkeit_py1}
 \end{figure}
 %
 \newpage
