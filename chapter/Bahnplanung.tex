@@ -46,7 +46,7 @@ Die Bestimmung der Parameter $a_0, ... a_6$ erfolgt durch Lösen des linearen Gl
 	\end{matrix}\right]
 \end{equation}
 %
-Die Bestimmung der Roboterdynamik setzt voraus, dass die berechnete Bewegungsbahn $\theta(t)$, sowie die dazugehörigen Verläufe $\dot{\theta}(t) ~\ddot{\theta}(t)$  die, von der KUKA Robotersteuerung berechnete Trajektorie möglichst genau approximieren. Hierzu wird eine Bewegung aus dem Programm $Kleben-Seitenwand$, welches auf der KRC5 des Roboters abgelegt ist und bereits für den Roboter auf Kollisionsfreiheit validiert ist, getestet. Die Bewegung ist in der Bewegungsart  Punkt-zu-Punkt (Point-To-Point)(PTP)) programmiert und sieht vor, den Roboter von dem letzten Prozesspunkt auf seine Warteposition (Home-Position) zu verfahren. Die Start- und Zielwinkel sind wie folgt definiert. Die Implementierung ist im Anhang \ref{add:sim} hinterlegt.
+Die Bestimmung der Roboterdynamik setzt voraus, dass die berechnete Bewegungsbahn $\theta(t)$, sowie die dazugehörigen Verläufe $\dot{\theta}(t) ~\ddot{\theta}(t)$  die, von der KUKA Robotersteuerung berechnete Trajektorie möglichst genau approximieren. Hierzu wird eine Bewegung aus dem Programm $Kleben-Seitenwand$, welches auf der KRC5 des Roboters abgelegt ist und bereits für den Roboter auf Kollisionsfreiheit validiert ist, getestet. Die Bewegung ist in der Bewegungsart  Punkt-zu-Punkt (Point-To-Point)(PTP)) programmiert und sieht vor, den Roboter von dem letzten Prozesspunkt auf seine Warteposition (Home-Position) zu verfahren. Die Start- und Zielwinkel sind wie folgt definiert. Die MATLAB\textsuperscript{\textregistered}-Implementierung der  Bewegung im Anhang \ref{add:sim} hinterlegt.
 %Die Abbildungen \ref{fig:gelenkwinkel}
 Startwert Gelenkwinkel\\
 $\theta_{s1} = -53,8$\\
@@ -71,6 +71,8 @@ $\theta_{v1}$ = $\tfrac{\theta_{s3}+\theta_{e3}}{2}$\\
 $\theta_{v1}$ = $\tfrac{\theta_{s4}+\theta_{e4}}{2}$\\
 $\theta_{v1}$ = $\tfrac{\theta_{s5}+\theta_{e5}}{2}$\\
 $\theta_{v1}$ = $\tfrac{\theta_{s6}+\theta_{e6}}{2}$\\
+%
+werden die zeitlichen Verläufe der implementierten Trajektorien mit den, von der KUKA Robotersteuerung berechneten Bahnverläufen verglichen.
 %
 \newpage
 \begin{figure}[]
