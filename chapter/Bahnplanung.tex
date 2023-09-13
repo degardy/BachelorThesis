@@ -67,11 +67,11 @@ Die Bestimmung der Roboterdynamik setzt voraus, dass die simulierte Bewegungsbah
 	$\theta_{s6} = 55,7^{\circ}$&  $\theta_{e6} = -10,2^{\circ}$&$\theta_{v6}$ = $\tfrac{\theta_{s6}+\theta_{e6}}{2}$  \\
 	\hline
 \end{tabular}
-\caption{Winkelangaben letzter Prozesspunkt und Home-Position PRG Kleben Seitenwand}
+\caption{Winkelangaben letzter Prozesspunkt und Home-Position PRG $Kleben-Seitenwand$}
 \label{tab:simu}
 \end{table}
 \\
-Abbildung \ref{fig:gelenkwinke  visualisiert dem simulierten  Verlauf der Gelenkwinkel. Abbildung \ref{fig:gelenkwinkelpy} zeigt den zeitlichen Verlauf der Gelenkwinkel am realen System. Die Daten sind mit einem einem  Zeitabstand $\Delta t = 4~\text{ms}$ abgetastet. Zur Visualisierung der Winkelgeschwindigkeit  erfolgt zunächst die Bildung des Differenzenquotienten für zwei benachbarte Abtastwerte. Durch eine anschießende Tiefpassfilterung wird der zeitliche Verlauf geglättet, siehe Abbildung \ref{fig:winkelgeschwindigkeit_py1}. Die Abtastfrequenz beträgt 250 Hz. Die Eckfrequenz des Butterworth-Filters wird auf 10 Hz definiert. Die Daten der Winkelbeschleunigung werden für dasselbe Vorgehen durch Anwendung des zentralen Differenzenquotienten für die zweite Ableitung berechnet.
+Abbildung \ref{fig:gelenkwinkel}  visualisiert den simulierten  Verlauf der Gelenkwinkel. Abbildung \ref{fig:gelenkwinkelpy} zeigt den zeitlichen Verlauf der Gelenkwinkel am realen System. Die Daten sind mit einem einem  Zeitabstand $\Delta t = 4~\text{ms}$ abgetastet. Zur Visualisierung der Winkelgeschwindigkeit  erfolgt zunächst die Bildung des Differenzenquotienten für zwei benachbarte Abtastwerte. Durch eine anschießende Tiefpassfilterung wird der zeitliche Verlauf geglättet, siehe Abbildung \ref{fig:winkelgeschwindigkeit_py1}. Die Abtastfrequenz beträgt 250 Hz. Die Eckfrequenz des Butterworth-Filters wird auf 10 Hz definiert. Die Daten der Winkelbeschleunigung werden für dasselbe Vorgehen durch Anwendung des zentralen Differenzenquotienten für die zweite Ableitung berechnet.
 %
 \newpage
 \begin{figure}[]
