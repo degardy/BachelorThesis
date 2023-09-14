@@ -67,6 +67,9 @@ Konvexität (konvex oder nicht konvex)
  - Körper -> Verbindungsglied
 -  Systemparameter Anhang
 - setcounter Anhang
+- Zitat vor bzw. NAch Punktsetzung
+Zielzeitpunkt, Endzeitpunkt
+Überschleifen
 
 ## Modell
 - Matlab Prüfung rec, rae
@@ -81,6 +84,8 @@ Konvexität (konvex oder nicht konvex)
 Soll Bewegung zwischen Start und Zielpunkt mit Berücksichtigung des Via-Punkts
 Bewegungsart PTP
 Überschleifen
+Butterworth Filter
+Eckfrequenz
 
 ## Versuch
 - Abbildung des Roboters 

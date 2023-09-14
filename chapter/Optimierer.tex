@@ -1,6 +1,60 @@
 \chapter{Bahnoptimierung}
-\section{Definition des Optimierungsproblems} 
+\cite{Eggers.2019}
+\cite{Engelke.2008}
+\cite{Ziaukas.2017}
+\cite{Hansen.2012}
+\cite{Spong.2020}
+\section{Zielsetzung}
+
+Minimierung des mechanischen Energieverbrauchs durch Anpassung der Bewegungsbahn.  
+
+Unterscheidung Prozessbezogener Bewegungen  und dem Verfahren auf Halte- bzw. Vorpositionen z. B. der Fahrt in die Home-Stellung
+
+Explizite Betrachtung der Leistungsaufnahme. Es wird angenommen, das die generatorisch erzeugte Leistung während des Abbremsvorgangs über Bremswiderstände dissipiert. \cite[S.~19]{Eggers.2019}
+
 \section{Optimierungsparameter}
-\section{Kostenfunktion}
+Der Parametervektor $\bm{p}_VP$ \cite[S.~49]{Eggers.2019} umfasst die Gelenkwinkel des nach der Hälfte der Verfahrdauer erreichten Via-Punkts.  
+
+\section{Zielfunktion}
+Zur Identifizierung des Optimums werden die Zielfunktionen \ref{eqn:torque} \cite[S-~1]{Hansen.2012} und \ref{eqn:emech} \cite[S.~57]{Eggers.2019} aufgestellt. Die Integrationsgrenzen $t_s$ und $t_e$ entsprechen dem Start- bzw. Zielzeitput. Der Ausdruck \ref{eqn:torque} erzielt durch Quadrieren den Vorteil, dass hohe Drehmomente stärker gewichtet werden.\textbf{}
+%
+\begin{equation}
+	\label{eqn:torque}
+	J_{\tau}(\bm{p}_{VP}) = \frac{1}{2}\int_{ts}^{te}\sum_{i=1}^{n}\left|\tau_i(t)\right|^2~dt
+\end{equation}
+%
+Von einem Vorschlag der Zielfunktion \ref{eqn:emechges} \cite[S.~1216]{Saravanan.2008} wird Abstand genommen, da hierbei die generatorisch umgewandelte Leistung während des Abbremsvorgangs als aufgenommene (zugeführte) Leistung der Verbraucher bewertet wird \cite[S.~1]{Hansen.2012}. 
+%
+\begin{equation}
+	\label{eqn:emechges}
+	J_{P_{{ges}}}(\bm{p}_{VP}) = \int_{ts}^{te}\sum_{i=1}^{n}\left|\tau_i(t)\dot{q_i}\right|^2~dt
+\end{equation}
+%
+Die Zielfunktion \ref{eqn:emech} entspricht dem physikalischen Ausdruck der verrichteten Arbeit mit positiven Vorzeichen. Infolgedessen wird ausschließlich die aufgenommene (zugeführte) Leistung berücksichtigt. In der Anwendung hat sich diese Funktion am besten bewährt.
+%
+\begin{equation}
+	\label{eqn:emech}
+	J_{P_{zu}}
+	(\bm{p}_{VP}) 
+	= E_{mech_{+}}(\bm{p}_{VP}) 
+	=\int_{ts}^{te}P_{zu}(\bm{p}_{VP,t})~dt
+\end{equation}
+%
+Die numerische Implementierung der Zielfunktion in  MATLAB\textsuperscript{\textregistered} entspricht der Gleichung  \ref{eqn:numerischezielfunktion}. 
+Die Schrittweite ist in Anlehnung an die Abtastung der Messeinrichtung  mit $\Delta t = 0.004 \text{s}$ festgelegt. Die Anzahl der Schritte $m$  wird gemäß $(t_s-t_e)/\Delta t$ berechnet.
+%
+\begin{equation}
+	\label{eqn:numerischezielfunktion}
+	J_{P_{zu}}
+	(\bm{p}_{VP}) 
+	= E_{mech_{+}}(\bm{p}_{VP}) 
+	= \sum_{k=1}^{m} P_{zu}(\bm{p}_{VP,t})~\Delta t
+\end{equation}
+%
+
+
+
 \section{Nebenbedingungen}
-\section{Auswahl des Optimierungsalgorithmus}
+Die Verfahrdauer bleibt gegenüber der Initialbahn konstant und wird implizit durch die feste Definition des Zielzeitpunks $t_e$ vorgegeben. 
+
+\section{Solver und Optimierungsalgorithmus}
