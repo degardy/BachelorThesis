@@ -1,60 +1,74 @@
 \chapter{Bahnoptimierung}
-\cite{Eggers.2019}
-\cite{Engelke.2008}
-\cite{Ziaukas.2017}
-\cite{Hansen.2012}
-\cite{Spong.2020}
-\section{Zielsetzung}
-
-Minimierung des mechanischen Energieverbrauchs durch Anpassung der Bewegungsbahn.  
-
-Unterscheidung Prozessbezogener Bewegungen  und dem Verfahren auf Halte- bzw. Vorpositionen z. B. der Fahrt in die Home-Stellung
-
-Explizite Betrachtung der Leistungsaufnahme. Es wird angenommen, das die generatorisch erzeugte Leistung während des Abbremsvorgangs über Bremswiderstände dissipiert. \cite[S.~19]{Eggers.2019}
-
-\section{Optimierungsparameter}
-Der Parametervektor $\bm{p}_VP$ \cite[S.~49]{Eggers.2019} umfasst die Gelenkwinkel des nach der Hälfte der Verfahrdauer erreichten Via-Punkts.  
-
+%\cite{Eggers.2019}
+%\cite{Engelke.2008}
+%\cite{Ziaukas.2017}
+%\cite{Hansen.2012}
+%\cite{Spong.2020}
+%
+\section{Definition des Optimierungsproblems}
+Gegenstand der Optimierung ist die Minimierung des Energieverbrauchs des Roboters entlang einer Bewegungsbahn. Im Ziel der Arbeit ist festgelegt, den Ansatz so realisierbar wie möglich für einen Roboter, der in der Automobilproduktion verortet ist, aufzubauen. Dazu wird der Begriff Bewegungsbahn stärker eingegrenzt. Zu unterscheiden sind prozessbezogene Bewegungen z. B. entlang einer Schweißnaht oder Klebebahn und nicht prozessbezogene Bewegungen z. B. auf das Anfahren einer Vorpositionen oder der Home-Stellung in der Bewegungsart PTP. Im weiteren Verlauf werden explizit nicht-prozessrelevante Trajektorien betrachtet. Der Ansatz basiert auf der geometrischen Anpassung  der Bewegungsbahn durch einen zu optimierenden Parametervektor $\bm{q}_{v}$. Dieser umfasst die Gelenkwinkel des, nach der Hälfte der Bewegungsdauer definierten Via-Punkts \cite[S-~56]{Hansen.2012}.
+%
+\begin{equation}
+	\bm{q}_{v} = [q_{v,1},...,q_{v,6}]^T ~\forall~ q_{v,i} \in [q_{i,min};q_{i,max}]
+\end{equation}
+%
+Der Startwert jedes Via-Punkts wird auf der Hälfte der Winkelposition,
+\begin{equation}
+	q_{v,i,Start} = \tfrac{q_{s,i}+q_{e,i}}{2}
+\end{equation}
+zwischen dem Start- und Zielpunkt definiert. Die Minimierung der Leistungsaufnahme beruht auf der konfigurationsabhängigen Reduktion der  Massenträgheitsmomente in $\bm{M}(\bm{q})$, sodass bei gleichbleibender Winkelbeschleunigung die Drehmomente in den Gelenken niedriger sind \cite[S.~531]{Ziaukas.2017}. Das Optimierungsproblem liegt in der Identifizierung des optimalen Parametervektors  
+%
+%\begin{equation}
+%	\bm{q}_{v,opt} = \argminA_{\bm{q}_{v}} J_{P_{zu}}(\bm{q}_{v}).
+%\end{equation}
+%
+\begin{equation}
+	\argminA_{\bm{q}_{v}} J(\bm{q}_{v}) = \{\bm{q}_{v} \mid J(\bm{q}_{v}) = \min_{\bm{q}_{v,opt}} J(\bm{q}_{v,opt})\}.
+\end{equation}
+%
 \section{Zielfunktion}
-Zur Identifizierung des Optimums werden die Zielfunktionen \ref{eqn:torque} \cite[S-~1]{Hansen.2012} und \ref{eqn:emech} \cite[S.~57]{Eggers.2019} aufgestellt. Die Integrationsgrenzen $t_s$ und $t_e$ entsprechen dem Start- bzw. Zielzeitput. Der Ausdruck \ref{eqn:torque} erzielt durch Quadrieren den Vorteil, dass hohe Drehmomente stärker gewichtet werden.\textbf{}
+Für die Definition der Zielfunktion wird angenommen, dass die generatorisch erzeugte Leistung während des Abbremsvorgangs über Bremswiderstände dissipiert. \cite[S.~19]{Eggers.2019} Eine Betrachtung der Energierückgewinnung über einen Gleichstromzwischenkreis, siehe \cite[S.~29]{Ziaukas.2017} erfolgt nicht. Zur Identifizierung des Optimums werden die Zielfunktionen \ref{eqn:torque} \cite[S-~1]{Hansen.2012} und \ref{eqn:emech} \cite[S.~57]{Eggers.2019} aufgestellt. Die Integrationsgrenzen $t_s$ und $t_e$ entsprechen dem Start- bzw. Zielzeitpunkt. Der Ausdruck \ref{eqn:torque} erzielt durch Quadrieren den Vorteil, dass hohe Drehmomente stärker gewichtet werden.\textbf{}
 %
 \begin{equation}
 	\label{eqn:torque}
-	J_{\tau}(\bm{p}_{VP}) = \frac{1}{2}\int_{ts}^{te}\sum_{i=1}^{n}\left|\tau_i(t)\right|^2~dt
+	J_{\tau}(\bm{q}_{v}) = \frac{1}{2}\int_{ts}^{te}\sum_{i=1}^{n}\left|\tau_i(t)\right|^2~dt
 \end{equation}
 %
-Von einem Vorschlag der Zielfunktion \ref{eqn:emechges} \cite[S.~1216]{Saravanan.2008} wird Abstand genommen, da hierbei die generatorisch umgewandelte Leistung während des Abbremsvorgangs als aufgenommene (zugeführte) Leistung der Verbraucher bewertet wird \cite[S.~1]{Hansen.2012}. 
+Von einem Vorschlag der Zielfunktion \ref{eqn:emechges} \cite[S.~1216]{Saravanan.2008} wird Abstand genommen, da hierbei die evtl. generatorisch umgewandelte Leistung während des Abbremsvorgangs als aufgenommene (zugeführte) Leistung der Verbraucher bewertet wird \cite[S.~19]{Hansen.2012}. 
 %
 \begin{equation}
 	\label{eqn:emechges}
-	J_{P_{{ges}}}(\bm{p}_{VP}) = \int_{ts}^{te}\sum_{i=1}^{n}\left|\tau_i(t)\dot{q_i}\right|^2~dt
+	J_{P_{mech_{ges}}}(\bm{q}_{v}) = \int_{ts}^{te}\sum_{i=1}^{n}\left|\tau_i(t)\dot{q_i}\right|^2~dt
 \end{equation}
 %
-Die Zielfunktion \ref{eqn:emech} entspricht dem physikalischen Ausdruck der verrichteten Arbeit mit positiven Vorzeichen. Infolgedessen wird ausschließlich die aufgenommene (zugeführte) Leistung berücksichtigt. In der Anwendung hat sich diese Funktion am besten bewährt.
+Die Zielfunktion \ref{eqn:emech} entspricht dem physikalischen Ausdruck der verrichteten Arbeit mit positiven Vorzeichen. Infolgedessen wird ausschließlich die aufgenommene (zugeführte) Leistung berücksichtigt. 
 %
 \begin{equation}
 	\label{eqn:emech}
-	J_{P_{zu}}
-	(\bm{p}_{VP}) 
-	= E_{mech_{+}}(\bm{p}_{VP}) 
-	=\int_{ts}^{te}P_{zu}(\bm{p}_{VP,t})~dt
+	J_{P_{mech_{zu}}}
+	(\bm{q}_{v}) 
+	= E_{mech_{+}}(\bm{q}_{v}) 
+	=\int_{ts}^{te}P_{mech_{zu}}(\bm{q}_{v},t)~dt
 \end{equation}
 %
-Die numerische Implementierung der Zielfunktion in  MATLAB\textsuperscript{\textregistered} entspricht der Gleichung  \ref{eqn:numerischezielfunktion}. 
-Die Schrittweite ist in Anlehnung an die Abtastung der Messeinrichtung  mit $\Delta t = 0.004 \text{s}$ festgelegt. Die Anzahl der Schritte $m$  wird gemäß $(t_s-t_e)/\Delta t$ berechnet.
+Die numerische Implementierung der Zielfunktion in  MATLAB\textsuperscript{\textregistered} entspricht der Gleichung  \ref{eqn:numerischezielfunktion}. Die Schrittweite ist in Anlehnung an die Abtastung der Messeinrichtung  mit $\Delta t = 0.004 \text{s}$ festgelegt. Die Anzahl der Schritte $m$  wird gemäß $(t_s-t_e)/\Delta t$ berechnet.
 %
 \begin{equation}
 	\label{eqn:numerischezielfunktion}
-	J_{P_{zu}}
-	(\bm{p}_{VP}) 
-	= E_{mech_{+}}(\bm{p}_{VP}) 
-	= \sum_{k=1}^{m} P_{zu}(\bm{p}_{VP,t})~\Delta t
+	J_{P_{mech_{zu}}}
+	(\bm{q}_{v}) 
+	= E_{mech_{+}}(\bm{q}_{v}) 
+	= \sum_{k=1}^{m} P_{mech_{zu}}(\bm{q}_{v},t)~\Delta t
 \end{equation}
 %
-
-
-
 \section{Nebenbedingungen}
-Die Verfahrdauer bleibt gegenüber der Initialbahn konstant und wird implizit durch die feste Definition des Zielzeitpunks $t_e$ vorgegeben. 
-
+Die Verfahrdauer bleibt gegenüber der Initialbahn konstant und wird durch den Zielzeitpunkt $t_e$ vorgegeben. Eine Anpassung der Variablen zur relativen Maximalgeschwindigkeit $vel axis[i]$ oder Maximalbeschleunigung $acc axis[i]$ im KRL Programm siehe \cite[S.~532]{Ziaukas.2017} erfolgt nicht. Last-, Geschwindigkeits und Beschleunigungsgrenzen werden nicht definiert, da die KRC diese während der Bahnplanung überwacht \cite[S.~57]{Eggers.2019}. In den Nebenbedingungen sind ausschließlich Grenzen für jeden Gelenkwinkel $q_{v,i}$ des Via-Punkts definiert, um zu gewährleisten, dass die optimierte Bewegungsbahn nicht signifikant von der Initialbahn abweicht \cite[S.~5]{Hansen.2012}.
+\begin{equation}
+	q_{v,i} \in [q_{i,min};q_{i,max}].
+\end{equation}
+%
+%Nicht explizit formuliert, jedoch gewünscht ist die Anforderung
+%\begin{equation}
+%	q_{i,min} < q_{i}(t) < q_{i,max} ~\forall~i=1,...,6
+%\end{equation}
 \section{Solver und Optimierungsalgorithmus}

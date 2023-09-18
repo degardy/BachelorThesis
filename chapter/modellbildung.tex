@@ -79,7 +79,7 @@ Im ersten Schritt werden die Achsen $z_i, \ i = 0,...,n-1, n=6$,	siehe Abbildung
 	\label{fig:zachsen}
 \end{figure}
 %
-Im zweiten Schritt wird das Basiskoordinatensystem ${0}$ definiert, wobei der Ursprung $\bm{o}_0$ auf der Achse $z_0$ platziert wird. Die Festlegung entspricht dem ROBROOT Koordinatensystem, welches der Robotersteuerung bekannt ist. Diese Festlegung erlaubt eine Überprüfung der Vorwärtskinematik mithilfe der, von der KRC (KUKA Robot Control) berechneten kartesischen Koordinaten. Des Weiteren werden, siehe Abbildung \ref{fig:KS} aufsteigend die Koordinatensysteme KS$\{i\},i=1,...,n-1$ basierend auf KS$\left\{i-1\right\}$, sowie das rot hervorgehobene Endeffektor-Koordinatensystem $0_6x_6y_6z_6$ platziert. Es werden folgende Regeln berücksichtigt.  
+Im zweiten Schritt wird das Basiskoordinatensystem ${0}$ definiert, wobei der Ursprung $\bm{o}_0$ auf der Achse $z_0$ platziert wird. Die Festlegung entspricht dem ROBROOT Koordinatensystem, welches der Robotersteuerung bekannt ist. Diese Festlegung erlaubt eine Überprüfung der Vorwärtskinematik mithilfe der, von der KUKA Robot Control (KR C (Robotersteuerung)) berechneten kartesischen Koordinaten. Des Weiteren werden, siehe Abbildung \ref{fig:KS} aufsteigend die Koordinatensysteme KS$\{i\},i=1,...,n-1$ basierend auf KS$\left\{i-1\right\}$, sowie das rot hervorgehobene Endeffektor-Koordinatensystem $0_6x_6y_6z_6$ platziert. Es werden folgende Regeln berücksichtigt.  
 %
 \begin{figure}[tbph]
 	\centering
@@ -120,7 +120,7 @@ Im nächsten Schritt werden DH-Parameter, identifiziert.  $\theta_i$ entspricht 
 \label{tab:dh}
 \end{table}
 %
-Eine Verarbeitung der Gelenkwinkel, welche in der KRC für eine bestimmte Pose definiert sind, bedingt eine Anpassung DH-Parameter. Der Lieferant KUKA definiert die Achse $z_{1}$ um 180° rotiert ggü. der o. g. Festlegung. Folglich werden die, in der Robotersteuerung gegebenen Winkel des ersten Gelenks  mit -1 multipliziert, bevor eine Weiterverarbeitung im Modell erfolgt. Des Weiteren werden vom dritten Winkel 90° subtrahiert, bevor der Wert dem Modell übergeben wird. Die Vorwärtskinematik ist über drei verschiedene Posen am realen System verifiziert. Dabei ist festzustellen, dass in der Robotersteuerung die Biegung der Glieder berücksichtigt wird, wohingegen in der oben gezeigten Definition von einem Starrkörper-Modell ausgegangen wird. 
+Eine Verarbeitung der Gelenkwinkel, welche in der KR C für eine bestimmte Pose definiert sind, bedingt eine Anpassung DH-Parameter. Der Lieferant KUKA definiert die Achse $z_{1}$ um 180° rotiert ggü. der o. g. Festlegung. Folglich werden die, in der Robotersteuerung gegebenen Winkel des ersten Gelenks  mit -1 multipliziert, bevor eine Weiterverarbeitung im Modell erfolgt. Des Weiteren werden vom dritten Winkel 90° subtrahiert, bevor der Wert dem Modell übergeben wird. Die Vorwärtskinematik ist über drei verschiedene Posen am realen System verifiziert. Dabei ist festzustellen, dass in der Robotersteuerung die Biegung der Glieder berücksichtigt wird, wohingegen in der oben gezeigten Definition von einem Starrkörper-Modell ausgegangen wird. 
 Die Implementierung der DH-Transformation ist im Anhang \ref{add:dh}  aufgeführt. 
 %
 \section{Geschwindigkeits-Kinematik}
@@ -369,7 +369,7 @@ Mit Kenntnis der Größen $\bm{q}, \dot{\bm{q}}, \ddot{\bm{q}}$ aus der Bahnplan
 	\ddot{\bm{p}}^i_{C_i} = \ddot{\bm{p}}^{i}_{i} + \dot{\bm{\omega}}^{i}_{i} \times \bm{r}^{i}_{i,C_i} + {\bm{\omega}}^{i}_{i} \times \left(  {\bm{\omega}}^{i}_{i} \times \bm{r}^{i}_{i,C_i} \right)
 \end{equation}
 %
-Im nächsten Schritt erfolgt die rekursive Berechnung der Kräfte und Drehmomente. Der Algorithmus startet beginnt mit der Berechnung für das sechste Gelenk, gemäß der Gleichungen \ref{eqn:rnea4}, \ref{eqn:rnea5} und \ref{eqn:rnea6} und endet für das erste Gelenk. $\bm{f}^{n+1}_{n+1}$ und $\bm{\mu}^{n+1}_{n+1}$ werden zu 0 angenommen. 
+Im nächsten Schritt erfolgt die rekursive Berechnung der Kräfte und Drehmomente. Der Algorithmus beginnt mit der Berechnung der Größen für das sechste Gelenk, gemäß der Gleichungen \ref{eqn:rnea4}, \ref{eqn:rnea5} und \ref{eqn:rnea6}. $\bm{f}^{n+1}_{n+1}$ und $\bm{\mu}^{n+1}_{n+1}$ werden zu 0 angenommen. 
 %
 \begin{equation}
 	\label{eqn:rnea4}
@@ -383,15 +383,10 @@ Im nächsten Schritt erfolgt die rekursive Berechnung der Kräfte und Drehmoment
 %%
 \begin{equation}
 	\label{eqn:rnea6}
-	\tau_i = \bm{\mu}^{i}_{i} {\bm{R}^{i-1}_{i}}^T \bm{z}_0 i_i
+	\tau_i = i_i{\bm{\mu}^{i}_{i}}^T {\bm{R}^{i-1}_{i}}^T \left(\begin{array}{c} 0 \\ 0 \\ 1 \end{array}\right) 
 \end{equation}
 %
-\autocite[S.~287~f.]{Grimble.2009} berücksichtigt bei der Berechnung der Drehmomente Einflüsse der viskosen- und coloumbschen Reibung. Des Weiteren wird in der Literatur die  Massenträgheit der Läufer der Elektromotoren und das daraus resultierende Drehmomente betrachtet. Diese Einflüsse werden in der Modellbildung nicht berücksichtigt. Darüber hinaus wird das Gewicht der Ständer der Elektromotoren, das Gewicht der Schlauchpakete, die Steifigkeit der Schlauchpakete und der Gewichtsausgleich am zweiten Gelenk vernachlässigt. 
-%
-Die Implementierung des RNEA ist im Anhang \ref{add:rnea} aufgeführt.	
-%
+Es folgt die Berechnung der mechanischen Leistung $P_{mech,i}$ aus der Multiplikation von $\tau_i$ und $\dot{{\theta_i}}$. Die Bestimmung der Größen erfolgt in der numerischen Implementierung, siehe  Anhang \ref{add:rnea}. Für jede Stützstelle einer betrachteten Trajektorie. 
 
-% todo Listing RNEA dem Anhang hinzufügen
-% todo Vernachlässigungen begründen
-% todo Auswirkunden der Vernachlässigungen
-% todo Berechnugsergebnisse
+\section{Vernachlässigungen}
+Bei der Entwicklung des mechanischen Modells zur Simulation der Roboterdynamik wurden Annahmen getroffen und Komponenten vernachlässigt, um den Modellierungsaufwand zu reduzieren. Ein wesentlicher Einfluss wird der Vernachlässigung des hydraulischen Gewichtsausgleichs am zweiten Gelenk zugeschrieben. Der Gewichtsausgleich ist aus einem Hydraulikzylinder mit Membranspeicher aufgebaut und wirkt dem am Gelenk auftretenden Drehmoment entgegen. Im Modell wurde der aufgrund fehlender Konstruktionsdaten zu Kolbendurchmesser und Kolbenstangendurchmesser nicht berücksichtigt. Fehlende Daten sind auch der Grund für die Auslassung des Gewichts und der Steifigkeit der Schlauchpakete. Das Gewicht der Elektromotoren (Statorseite) wurde aufgrund fehlender Informationen aus der Verschiebung der Massenschwerpunkte der Achsen vernachlässigt. Aufgrund des Verhältnisses zwischen der Masse der Motoren (Statorseite) und dem Gewicht der Achsen  wird diese Vernachlässigung toleriert. Am Beispiel des dritten Verbindungsglieds beträgt dieses mindesten 1:15. Genaue Daten wie viel Gewicht der Rotor bzw. der Stator einnehmen liegen nicht vor.  Die gleiche Schlussfolgerung gilt für die Massenträgheit der Motoren (Rotorseite) und die daraus resultierenden Momente. \autocite[S.~287~f.]{Grimble.2009} berücksichtigt bei der Berechnung der Drehmomente die Einflüsse der viskosen und der coloumbschen Reibung. Die entsprechenden Koeffizienten wurden nicht ermittelt, so dass dieser Einfluss ebenfalls als Vernachlässigung festgehalten wird. 
