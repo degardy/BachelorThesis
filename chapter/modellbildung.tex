@@ -1,16 +1,10 @@
 \chapter{Mechanische Modellbildung}
 % todo Bild HMI Roboterkoordinaten ablesen
 %
-Gegenstand der Modellbildung ist die Definition von Bewegungsgleichungen zur Simulationen der Roboterdynamik. Damit soll die aufgenommene Energie des Roboters entlang einer Bewegungsbahnen bestimmt werden, ohne dass das reale System angesteuert werden muss. ~\autocite[S.~247]{Grimble.2009} Zunächst erfolgt eine Beschreibung der Vorwärtskinematik mithilfe der Denavit-Hartenberg (DH) Konvention.
-Nach einer Betrachtung der Geschwindigkeits-Kinematik wird die inverse Dynamik des Systems beschrieben. 
-Abschließend wird der Wahrheitsgehalt des Modells überprüft. 
-
-\section{Kinematische Kette}
-% um Rieber Skript 2 S 4 ergänzen
-Als kinematische Kette wird die Zusammensetzung eines Roboterarms aus $n+1$ Gliedern und $n$ Gelenken definiert. Das letzte Glied der kinematischen Kette wird als Endeffektor bezeichnet. Die Glieder werden von der festen Basis (Glied $0$) bis $n$ durchnummeriert. Mit jedem Glied $i-1$ wird das Gelenk $i$ starr verbunden. Des Weiteren wird jedem Glied $i$ ein fest verbundenes Koordinatensystem $o_ix_iy_iz_i$ zugeordnet. Eine Aktuierung des Gelenks $i$ führt zu einer Bewegung von Glied $i$ und Koordinatensystem KS$\left\{i\right\}$. Die Gelenke weisen einen Freiheitsgrad (degree-of-freedom (DOF)) $q_i$ auf und können als Dreh- oder Schubgelenke ausgeführt werden. Die Gelenkvariable $q_i$ entspricht dem Rotationswinkel $\theta_i$ bzw. der Translation $d_i$. 
+Gegenstand der Modellbildung ist die Definition von Bewegungsgleichungen zur Simulationen der Roboterdynamik \cite[S.~247]{Grimble.2009}. Damit soll die aufgenommene Energie des Roboters entlang einer Bewegungsbahnen bestimmt werden, ohne dass das reale System angesteuert werden muss. Zunächst erfolgt eine Beschreibung der Vorwärtskinematik mithilfe der Denavit-Hartenberg (DH) Konvention. Nach einer Betrachtung der Geschwindigkeits-Kinematik wird die inverse Dynamik des Systems beschrieben.  Abschließend wird der Wahrheitsgehalt des Modells überprüft.
 
 \section{Vorwärtskinematik}
-Über die Vorwärtskinematik erfolgt eine geometrische Beschreibung der Endeffektor Bewegung des Roboters entlang der kinematischen Kette. Entsprechend der Gelenkvariablen wird dabei die Position und Orientierung (Pose) des Endeffektors im Basis-Koordinatensystem berechnet. Ausgehend vom Basis-Koordinatensystem werden homogene Transformationsmatrizen $\bm{A}(i) = \bm{T}^{i-1}_i$ zwischen zwei aufeinanderfolgenden Koordinatensystemen $0_{i-1}x_{i-1}y_{i-1}z_{i-1}$ und $0_ix_iy_iz_i$ der kinematischen Kette definiert. $\bm{T}^{i-1}_i$ (Lie-Gruppe SE(3)) repräsentiert die  Rotation und Translation des KS$\left\{i\right\}$ im $\left\{i-1\right\}$. Die Transformationsmatrizen sind abhängig von der Konfiguration der Gelenkvariablen $q_i$ des Roboters.
+Über die Vorwärtskinematik erfolgt eine geometrische Beschreibung der Endeffektor Bewegung des Roboters entlang der kinematischen Kette \footnote{siehe Anhang \ref{add:kinematische-kette}}. Entsprechend der Gelenkvariablen wird dabei die Position und Orientierung (Pose) des Endeffektors im Basis-Koordinatensystem berechnet. Ausgehend vom Basis-Koordinatensystem werden homogene Transformationsmatrizen $\bm{A}(i) = \bm{T}^{i-1}_i \in \text{SE(3)}$\footnote{siehe Anhang \ref{add:SE3}} zwischen zwei aufeinanderfolgenden Koordinatensystemen $0_{i-1}x_{i-1}y_{i-1}z_{i-1}$ und $0_ix_iy_iz_i$ der kinematischen Kette definiert. $\bm{T}^{i-1}_i$ repräsentiert die  Rotation und Translation des KS$\left\{i\right\}$ im $\left\{i-1\right\}$. Die Transformationsmatrizen sind abhängig von der Konfiguration der Gelenkvariablen $q_i$ des Roboters. 
 \begin{align}
 	\bm{A}_i = \bm{A}_i(q_i)
 \end{align}
@@ -22,7 +16,7 @@ Eine Repräsentation der Endeffektor-Pose $H$ im Basis-Koordinatensystem wird ü
 \begin{align}
 	\bm{H} =\begin{bmatrix} \bm{R}^0_n &\quad \bm{o}^0_n\\ \mathbf{0}_{1x3} &\quad 1\end{bmatrix}
 \end{align}
-Der Spaltenvektor $\bm{o}^0_n$ repräsentiert die Koordinaten des Ursprungs des Endeffektor-Koordinatensystems im Basis-Koordinatensystem. Die $3 \times 3 $ Matrix $\bm{R}^n_0$ entspricht der Rotation des Endeffektor-Koordinatensystems gegenüber dem Basis-Koordinatensystem. \autocite{Spong.2020} 
+Der Spaltenvektor $\bm{o}^0_n$ repräsentiert die Koordinaten des Ursprungs des Endeffektor-Koordinatensystems im Basis-Koordinatensystem. Die $3 \times 3 $ Matrix $\bm{R}^n_0$ entspricht der Rotation des Endeffektor-Koordinatensystems gegenüber dem Basis-Koordinatensystem. \cite[S.~75~ff.]{Spong.2020} 
 %
 \section{Denavit-Hartenberg Konvention}
 Eine Methode zur Bestimmung der homogenen Transformationsmatrizen ist die, nach  dem Physiker Jacques Denavit und dem Ingenieur Richard Hartenberg benannte Denavit-Hartenberg Konvention. Diese besagt, dass jede homogene Transformation $\bm{A}_i$ als Produkt vier nacheinander ausgeführter elementarer Transformationen ausgedrückt werden kann. 
@@ -58,9 +52,9 @@ Eine Methode zur Bestimmung der homogenen Transformationsmatrizen ist die, nach 
 	c = cos\notag \\
 	s = sin \notag 
 \end{align}
-Die Parameter entsprechen dem Gelenkwinkel $\theta_i$, dem Gelenkabstand $d_i$, der Armelementlänge $a_i$ und der Verwindung $alpha_i$, wobei $d_i$, $a_i$ und $alpha_i$ konstant sind.
-
-%\subsection{Festlegung der Koordinatensysteme}
+Die Parameter entsprechen dem Gelenkwinkel $\theta_i$, dem Gelenkabstand $d_i$, der Armelementlänge $a_i$ und der Verwindung $alpha_i$, wobei $d_i$, $a_i$ und $alpha_i$ konstant sind. \cite[S.~79]{Spong.2020}
+%
+\subsection*{Festlegung der Koordinatensysteme}
 Abbildung \ref{fig:kr210} zeigt den zu untersuchenden KUKA KR210 R2700-2 Industrieroboter. Die Bezeichnung der Maschine gibt Auskunft über ihre technischen Daten.  Die Nenn-Traglast beträgt 210 kg. Die maximale Reichweite des Roboters liegt bei 2701 mm. Weitere Informationen sind dem Datenblatt, siehe Anhang \ref{add:datenblatt} zu entnehmen.  
 %
 \begin{figure}[tbph]
@@ -70,7 +64,7 @@ Abbildung \ref{fig:kr210} zeigt den zu untersuchenden KUKA KR210 R2700-2 Industr
 	\label{fig:kr210}
 \end{figure}
 %
-Im ersten Schritt werden die Achsen $z_i, \ i = 0,...,n-1, n=6$,	siehe Abbildung \ref{fig:zachsen} definiert. 
+Im ersten Schritt werden die Achsen $z_i, \ i = 0,...,n-1, n=6$, siehe Abbildung \ref{fig:zachsen} definiert. Im zweiten Schritt wird das Basiskoordinatensystem ${0}$ definiert, wobei der Ursprung $\bm{o}_0$ auf der Achse $z_0$ platziert wird. Die Definition des ersten Koordinatensystems entspricht dem ROBROOT-Koordinatensystem, welches vom Hersteller auf der Robotersteuerung hinterlegt ist. Diese Festlegung erlaubt eine Überprüfung der Vorwärtskinematik mithilfe der, von der KUKA Robotersteuerung (Robot Control (KR C)) berechneten kartesischen Koordinaten. Des Weiteren werden, siehe Abbildung \ref{fig:KS} aufsteigend die Koordinatensysteme KS$\{i\},i=1,...,n-1$ basierend auf KS$\left\{i-1\right\}$, sowie das rot hervorgehobene Endeffektor-Koordinatensystem $0_6x_6y_6z_6$ platziert. Es werden folgende Regeln berücksichtigt.  
 %
 \begin{figure}[tbph]
 	\centering
@@ -78,8 +72,6 @@ Im ersten Schritt werden die Achsen $z_i, \ i = 0,...,n-1, n=6$,	siehe Abbildung
 	\caption[]{Festlegung der z-Achsen}
 	\label{fig:zachsen}
 \end{figure}
-%
-Im zweiten Schritt wird das Basiskoordinatensystem ${0}$ definiert, wobei der Ursprung $\bm{o}_0$ auf der Achse $z_0$ platziert wird. Die Festlegung entspricht dem ROBROOT Koordinatensystem, welches der Robotersteuerung bekannt ist. Diese Festlegung erlaubt eine Überprüfung der Vorwärtskinematik mithilfe der, von der KUKA Robot Control (KR C (Robotersteuerung)) berechneten kartesischen Koordinaten. Des Weiteren werden, siehe Abbildung \ref{fig:KS} aufsteigend die Koordinatensysteme KS$\{i\},i=1,...,n-1$ basierend auf KS$\left\{i-1\right\}$, sowie das rot hervorgehobene Endeffektor-Koordinatensystem $0_6x_6y_6z_6$ platziert. Es werden folgende Regeln berücksichtigt.  
 %
 \begin{figure}[tbph]
 	\centering
@@ -99,6 +91,8 @@ Im nächsten Schritt werden DH-Parameter, identifiziert.  $\theta_i$ entspricht 
 %
 \begin{table}[tbph]
 	\centering
+	\caption{Denavit-Hartenberg Parameter}
+	\label{tab:dh}
 	\begin{tabular}{|c|c|c|c|c|}
 		\hline
 		Gelenk & theta & d [m] & a [m] & alpha \\
@@ -116,97 +110,13 @@ Im nächsten Schritt werden DH-Parameter, identifiziert.  $\theta_i$ entspricht 
 		6& $90^\circ$ & 0,215 & 0 & 0 \\
 		\hline
 	\end{tabular}
-\caption{Denavit-Hartenberg Parameter}
-\label{tab:dh}
 \end{table}
 %
 Eine Verarbeitung der Gelenkwinkel, welche in der KR C für eine bestimmte Pose definiert sind, bedingt eine Anpassung DH-Parameter. Der Lieferant KUKA definiert die Achse $z_{1}$ um 180° rotiert ggü. der o. g. Festlegung. Folglich werden die, in der Robotersteuerung gegebenen Winkel des ersten Gelenks  mit -1 multipliziert, bevor eine Weiterverarbeitung im Modell erfolgt. Des Weiteren werden vom dritten Winkel 90° subtrahiert, bevor der Wert dem Modell übergeben wird. Die Vorwärtskinematik ist über drei verschiedene Posen am realen System verifiziert. Dabei ist festzustellen, dass in der Robotersteuerung die Biegung der Glieder berücksichtigt wird, wohingegen in der oben gezeigten Definition von einem Starrkörper-Modell ausgegangen wird. 
 Die Implementierung der DH-Transformation ist im Anhang \ref{add:dh}  aufgeführt. 
 %
 \section{Geschwindigkeits-Kinematik}
-Die Geschwindigkeits-Kinematik definiert die lineare Endeffektor-Geschwindigkeit, sowie die  Endeffektor-Winkelgeschwindigkeit in Abh{\"a}ngigkeit der Gelenkwinkelgeschwindigkeiten des Roboters. Eine mathematische Beschreibung des Zusammenhangs erfolgt {\"u}ber die Jacobi-Matrix der Vorw{\"a}rtskinematik.~\autocite[S.~101]{Spong.2020} Zur Aufstellung der Jacobi-Matrizen werden zunächst grundlegende Definitionen betrachtet. Die Herleitung der Zusammenhänge ist ~\autocite[S.~79--80]{Kemmetmueller.2023} und ~\autocite[S.~106]{Spong.2020} entnommen. Die Rotation eines Starrk{\"o}rpers um eine feste Drehachse wird über die Beziehung $\bm{\omega} = \dot{\theta}\bm{k}$ ausgedr{\"u}ckt. Dabei sind $\dot{\theta}$ die zeitliche Ableitung des Gelenkwinkels $\theta$ und $\bm{k}$ der Einheitsvektor der Drehachse. Die lineare Geschwindigkeit eines Punktes P, welcher um die Drehachse rotiert, ergibt sich zu $\bm{v} = \bm{\omega} \times \bm{r}$. Wobei der Vektor $\bm{r}$ die Position des Punktes P orthogonal auf der Drehachse $\bm{k}$ angibt.~\autocite[S.~102]{Spong.2020} 
-%
-\subsection{Schiefsymmetrische Matrizen}
-Die Berechnung der Geschwindigkeits-Kinematik l{\"a}sst sich durch Verwendung Schiefsymmetrischer Matrizen vereinfachen. Eine $n\times n$ Matrix $\bm{S}$ ist schief symmetrisch, wenn 
-\begin{equation}
-	\label{eqn:skewsymmetric}
-	\bm{S}^T+\bm{S}=0.
-\end{equation}
-Damit hat jede schiefsymmetrische $3\times3$ Matrix die Form
-\begin{align}
-	\bm{S} = \left[\begin{matrix}
-		0 &\quad -s_3 &\quad s_2  \\
-		s_3 &\quad 0 &\quad -s_1  \\
-		-s_2 &\quad s_1 &\quad 0  
-	\end{matrix}\right].
-\end{align}
-Für weitere Eigenschaften schiefsymmetrischer Matrizen wird auf die referenzierte Literatur ~\autocite[S.~104]{Spong.2020} verwiesen. Für die Drehmatrix $\bm{R} = \bm{R}(\theta) \in SO(3)$, deren Elemente Funktionen der Drehwinkel $\theta\left(t\right)$ sind, gilt 
-\begin{equation}
-	\label{eqn:einheitsmatrix}
-	\bm{R}(\theta)\bm{R}(\theta)^T = E.
-\end{equation}
-%
-\subsection{Drehwinkelgeschwindigkeit}
-Die Ableitung beider Terme der Gleichung \ref{eqn:einheitsmatrix} ergibt
-\begin{equation} 
-	\frac{\text{d}}{\text{d}\theta}\left[\bm{R}(\theta)\bm{R}(\theta)^T\right] = 	\left[\frac{\text{d}}{\text{d}\theta} {\bm{R}}(\theta)\right]\bm{R}(\theta)^T + \bm{R}(\theta)\left[\frac{\text{d}}{\text{d}\theta} {\bm{R}}(\theta)^T\right] = 0
-\end{equation} 
-Unter Berücksichtigung der Eigenschaft schiefsymmetrischer Matrizen, siehe Gleichung \ref{eqn:skewsymmetric} folgt
-\begin{equation}
-	\label{eqn:skewsymm}
-	\bm{S} = \left[\frac{\text{d}}{\text{d}\theta}{\bm{R}}(\theta)\right]\bm{R}(\theta)^T  = -\bm{R}(\theta)     \left[\frac{\text{d}}{\text{d}\theta}{\bm{R}}(\theta)^T\right].
-\end{equation} 
-%
-Daraus folgt
-%
-\begin{equation}
-	\frac{\text{d}}{\text{d}\theta}\bm{R}(\theta) = \bm{SR}(\theta)
-\end{equation} 
-%
-Die zeitliche Ableitung der Rotationsmatrix $\bm{R} = \bm{R}(t) \in SO(3)$ lautet
-%
-\begin{equation}
-	\frac{\text{d}}{\text{d}t}\bm{R}(t) = \bm{S}\left(\bm{\omega}(t)\right)\bm{R}(t)
-\end{equation} 
-%
-Für Verkettete Rotationen gilt
-%
-\begin{equation}
-	\frac{\text{d}}{\text{d}t}\bm{R}^0_n(t) = \bm{S}\left(\bm{\omega}^0_{0,n}(t)\right)\bm{R}^0_n(t)
-\end{equation} 
-\begin{equation}
-	\bm{\omega}^0_{0,n} = \bm{\omega}^0_{0,1} + \bm{R}^0_1\bm{\omega}^1_{1,2} + \bm{R}^0_2\bm{\omega}^2_{2,3} + ... + \bm{R}^0_{n-1}\bm{\omega}^{n-1}_{n-1,n}
-\end{equation} 
-%
-%Die Elemente von $\bm{S}$ resultieren aus den Winkelgeschwindigkeiten $\omega = \left[\omega_x~\omega_y~\omega_z\right]^T$.
-%\begin{equation}
-%	\bm{S} = \left[\begin{array}{ccc}
-	%		0&-\omega_z&\omega_y  \\
-	%		\omega_z&0&-\omega_x  \\
-	%		-\omega_y&\omega_x&0  \\
-	%	\end{array} \right]
-%\end{equation}
-%
-\subsection{Lineare Geschwindigkeit}
-Für die Lineare Geschwindigkeit eines Punktes werden nachfolgend zwei Szenarien unterschieden. In beiden Fällen ist der Punkt P fest mit dem KS$\left\{i\right\}$ verbunden. Im ersten Fall wird eine Rotation des KS$\left\{i\right\}$ relativ zum KS$\left\{0\right\}$ betrachtet. 
-\begin{equation}
-	\bm{p}^0 = \bm{R}^0_i(t)\bm{p}^i
-\end{equation}
-%
-\begin{equation}
-	\dot{\bm{p}}^0 = \bm{\omega}^0_{0,i}\times\bm{p}^0
-\end{equation}
-%
-Im zweiten Fall bewegt sich KS$\left\{i\right\}$ rotatorisch und translatorisch relativ zu KS$\left\{0\right\}$. 
-\begin{equation}
-	\bm{p}^0 = \bm{R}^0_i(t)\bm{p}^i + \bm{o^0_i}
-\end{equation}
-%
-\begin{equation}
-	\dot{\bm{p}}^0 = \bm{\omega}^0_{0,i}\times\bm{p}^0 + \dot{\bm{o^0_i}}
-\end{equation}
-Auf eine Beschreibung des Szenarios, dass sich P gegenüber KS$\left\{i\right\}$ bewegt, wird verzichtet.
-%
+Die Geschwindigkeits-Kinematik definiert die lineare Endeffektor-Geschwindigkeit, sowie die  Endeffektor-Winkelgeschwindigkeit in Abh{\"a}ngigkeit der Gelenkwinkelgeschwindigkeiten des Roboters. Eine mathematische Beschreibung des Zusammenhangs erfolgt {\"u}ber die Jacobi-Matrix der Vorw{\"a}rtskinematik \cite[S.~101]{Spong.2020}. Grundlegende Definitionen zur Aufstellung der Jacobi-Matrizen werden in \ref{add:geschwindigkeitskinematik} betrachtet. 
 \subsection{Jacobi-Matrizen}
 Die lineare Geschwindigkeit $\bm{v}^0_n$ des Endeffektors, sowie seine Winkelgeschwindigkeit $\bm{\omega}^0_{0,i}$ im  KS$\left\{0\right\}$ lassen sich über die $3\times n$-Jacobi-Matrizen $\bm{J}_v$ und $\bm{J}_{\omega}$ berechnen. 
 %
@@ -237,16 +147,16 @@ Die lineare Geschwindigkeit $\bm{v}^0_n$ des Endeffektors, sowie seine Winkelges
 	\item Ein Gelenk vom Typ T ist ein Translationsgelenk.
 \end{itemize}
 %
-Die Notation ist \autocite{Rieber.2022} entnommen.
+\cite{Rieber.2022}
 %
 % todo Relevanz Geeschwindigkeitskinematik
 %
 \section{Dynamik}
-Ziel des Kapitels ist die Lösung des inversen dynamischen Problems, der Berechnung der aufzubringenden Momente in den sechs Gelenken des Roboters bei Ansteuerung entlang einer Bewegungsbahn. \autocite[S.~247]{Grimble.2009} 
-Die Bewegungsgleichungen werden zunächst formal mithilfe der Euler-Lagrange Gleichungen formuliert. Anschließend folgt die numerisch effiziente Implementierung  über den Rekursiven-Newton-Euler-Algorithmus (RNEA).  \autocite[S.~247]{Grimble.2009} 
+Ziel des Kapitels ist die Berechnung der aufzubringenden Momente in den sechs Gelenken des Roboters bei Ansteuerung entlang einer Bewegungsbahn.
+Die Bewegungsgleichungen werden zunächst formal mithilfe der Euler-Lagrange Gleichungen formuliert. Anschließend folgt die numerisch effiziente Implementierung  über den Rekursiven-Newton-Euler-Algorithmus (RNEA) \cite[S.~247]{Grimble.2009}. 
 %
 \subsection{Euler-Lagrange Gleichungen}
-Die Lagrange Funktion $L$ eines mechanischen Systems entspricht der Differenz der kinetischen Energie $K$ und potentiellen Energie $P$.~\autocite[S.~175]{Spong.2020}
+Die Lagrange Funktion $L$ eines mechanischen Systems entspricht der Differenz der kinetischen Energie $K$ und potentiellen Energie $P$ \cite[S.~175]{Spong.2020}. 
 \begin{equation}
 	L = K-P 
 \end{equation}
@@ -257,7 +167,7 @@ Die Lagrange Funktion $L$ eines mechanischen Systems entspricht der Differenz de
 %	L = \frac{1}{2}m\dot{q}^2 - mgq
 %\end{equation}
 %
-Die Euler-Lagrange-Gleichung wird über den folgenden Ausdruck beschrieben. Dabei entspricht die Ordnung $n$ des Systems der Anzahl generalisierter Koordinaten \footnote{Voneinander unabhängige Koordinaten, welche den aktuellen Systemzustand vollständig beschreiben \cite{Engelke.2008}}, bzw. im Anwendungsfall den sechs rotatorischen Gelenkkoordinaten ($\theta_1$,...,$\theta_6$). Die Größe $\tau_i$ repräsentiert generalisierte Kräfte \footnote{Kräfte und Momente}. Im Anwendungsfall werden die Antriebsmomente in den Gelenken betrachtet. 
+Die Euler-Lagrange-Gleichung wird über den folgenden Ausdruck beschrieben. Dabei entspricht die Ordnung $n$ des Systems der Anzahl generalisierter Koordinaten\footnote{Voneinander unabhängige Koordinaten, welche den aktuellen Systemzustand vollständig beschreiben \cite{Engelke.2008}}, bzw. im Anwendungsfall den sechs rotatorischen Gelenkkoordinaten ($\theta_1$,...,$\theta_6$). Die Größe $\tau_i$ repräsentiert generalisierte Kräfte \footnote{Kräfte und Momente}. Im Anwendungsfall werden die Antriebsmomente in den Gelenken betrachtet. 
 %
 \begin{equation}
 	\frac{d}{dt} \frac{\partial{L}}{\partial{\dot{\bm{q}_i}}}- \frac{\partial{L}}{\partial{\bm{q}_i}} = \bm{\tau}_i \ ;  \ i = 1,...,n 
@@ -280,7 +190,7 @@ Die kinetischen Energie des Roboters entspricht der Gleichung  \ref{eqn:ekin}
 Der Ausdruck in der Klammer wird als Massenmatrix $\bm{M}(\bm{q})$ bezeichnet. 
 Die Massen $m_i$ sind einem Computer Aided Design- (CAD) Modell, welches vom Hersteller bereitgestellt wird, entnommen. 
 Die Trägheitstensoren $\bm{I}^{i}_{i}$, bezogen auf den Masseschwerpunkt des Verbindungsglieds $i$ sind relativ zu den Gelenkkoordinatensystemen orientiert und damit für alle Konfigurationen des Roboters konstant. 
-Über das CAD-Modell werden die Trägheitstensoren $\bm{I}^{0}_{i}$, bezogen auf den Masseschwerpunkt relativ zum ROBROOT-KS (KS$\left\{0\right\}$) bereitgestellt. Die gewünschte Umrechnung erfolgt mithilfe der Ähnlichkeitstransformation 
+Über das CAD-Modell werden die Trägheitstensoren $\bm{I}^{0}_{i}$, bezogen auf den Masseschwerpunkt relativ zum KS$\left\{0\right\}$ bereitgestellt. Die gewünschte Umrechnung erfolgt mithilfe der Ähnlichkeitstransformation 
 %
 \begin{equation}
 	\label{eqn:similarity}
@@ -294,14 +204,14 @@ Die potentielle Energie wird über den Ausdruck \ref{eqn:epot} berechnet.
 	P = \sum_{i=1}^{n} m_i \bm{g}^T\bm{r^0_{C_i}}
 \end{equation}
 %
-Der Vektor $g = [0,0,-9.81]^T~\frac{\text{m}}{\text{s}}$ entspricht der Fallbeschleunigung, ausgedrückt im KS$\left\{0\right\}$. Der Vektor $r^0_{C_i}$ definiert die Lage des Masseschwerpunkts von Körper $i$ im  KS$\left\{0\right\}$. Für die Herleitung der Bewegungsgleichungen \ref{eqn:bewegungsgleichungen} wird auf die Literatur \autocite[S.~180 ff.]{Spong.2020} verwiesen. Hierbei wird ersichtlich, dass die numerische Bestimmung von $\tau$ über die partiellen Ableitungen von $K$ und $P$ insbesondere in den letzten Gliedern der kinematischen Kette einen hohen Berechnungsaufwand erfordert, weshalb das Modell über den RNEA implementiert ist. 
+Der Vektor $\bm{g} = [0~0-9,81]^T~\dfrac{\text{m}}{\text{s}}$ ist die Fallbeschleunigung, ausgedrückt im KS$\left\{0\right\}$. Der Vektor $r^0_{C_i}$ definiert die Lage des Masseschwerpunkts von Körper $i$ im  KS$\left\{0\right\}$. Für die Herleitung der Bewegungsgleichungen \ref{eqn:bewegungsgleichungen} wird auf die Literatur \cite[S.~180 ff.]{Spong.2020} verwiesen. Hierbei wird ersichtlich, dass die numerische Bestimmung von $\tau$ über die partiellen Ableitungen von $K$ und $P$ insbesondere in den letzten Gliedern der kinematischen Kette einen hohen Berechnungsaufwand erfordert, weshalb das Modell über den RNEA implementiert ist. 
 %
 \begin{equation}
 	\label{eqn:bewegungsgleichungen}
 	\bm{M}(\bm{q})\ddot{\bm{q}} + \bm{C}(\bm{q},\dot{\bm{q}})\dot{\bm{q}} + \bm{g}(\bm{q}) = \bm{\tau}
 \end{equation}
 %
-Der Term $\bm{C}(\bm{q},\dot{\bm{q}})\dot{\bm{q}}$ berücksichtigt die Einflüsse der Corioliskraft und Zentrifugalkraft\footnote{Für die Scheinkräfte in rotierenden Bezugssystemen wird auf die Literatur ~\autocite[S.~159]{Roth.2016} verwiesen}. Der Vektor $\bm{g}(\bm{q})$ berücksichtigt die Gravitation.
+Der Term $\bm{C}(\bm{q},\dot{\bm{q}})\dot{\bm{q}}$ berücksichtigt die Einflüsse der Corioliskraft und Zentrifugalkraft\footnote{Eine detaillierte Betrachtung von Scheinkräften in rotierenden Bezugssystemen erfolgt in  \cite[S.~159]{Roth.2016}}. Der Vektor $\bm{g}(\bm{q})$ berücksichtigt die Gravitation. \cite[S.~180~ff.]{Spong.2020}
 %
 \subsection{Rekursiver-Newton-Euler-Algorithmus}
 %
@@ -310,7 +220,7 @@ Der Ansatz sieht vor, jedes Verbindungsglied der kinematischen Kette und die, au
 \begin{figure}[tbph]
 	\centering
 	\includegraphics[width=1\linewidth]{images/rnea}
-	\caption{generisches Verbindungsglied \cite[S.~283]{Siciliano.2011}}
+	\caption{generisches Verbindungsglied \cite[S.~283]{Grimble.2009}}
 	\label{fig:rnea}
 \end{figure} 
 %
@@ -323,7 +233,7 @@ Der Ansatz sieht vor, jedes Verbindungsglied der kinematischen Kette und die, au
 	\item $ -\boldsymbol{\mu}_{i+1} $ - Drehmoment, welches vom Verbindungsglied $ i+1 $ auf das Verbindungsglied $ i $ im KS$\left\{i\right\}$ des dazugehörigen Gelenks $i+1$ ausgeübt wird
 \end{itemize}
 %
-Die Implementierung des RNEA sieht vor, alle Größen bezogen auf das KS$\left\{i\right\}$ des fest damit verbundenen Verbindungsglieds $i$ zu beziehen. Daraus resultieren die Kräfte und Momente mit der Notation $ \boldsymbol{f}_{i}^{i} $ und $ \boldsymbol{\mu}_i^{i} $. Nachfolgend werden die Parameter der Verbindungsglieder eingeführt. Alle Vektoren beziehen sich ebenfalls auf das KS$\left\{i\right\}$, sodass die Parameter als Konstante weiterverarbeitet werden können. Die Werte der Systemparameter sind im Anhang \ref{add:systemparameter} aufgeführt.
+Die Implementierung des RNEA sieht vor, alle Größen bezogen auf das KS$\left\{i\right\}$ des fest damit verbundenen Verbindungsglieds $i$ zu beziehen. Daraus resultieren die Kräfte und Momente mit der Notation $ \boldsymbol{f}_{i}^{i} $ und $ \boldsymbol{\mu}_i^{i} $. Nachfolgend werden die Parameter der Verbindungsglieder eingeführt. Alle Vektoren beziehen sich ebenfalls auf das KS$\left\{i\right\}$, sodass die Parameter als Konstante weiterverarbeitet werden können. Die Werte der Systemparameter sind im Anhang \ref{add:Systemparameterdef} aufgeführt.
 %
 \subsubsection*{Parameter}
 \setlist{noitemsep}
@@ -347,7 +257,7 @@ Die Implementierung des RNEA sieht vor, alle Größen bezogen auf das KS$\left\{
 	\item $ \boldsymbol{\dot{\omega}}_i $ - Winkelbeschleunigung des Verbindungsglieds $i$
 \end{itemize}
 %
-Mit Kenntnis der Größen $\bm{q}, \dot{\bm{q}}, \ddot{\bm{q}}$ aus der Bahnplanung des Roboters und unter Festlegung der Startbedingungen $\bm{\omega}_0 = 0,~ \ddot{\bm{p}_0}-g = [0,0,-9.81]^T,~ \ddot{\bm{\omega}_0} = 0$  erfolgt sukzessive die Berechnung der Geschwindigkeiten und Beschleunigungen für jedes Verbindungsglied des Roboters vom ersten bis zum sechsten. Ein Endeffektor ist am Versuchsroboter nicht verbaut. Die der Literatur ~\autocite[S.~287~f.]{Grimble.2009} entnommenen Gleichungen \ref{eqn:rnea0}, \ref{eqn:rnea1}, \ref{eqn:rnea2} und  \ref{eqn:rnea3} werden nachfolgend aufgezeigt. Diese gelten ausschließlich für rotatorische Gelenke, da der betrachtete KUKA KR210 R2700-2 eine RRR-Kinematik mit Zentralhand (rotatorische Funktionen Drehen, Nicken, Gieren) aufweist. 
+Mit Kenntnis der Größen $\bm{q}, \dot{\bm{q}}, \ddot{\bm{q}}$ aus der Bahnplanung des Roboters und unter Festlegung der Startbedingungen $\bm{\omega}_0 = 0,~ \ddot{\bm{p}_0}-g = [0,0,-9.81]^T,~ \ddot{\bm{\omega}_0} = 0$  erfolgt sukzessive die Berechnung der Geschwindigkeiten und Beschleunigungen für jedes Verbindungsglied des Roboters vom ersten bis zum sechsten. Ein Endeffektor ist am Versuchsroboter nicht verbaut. Die der Literatur  \cite[S.~287~f.]{Grimble.2009} entnommenen Gleichungen \ref{eqn:rnea0}, \ref{eqn:rnea1}, \ref{eqn:rnea2} und  \ref{eqn:rnea3} werden nachfolgend aufgezeigt. Diese gelten ausschließlich für rotatorische Gelenke, da der betrachtete KUKA KR210 R2700-2 eine RRR-Kinematik mit Zentralhand (rotatorische Funktionen Drehen, Nicken, Gieren) aufweist. 
 %
 \begin{equation}
 	\label{eqn:rnea0}
@@ -386,10 +296,10 @@ Im nächsten Schritt erfolgt die rekursive Berechnung der Kräfte und Drehmoment
 	\tau_i = i_i{\bm{\mu}^{i}_{i}}^T {\bm{R}^{i-1}_{i}}^T [0~0~1]^T
 \end{equation}
 %
-Aufgrund der Lagerausführung des ersten Gelenks wird angenommen, dass das nachfolgende Drehmoment nicht auf das erste Gelenk übertragen wird, sodass der Term $\bm{R}^{i}_{i+1} \bm{\mu}^{i+1}_{i+1}$ hierbei entfällt. Aus der den identifizierten Drehmomenten $\tau_i$ erfolgt durch Multiplikation mit den Winkelgeschwindigkeiten $\dot{{d}}$ die Berechnung der mechanischen Leistung $P_{mech,i}$ Die Implementierung des Modells ist dem Anhang \ref{add:rnea} zu entnehmen. 
+Aufgrund der Lagerausführung des ersten Gelenks wird angenommen, dass das nachfolgende Drehmoment nicht auf das erste Gelenk übertragen wird, sodass der Term $\bm{R}^{i}_{i+1} \bm{\mu}^{i+1}_{i+1}$ hierbei entfällt. Aus der den identifizierten Drehmomenten $\tau_i$ erfolgt durch Multiplikation mit den Winkelgeschwindigkeiten $\dot{{d}}$ die Berechnung der mechanischen Leistung $P_{mech,i}$ Die Implementierung des Modells ist dem Anhang \ref{add:rnea} zu entnehmen. \cite[S.~282~ff.]{Grimble.2009}
 %
 \section{Annahmen und Vernachlässigungen}
-Bei der Entwicklung des mechanischen Modells zur Simulation der Roboterdynamik wurden Annahmen getroffen und Komponenten vernachlässigt, um den Modellierungsaufwand zu reduzieren. Ein wesentlicher Einfluss wird der Vernachlässigung des hydraulischen Gewichtsausgleichs am zweiten Gelenk zugeschrieben. Der Gewichtsausgleich ist aus einem Hydraulikzylinder mit Membranspeicher aufgebaut und wirkt dem am zweiten Gelenk auftretenden Drehmoment entgegen. Im Modell wurde dieser aufgrund fehlender Konstruktionsdaten zu Kolbendurchmesser und Kolbenstangendurchmesser nicht berücksichtigt. Fehlende Daten sind auch der Grund für die Auslassung des Gewichts und der Steifigkeit der Schlauchpakete. Das Gewicht der Elektromotoren (Statorseite) wurde aufgrund fehlender Informationen aus der Verschiebung der Massenschwerpunkte der Achsen vernachlässigt. Aufgrund des Verhältnisses zwischen der Masse der Motoren (Statorseite) und dem Gewicht der Achsen  wird diese Vernachlässigung toleriert. Am Beispiel des dritten Verbindungsglieds beträgt dieses mindesten 1:15. Genaue Daten wie viel Gewicht der Rotor bzw. der Stator einnehmen liegen nicht vor.  Die gleiche Schlussfolgerung gilt für die Massenträgheit der Motoren (Rotorseite) und die daraus resultierenden Momente. \autocite[S.~287~f.]{Grimble.2009} berücksichtigt bei der Berechnung der Drehmomente die Einflüsse der viskosen und der coloumbschen Reibung. Die entsprechenden Koeffizienten wurden nicht ermittelt, so dass dieser Einfluss ebenfalls als Vernachlässigung festgehalten wird. Neben der Berechnung der mechanisch aufzuwendenden Leistung erfordert eine hohe Modellgenauigkeit die Berücksichtigung der elektrischen Komponenten in Abbildung \ref{fig:zk}. Bei den Motoren handelt es sich um dreiphasige permanenterregte Synchronmaschinen (PMSM).  Die Steuerung erfolgt über Frequenzumrichter. Im Ersatzschaltbild (ESB) sind alle Antriebe über einen gemeinsamen Gleichrichter vom Netz auf einen Gleichspannungszwischenkreis gekoppelt. PMSM können sowohl motorisch als auch generatorisch betrieben werden. Für die Berechnung des Energieverbrauchs wird angenommen, dass die generatorisch umgewandelte Energie über einen Bremswiderstand als Wärme abgeführt wird. Von einer Spannungs-Schwellwert gesteuerten Zu- und Abschaltung des Bremswiderstands wird abgesehen. \cite[S.~21~ff.]{Eggers.2019}
+Bei der Entwicklung des mechanischen Modells zur Simulation der Roboterdynamik wurden Annahmen getroffen und Komponenten vernachlässigt, um den Modellierungsaufwand zu reduzieren. Ein wesentlicher Einfluss wird der Vernachlässigung des hydraulischen Gewichtsausgleichs am zweiten Gelenk zugeschrieben. Der Gewichtsausgleich ist aus einem Hydraulikzylinder mit Membranspeicher aufgebaut und wirkt dem am zweiten Gelenk auftretenden Drehmoment entgegen. Im Modell wurde dieser aufgrund fehlender Konstruktionsdaten zu Kolbendurchmesser und Kolbenstangendurchmesser nicht berücksichtigt. Fehlende Daten sind auch der Grund für die Auslassung des Gewichts und der Steifigkeit der Schlauchpakete. Das Gewicht der Elektromotoren (Statorseite) wurde aufgrund fehlender Informationen aus der Verschiebung der Massenschwerpunkte der Achsen vernachlässigt. Aufgrund des Verhältnisses zwischen der Masse der Motoren (Statorseite) und dem Gewicht der Achsen  wird diese Vernachlässigung toleriert. Am Beispiel des dritten Verbindungsglieds beträgt dieses mindesten 1:15. Genaue Daten wie viel Gewicht der Rotor bzw. der Stator einnehmen liegen nicht vor.  Die gleiche Schlussfolgerung gilt für die Massenträgheit der Motoren (Rotorseite) und die daraus resultierenden Momente. \cite[S.~287~f.]{Grimble.2009} berücksichtigt bei der Berechnung der Drehmomente die Einflüsse der viskosen und der coloumbschen Reibung. Die entsprechenden Koeffizienten wurden nicht ermittelt, so dass dieser Einfluss ebenfalls als Vernachlässigung festgehalten wird. Neben der Berechnung der mechanisch aufzuwendenden Leistung erfordert eine hohe Modellgenauigkeit die Berücksichtigung der elektrischen Komponenten in Abbildung \ref{fig:zk}. Bei den Motoren handelt es sich um dreiphasige permanenterregte Synchronmaschinen (PMSM).  Die Steuerung erfolgt über Frequenzumrichter. Im Ersatzschaltbild (ESB) sind alle Antriebe über einen gemeinsamen Gleichrichter vom Netz auf einen Gleichspannungszwischenkreis gekoppelt. PMSM können sowohl motorisch als auch generatorisch betrieben werden. Für die Berechnung des Energieverbrauchs wird angenommen, dass die generatorisch umgewandelte Energie über einen Bremswiderstand als Wärme abgeführt wird. Von einer Spannungs-Schwellwert gesteuerten Zu- und Abschaltung des Bremswiderstands wird abgesehen. \cite[S.~21~ff.]{Eggers.2019}
 %
 \begin{figure}[tbph]
 	\centering
@@ -397,5 +307,3 @@ Bei der Entwicklung des mechanischen Modells zur Simulation der Roboterdynamik w
 	\caption{Ersatzschaltbild der aufgenommenen Netzleistung \cite[S.~20]{Eggers.2019}}
 	\label{fig:zk}
 \end{figure}
-
-

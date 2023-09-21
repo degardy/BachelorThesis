@@ -1,8 +1,122 @@
-%\addchap{Anhang A}
-%\setcounter{chapter}{1}
+\addchap{Anhang A}
+\setcounter{chapter}{1}
+\setcounter{section}{1}
+\setcounter{table}{0}
+\setcounter{figure}{0}
 %
-%\section{Details zu bestimmten theoretischen Grundlagen}
+\section{theoretische Grundlagen}
+\subsection{Kinematische Kette}
+\label{add:kinematische-kette}
+Als kinematische Kette wird die Zusammensetzung eines Roboterarms aus $n+1$ Gliedern und $n$ Gelenken definiert. Das letzte Glied der kinematischen Kette wird als Endeffektor bezeichnet. Die Glieder werden von der festen Basis (Glied $0$) bis $n$ durchnummeriert. Mit jedem Glied $i-1$ wird das Gelenk $i$ starr verbunden. Des Weiteren wird jedem Glied $i$ ein fest verbundenes Koordinatensystem $o_ix_iy_iz_i$ zugeordnet. Eine Aktuierung des Gelenks $i$ führt zu einer Bewegung von Glied $i$ und Koordinatensystem KS$\left\{i\right\}$. Die Gelenke weisen einen Freiheitsgrad (degree-of-freedom (DOF)) $q_i$ auf und können als Dreh- oder Schubgelenke ausgeführt werden. Die Gelenkvariable $q_i$ entspricht dem Rotationswinkel $\theta_i$ bzw. der Translation $d_i$. \cite[S.~75]{Spong.2020}
 %
+\subsection{Euklidische Gruppe}
+\label{add:SE3}
+\begin{align} 
+	\text{SE(3)} = \left\{{\bm{T}} \ | \ \bm{T}=\begin{bmatrix} {\bm{R}} &\quad {\bm{o}}\\ {0}_{1x3} &\quad 1 \end{bmatrix}\right\}, \ \bm{R} \in {R}^{3x3}, \ {r} \in {R}^{3}  
+\end{align} 
+
+\cite[S.~534]{Spong.2020}
+
+\subsection{Geschwindigkeits-Kinematik}
+\label{add:geschwindigkeitskinematik}
+Die Herleitung der Zusammenhänge ist  \cite[S.~79~f.]{Kemmetmueller.2023} und  \cite[S.~106]{Spong.2020} entnommen. Die Rotation eines Starrk{\"o}rpers um eine feste Drehachse wird über die Beziehung $\bm{\omega} = \dot{\theta}\bm{k}$ ausgedr{\"u}ckt. Dabei sind $\dot{\theta}$ die zeitliche Ableitung des Gelenkwinkels $\theta$ und $\bm{k}$ der Einheitsvektor der Drehachse. Die lineare Geschwindigkeit eines Punktes P, welcher um die Drehachse rotiert, ergibt sich zu $\bm{v} = \bm{\omega} \times \bm{r}$. Wobei der Vektor $\bm{r}$ die Position des Punktes P orthogonal auf der Drehachse $\bm{k}$ angibt. \cite[S.~102]{Spong.2020} 
+%
+\subsubsection{Schiefsymmetrische Matrizen}
+Die Berechnung der Geschwindigkeits-Kinematik l{\"a}sst sich durch Verwendung Schiefsymmetrischer Matrizen vereinfachen. Eine $n\times n$ Matrix $\bm{S}$ ist schief symmetrisch, wenn 
+\begin{equation}
+	\label{eqn:skewsymmetric}
+	\bm{S}^T+\bm{S}=0.
+\end{equation}
+Damit hat jede schiefsymmetrische $3\times3$ Matrix die Form
+\begin{align}
+	\bm{S} = \left[\begin{matrix}
+		0 &\quad -s_3 &\quad s_2  \\
+		s_3 &\quad 0 &\quad -s_1  \\
+		-s_2 &\quad s_1 &\quad 0  
+	\end{matrix}\right].
+\end{align}
+Für weitere Eigenschaften schiefsymmetrischer Matrizen wird auf die referenzierte Literatur \cite[S.~104]{Spong.2020} verwiesen. Für die Drehmatrix $\bm{R} = \bm{R}(\theta) \in SO(3)$, deren Elemente Funktionen der Drehwinkel $\theta\left(t\right)$ sind, gilt 
+\begin{equation}
+	\label{eqn:einheitsmatrix}
+	\bm{R}(\theta)\bm{R}(\theta)^T = E.
+\end{equation}
+%
+\subsubsection{Drehwinkelgeschwindigkeit}
+Die Ableitung beider Terme der Gleichung \ref{eqn:einheitsmatrix} ergibt
+\begin{equation} 
+	\frac{\text{d}}{\text{d}\theta}\left[\bm{R}(\theta)\bm{R}(\theta)^T\right] = 	\left[\frac{\text{d}}{\text{d}\theta} {\bm{R}}(\theta)\right]\bm{R}(\theta)^T + \bm{R}(\theta)\left[\frac{\text{d}}{\text{d}\theta} {\bm{R}}(\theta)^T\right] = 0
+\end{equation} 
+Unter Berücksichtigung der Eigenschaft schiefsymmetrischer Matrizen, siehe Gleichung \ref{eqn:skewsymmetric} folgt
+\begin{equation}
+	\label{eqn:skewsymm}
+	\bm{S} = \left[\frac{\text{d}}{\text{d}\theta}{\bm{R}}(\theta)\right]\bm{R}(\theta)^T  = -\bm{R}(\theta)     \left[\frac{\text{d}}{\text{d}\theta}{\bm{R}}(\theta)^T\right].
+\end{equation} 
+%
+Daraus folgt
+%
+\begin{equation}
+	\frac{\text{d}}{\text{d}\theta}\bm{R}(\theta) = \bm{SR}(\theta)
+\end{equation} 
+%
+Die zeitliche Ableitung der Rotationsmatrix $\bm{R} = \bm{R}(t) \in SO(3)$ lautet
+%
+\begin{equation}
+	\frac{\text{d}}{\text{d}t}\bm{R}(t) = \bm{S}\left(\bm{\omega}(t)\right)\bm{R}(t)
+\end{equation} 
+%
+Für Verkettete Rotationen gilt
+%
+\begin{equation}
+	\frac{\text{d}}{\text{d}t}\bm{R}^0_n(t) = \bm{S}\left(\bm{\omega}^0_{0,n}(t)\right)\bm{R}^0_n(t)
+\end{equation} 
+\begin{equation}
+	\bm{\omega}^0_{0,n} = \bm{\omega}^0_{0,1} + \bm{R}^0_1\bm{\omega}^1_{1,2} + \bm{R}^0_2\bm{\omega}^2_{2,3} + ... + \bm{R}^0_{n-1}\bm{\omega}^{n-1}_{n-1,n}
+\end{equation} 
+%
+%Die Elemente von $\bm{S}$ resultieren aus den Winkelgeschwindigkeiten $\omega = \left[\omega_x~\omega_y~\omega_z\right]^T$.
+%\begin{equation}
+%	\bm{S} = \left[\begin{array}{ccc}
+	%		0&-\omega_z&\omega_y  \\
+	%		\omega_z&0&-\omega_x  \\
+	%		-\omega_y&\omega_x&0  \\
+	%	\end{array} \right]
+%\end{equation}
+%
+\subsubsection{Lineare Geschwindigkeit}
+Für die Lineare Geschwindigkeit eines Punktes werden nachfolgend zwei Szenarien unterschieden. In beiden Fällen ist der Punkt P fest mit dem KS$\left\{i\right\}$ verbunden. Im ersten Fall wird eine Rotation des KS$\left\{i\right\}$ relativ zum KS$\left\{0\right\}$ betrachtet. 
+\begin{equation}
+	\bm{p}^0 = \bm{R}^0_i(t)\bm{p}^i
+\end{equation}
+%
+\begin{equation}
+	\dot{\bm{p}}^0 = \bm{\omega}^0_{0,i}\times\bm{p}^0
+\end{equation}
+%
+Im zweiten Fall bewegt sich KS$\left\{i\right\}$ rotatorisch und translatorisch relativ zu KS$\left\{0\right\}$. 
+\begin{equation}
+	\bm{p}^0 = \bm{R}^0_i(t)\bm{p}^i + \bm{o^0_i}
+\end{equation}
+%
+\begin{equation}
+	\dot{\bm{p}}^0 = \bm{\omega}^0_{0,i}\times\bm{p}^0 + \dot{\bm{o^0_i}}
+\end{equation}
+Auf eine Beschreibung des Szenarios, dass sich P gegenüber KS$\left\{i\right\}$ bewegt, wird verzichtet.
+%
+
+
+
+
+
+%\section{Newtonsche Axiome} 
+%\section{Zwangsbedingungen}
+%	- %todo holonom
+%	Holonome Zwangsbedingungen sind als Gleichungen formulierbar
+%	drei Positionskoordinaten definieren die Lage des Massenschwerpunkts eines Arms
+%	drei Eulerwinkel definieren die Orientierung des Körpers
+%	- %todo nicht holomom
+%	Nichtholonome Zwansbedingungen sind nicht als Gleichungen formulierbar, z. B. Ungleichungen
+%\section{Hamilton-Prinzip}
+%\section{D’Alembertsches Prinzip}
 %\section{Weitere Details, welche im Hauptteil den Lesefluss behindern}
 %
 %\addchap{Anhang B}
@@ -33,8 +147,8 @@
 %
 %\section{Wichtige Teile des Quellcodes}
 %
-\addchap{Anhang A}
-\setcounter{chapter}{1}
+\addchap{Anhang B}
+\setcounter{chapter}{2}
 \setcounter{section}{1}
 \setcounter{table}{0}
 \setcounter{figure}{0}
@@ -48,10 +162,92 @@
 \section{KR210 2700-2 Datenblatt}
 \label{add:datenblatt}
 \includepdf[pages=1]{C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis/literature/Anhang/DatenblattKR2102700-2.pdf}
+\section{Systemparameter}
+\label{add:Systemparameterdef}
+Die Massen $m_i$ der Starrkörper $i$ sind dem CAD-Modell des Herstellers entnommen. Hierbei wird angenommen, dass der Werkstoff korrekt zugeordnet ist. 
+%
+\setlist{noitemsep}
+\begin{itemize}
+	\item $m_1$ = 535 kg
+	\item $m_2$ = 696,3 kg
+	\item $m_3$ = 361,6 kg
+	\item $m_4$ = 39,676 kg
+	\item $m_5$ = 53,619 kg
+	\item $m_6$ = 4,528 kg
+\end{itemize}
+%
+Die Trägheitstensoren, werden vom CAD-Modell, bezogen auf das KS$\left\{0\right\}$ vorgegeben. Gleichung \ref{eqn:similarity} zeigt, wie diese einmalig über eine Ähnlichkeitstransformation auf das Körperfeste Koordinatensystem KS$\left\{i\right\}$ transformiert werden. Nachfolgend sind die Trägheitstensoren bezogen auf das KS$\left\{0\right\}$ angegeben. 
+%
+\setlist{noitemsep}
+\begin{itemize}
+	\item $I_{1xx} = 17,298~\frac{\text{kg}}{\text{m}^2}$
+	\item $I_{1xy} = -2,711~\frac{\text{kg}}{\text{m}^2}$
+	\item $I_{1xz} = 1,672~\frac{\text{kg}}{\text{m}^2}$
+	\item $I_{1yy} = 32,671~\frac{\text{kg}}{\text{m}^2}$
+	\item $I_{1yz} = -0,493~\frac{\text{kg}}{\text{m}^2}$
+	\item $I_{1zz} = 29,447~\frac{\text{kg}}{\text{m}^2}$
+	\\
+	\item $I_{2xx} = 138,135~\frac{\text{kg}}{\text{m}^2}$
+	\item $I_{2xy} = -0,012~\frac{\text{kg}}{\text{m}^2}$
+	\item $I_{2xz} = 0,387~\frac{\text{kg}}{\text{m}^2}$
+	\item $I_{2yy} = 136,664~\frac{\text{kg}}{\text{m}^2}$
+	\item $I_{2yz} = 9,231~\frac{\text{kg}}{\text{m}^2}$
+	\item $I_{2zz} = 11,838~\frac{\text{kg}}{\text{m}^2}$
+	\\
+	\item $I_{3xx} = 3,031~\frac{\text{kg}}{\text{m}^2}$
+	\item $I_{3xy} = -1,386~\frac{\text{kg}}{\text{m}^2}$
+	\item $I_{3xz} = -0,045~\frac{\text{kg}}{\text{m}^2}$
+	\item $I_{3yy} = 30,03~\frac{\text{kg}}{\text{m}^2}$
+	\item $I_{3yz} = -0,21~\frac{\text{kg}}{\text{m}^2}$
+	\item $I_{3zz} = 29,693~\frac{\text{kg}}{\text{m}^2}$
+	\\
+	\item $I_{4xx} = 0,099~\frac{\text{kg}}{\text{m}^2}$
+	\item $I_{4xy} = -0,032~\frac{\text{kg}}{\text{m}^2}$
+	\item $I_{4xz} = -0,001~\frac{\text{kg}}{\text{m}^2}$
+	\item $I_{4yy} = 0,701~\frac{\text{kg}}{\text{m}^2}$
+	\item $I_{4yz} = -9,367\cdot10^{-6}~\frac{\text{kg}}{\text{m}^2}$
+	\item $I_{4zz} = 0,698~\frac{\text{kg}}{\text{m}^2}$
+	\\
+	\item $I_{5xx} = 0,481~\frac{\text{kg}}{\text{m}^2}$
+	\item $I_{5xy} = 0,118~\frac{\text{kg}}{\text{m}^2}$
+	\item $I_{5xz} = 0.00~\frac{\text{kg}}{\text{m}^2}$
+	\item $I_{5yy} = 0,424~\frac{\text{kg}}{\text{m}^2}$
+	\item $I_{5yz} = 0,00~\frac{\text{kg}}{\text{m}^2}$
+	\item $I_{5zz} = 0,675~\frac{\text{kg}}{\text{m}^2}$
+	\\
+	\item $I_{6xx} = 0,011~\frac{\text{kg}}{\text{m}^2}$
+	\item $I_{6xy} = 5,143\cdot10^{-7}~\frac{\text{kg}}{\text{m}^2}$
+	\item $I_{6xz} = -2,003\cdot10^{-6}~\frac{\text{kg}}{\text{m}^2}$
+	\item $I_{6yy} = 0,006~\frac{\text{kg}}{\text{m}^2}$
+	\item $I_{6yz} = 1,220\cdot10^{07}~\frac{\text{kg}}{\text{m}^2}$
+	\item $I_{6zz} = 0,006~\frac{\text{kg}}{\text{m}^2}$
+\end{itemize}
+%
+Nachfolgend ist die Lage der Massenschwerpunkte $C_i^0$ im KS$\left\{0\right\}$ angegeben. 
+% 
+\begin{itemize}
+	\item $r_{0,C_1}^0$ = $\left[-30,103,~441,~452,213\right]$ mm
+	\item $r_{0,C_2}^0$ = $\left[330,979,~-222,585,~1094,239\right]$ mm
+	\item $r_{0,C_3}^0$ = $\left[705,894,~-8,126,~1908,436\right]$ mm
+	\item $r_{0,C_4}^0$ = $\left[1383,185,~4,492,~1909,983\right]$ mm
+	\item $r_{0,C_5}^0$ = $\left[1601,767,~33,833,~1909,955\right]$ mm
+	\item $r_{0,C_6}^0$ = $\left[1743,222,~-0,007,~1910 051\right]$ mm
+\end{itemize}
+%
+Die Getriebeübersetzung ist der Datei Machine Data (MADA) der Robotersteuerung entnommen.
+%
+\begin{itemize}
+	\item $i_1 = -\frac{7}{1798}$
+	\item $i_2 = -\frac{17}{4576}$
+	\item $i_3 = \frac{3}{754}$
+	\item $i_4 = -\frac{55}{10387}$
+	\item $i_5 = -\frac{483}{91834}$
+	\item $i_6 = \frac{49400}{6485103}$
+\end{itemize}
 \section{DH-Transformation}
 \label{add:dh}
 %\includepdf[pages=1-2]{C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis/literature/Anhang/dhtrafo_matlab.pdf}
-\begin{lstlisting}[language=Matlab]
+\begin{lstlisting}[language=Matlab, numbers=none]
 	function [T,R,R0i] = dhtrafo(q1, q2, q3, q4, q5, q6)
 	%Vorwärtskinematik
 	% Denavit-Hartenberg-Konvention
@@ -144,111 +340,18 @@
 \end{lstlisting}
 \label{add:systemparameter}
 %
-\section{Systemparameter}
-Die Massen $m_i$ der Starrkörper $i$ sind dem CAD-Modell des Herstellers entnommen. Hierbei wird angenommen, dass der Werkstoff korrekt zugeordnet ist. 
-%
-\setlist{noitemsep}
-\begin{itemize}
-	\item $m_1$ = 535 kg
-	\item $m_2$ = 696,3 kg
-	\item $m_3$ = 361,6 kg
-	\item $m_4$ = 39,676 kg
-	\item $m_5$ = 53,619 kg
-	\item $m_6$ = 4,528 kg
-\end{itemize}
-%
-Die Trägheitstensoren, werden vom CAD-Modell, bezogen auf das KS$\left\{0\right\}$ vorgegeben. Gleichung \ref{eqn:similarity} zeigt, wie diese einmalig über eine Ähnlichkeitstransformation auf das Körperfeste Koordinatensystem KS$\left\{i\right\}$ transformiert werden. Nachfolgend sind die Trägheitstensoren bezogen auf das KS$\left\{0\right\}$ angegeben. 
-%
-\setlist{noitemsep}
-\begin{itemize}
-	\item $I_{1xx} = 17,298~\frac{\text{kg}}{\text{m}^2}$
-	\item $I_{1xy} = -2,711~\frac{\text{kg}}{\text{m}^2}$
-	\item $I_{1xz} = 1,672~\frac{\text{kg}}{\text{m}^2}$
-	\item $I_{1yy} = 32,671~\frac{\text{kg}}{\text{m}^2}$
-	\item $I_{1yz} = -0,493~\frac{\text{kg}}{\text{m}^2}$
-	\item $I_{1zz} = 29,447~\frac{\text{kg}}{\text{m}^2}$
-	\\
-	\item $I_{2xx} = 138,135~\frac{\text{kg}}{\text{m}^2}$
-	\item $I_{2xy} = -0,012~\frac{\text{kg}}{\text{m}^2}$
-	\item $I_{2xz} = 0,387~\frac{\text{kg}}{\text{m}^2}$
-	\item $I_{2yy} = 136,664~\frac{\text{kg}}{\text{m}^2}$
-	\item $I_{2yz} = 9,231~\frac{\text{kg}}{\text{m}^2}$
-	\item $I_{2zz} = 11,838~\frac{\text{kg}}{\text{m}^2}$
-	\\
-	\item $I_{3xx} = 3,031~\frac{\text{kg}}{\text{m}^2}$
-	\item $I_{3xy} = -1,386~\frac{\text{kg}}{\text{m}^2}$
-	\item $I_{3xz} = -0,045~\frac{\text{kg}}{\text{m}^2}$
-	\item $I_{3yy} = 30,03~\frac{\text{kg}}{\text{m}^2}$
-	\item $I_{3yz} = -0,21~\frac{\text{kg}}{\text{m}^2}$
-	\item $I_{3zz} = 29,693~\frac{\text{kg}}{\text{m}^2}$
-	\\
-	\item $I_{4xx} = 0,099~\frac{\text{kg}}{\text{m}^2}$
-	\item $I_{4xy} = -0,032~\frac{\text{kg}}{\text{m}^2}$
-	\item $I_{4xz} = -0,001~\frac{\text{kg}}{\text{m}^2}$
-	\item $I_{4yy} = 0,701~\frac{\text{kg}}{\text{m}^2}$
-	\item $I_{4yz} = -9,367\cdot10^{-6}~\frac{\text{kg}}{\text{m}^2}$
-	\item $I_{4zz} = 0,698~\frac{\text{kg}}{\text{m}^2}$
-	\\
-	\item $I_{5xx} = 0,481~\frac{\text{kg}}{\text{m}^2}$
-	\item $I_{5xy} = 0,118~\frac{\text{kg}}{\text{m}^2}$
-	\item $I_{5xz} = 0.00~\frac{\text{kg}}{\text{m}^2}$
-	\item $I_{5yy} = 0,424~\frac{\text{kg}}{\text{m}^2}$
-	\item $I_{5yz} = 0,00~\frac{\text{kg}}{\text{m}^2}$
-	\item $I_{5zz} = 0,675~\frac{\text{kg}}{\text{m}^2}$
-	\\
-	\item $I_{6xx} = 0,011~\frac{\text{kg}}{\text{m}^2}$
-	\item $I_{6xy} = 5,143\cdot10^{-7}~\frac{\text{kg}}{\text{m}^2}$
-	\item $I_{6xz} = -2,003\cdot10^{-6}~\frac{\text{kg}}{\text{m}^2}$
-	\item $I_{6yy} = 0,006~\frac{\text{kg}}{\text{m}^2}$
-	\item $I_{6yz} = 1,220\cdot10^{07}~\frac{\text{kg}}{\text{m}^2}$
-	\item $I_{6zz} = 0,006~\frac{\text{kg}}{\text{m}^2}$
-\end{itemize}
-%
-Nachfolgend ist die Lage der Massenschwerpunkte $C_i^0$ im KS$\left\{0\right\}$ angegeben. 
-% 
-\begin{itemize}
-	\item $r_{0,C_1}^0$ = $\left[-30,103,~441,~452,213\right]$ mm
-	\item $r_{0,C_2}^0$ = $\left[330,979,~-222,585,~1094,239\right]$ mm
-	\item $r_{0,C_3}^0$ = $\left[705,894,~-8,126,~1908,436\right]$ mm
-	\item $r_{0,C_4}^0$ = $\left[1383,185,~4,492,~1909,983\right]$ mm
-	\item $r_{0,C_5}^0$ = $\left[1601,767,~33,833,~1909,955\right]$ mm
-	\item $r_{0,C_6}^0$ = $\left[1743,222,~-0,007,~1910 051\right]$ mm
-\end{itemize}
-%
-Die Getriebeübersetzung ist der Datei Machine Data (MADA) der Robotersteuerung entnommen.
-%
-\begin{itemize}
-	\item $i_1 = -\frac{7}{1798}$
-	\item $i_2 = -\frac{17}{4576}$
-	\item $i_3 = \frac{3}{754}$
-	\item $i_4 = -\frac{55}{10387}$
-	\item $i_5 = -\frac{483}{91834}$
-	\item $i_6 = \frac{49400}{6485103}$
-\end{itemize}
- %
-Nachfolgend ist die Umsetzung der Parameter Transformation via MATLAB\textsuperscript{\textregistered} gezeigt. 
+%Nachfolgend ist die Umsetzung der Parameter Transformation via MATLAB\textsuperscript{\textregistered} gezeigt. 
 %
 %\includepdf[pages=1-4]{C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis/literature/Anhang/parameter_matlab.pdf}
-\subsection*{Funktionalitäten}
-%
-\begin{itemize}
-	\setlength{\itemsep}{-1ex}
-	\item Vorwärtskinematik für die Ausgangsstellung
-	\item Trägheitsmoment $I^{0}_i$ am Massezentrum in kg mm\^{}2
-	\item Lage der Massenschwerpunkte im Intertialkoordinatensystem KS\{0\}
-	\item $r^{i}_{i,C_i}$
-	\item $r^{i}_{i-1,i}$
-	\item Masse $m_i$
-	\item Getriebe-Übersetzung $i_i$
-\end{itemize}
-\begin{lstlisting}
+\section{Parameter}
+\begin{lstlisting}[language=Matlab, numbers=none]
 	function [I,rec,rae,m,G] = parameter()
 	% Berechnung konstante Parameter
 \end{lstlisting}
 %
-\subsection*{Vorwärtskinematik für die Ausgangsstellung}
+\subsection{Vorwärtskinematik für die Ausgangsstellung}
 %
-\begin{lstlisting}
+\begin{lstlisting}[language=Matlab, numbers=none]
 	[T,~,~] = dhtrafo(0, 0, 0, 0, 0, 0);
 	
 	T01 = T(:,:,1);
@@ -271,9 +374,9 @@ Nachfolgend ist die Umsetzung der Parameter Transformation via MATLAB\textsupers
 	R06 = T06(1:3,1:3);
 \end{lstlisting}
 %
-\subsection*{Trägheitsmoment $I^{0}_i$ am Massezentrum in kg mm\^{}2}
+\subsection{Trägheitsmoment $I^{0}_i$ am Massezentrum in kg mm\^{}2}
 %
-\begin{lstlisting}
+\begin{lstlisting}[language=Matlab, numbers=none]
 	I1xx = 17.298;
 	I1xy = -2.711;
 	I1xz = 1.672;
@@ -338,47 +441,47 @@ Nachfolgend ist die Umsetzung der Parameter Transformation via MATLAB\textsupers
 	% Koordinatensysteme
 	
 	I1base = [ I1xx, I1xy, I1xz;
-					I1yx, I1yy, I1yz;
-					I1zx, I1zy, I1zz];
+	I1yx, I1yy, I1yz;
+	I1zx, I1zy, I1zz];
 	
 	I1 = R01'*I1base*R01;
 	
 	I2base = [ I2xx, I2xy, I2xz;
-					I2yx, I2yy, I2yz;
-					I2zx, I2zy, I2zz];
+	I2yx, I2yy, I2yz;
+	I2zx, I2zy, I2zz];
 	
 	I2 = R02'*I2base*R02;
 	
 	I3base = [ I3xx, I3xy, I3xz;
-					I3yx, I3yy, I3yz;
-					I3zx, I3zy, I3zz];
+	I3yx, I3yy, I3yz;
+	I3zx, I3zy, I3zz];
 	
 	I3 = R03'*I3base*R03;
 	
 	I4base = [ I4xx, I4xy, I4xz;
-					I4yx, I4yy, I4yz;
-					I4zx, I4zy, I4zz];
-					
+	I4yx, I4yy, I4yz;
+	I4zx, I4zy, I4zz];
+	
 	I4 = R04'*I4base*R04;
 	
 	I5base = [ I5xx, I5xy, I5xz;
-					I5yx, I5yy, I5yz;
-					I5zx, I5zy, I5zz];
+	I5yx, I5yy, I5yz;
+	I5zx, I5zy, I5zz];
 	
 	I5 = R05'*I5base*R05;
 	
 	I6base = [ I6xx, I6xy, I6xz;
-					I6yx, I6yy, I6yz;
-					I6zx, I6zy, I6zz];
+	I6yx, I6yy, I6yz;
+	I6zx, I6zy, I6zz];
 	
 	I6 = R06'*I6base*R06;
 	
 	I = cat(3,I1,I2,I3,I4,I5,I6);
 \end{lstlisting}
 %
-\subsection*{Lage der Massenschwerpunkte im Intertialkoordinatensystem KS\{0\}}
+\subsection{Lage der Massenschwerpunkte im Intertialkoordinatensystem KS\{0\}}
 %
-\begin{lstlisting}
+\begin{lstlisting}[language=Matlab, numbers=none]
 	com1 = [-30.103; 4.41; 452.213]/1000;
 	com2 = [330.979; -222.585; 1094.239]/1000;
 	com3 = [705.894; -8.126; 1908.436]/1000;
@@ -387,9 +490,9 @@ Nachfolgend ist die Umsetzung der Parameter Transformation via MATLAB\textsupers
 	com6 = [1743.222; -0.007; 1910.051]/1000;
 \end{lstlisting}
 %
-\subsection*{$r^{i}_{i,C_i}$}
+\subsection{$r^{i}_{i,C_i}$}
 %
-\begin{lstlisting}
+\begin{lstlisting}[language=Matlab, numbers=none]
 	r1e_c1 = (T01)\[com1;1]; r1e_c1 = r1e_c1(1:3,1);
 	r2e_c2 = (T02)\[com2;1]; r2e_c2 = r2e_c2(1:3,1);
 	r3e_c3 = (T03)\[com3;1]; r3e_c3 = r3e_c3(1:3,1);
@@ -400,9 +503,9 @@ Nachfolgend ist die Umsetzung der Parameter Transformation via MATLAB\textsupers
 	rec= cat(3, r1e_c1, r2e_c2, r3e_c3, r4e_c4, r5e_c5, r6e_c6);
 \end{lstlisting}
 %
-\subsection*{$r^{i}_{i-1,i}$}
+\subsection{$r^{i}_{i-1,i}$}
 %
-\begin{lstlisting}
+\begin{lstlisting}[language=Matlab, numbers=none]
 	r1a_e = -inv(T01); r1a_e = r1a_e(1:3,4);
 	r2a_e = -inv(T12); r2a_e = r2a_e(1:3,4);
 	r3a_e = -inv(T23); r3a_e = r3a_e(1:3,4);
@@ -413,9 +516,9 @@ Nachfolgend ist die Umsetzung der Parameter Transformation via MATLAB\textsupers
 	rae = cat(3, r1a_e, r2a_e, r3a_e, r4a_e, r5a_e, r6a_e);
 \end{lstlisting}
 %
-\subsection*{Masse $m_i$}
+\subsection{Masse $m_i$}
 %
-\begin{lstlisting}
+\begin{lstlisting}[language=Matlab, numbers=none]
 	m1 = 535;
 	m2 = 696.3;
 	m3 = 361.6; % +65.3 kg für die Schlauchpaket-Halterung +50 kg für die Antriebe 4 und 5;
@@ -425,9 +528,9 @@ Nachfolgend ist die Umsetzung der Parameter Transformation via MATLAB\textsupers
 	m = [m1,m2,m3,m4,m5,m6];
 \end{lstlisting}
 %
-\subsection*{Getriebe-Übersetzung $i_i$}
+\subsection{Getriebe-Übersetzung $i_i$}
 %
-\begin{lstlisting}
+\begin{lstlisting}[language=Matlab, numbers=none]
 	i1 = -7/1798;
 	i2 = -17/4576;
 	i3 = 3/754;
@@ -436,36 +539,17 @@ Nachfolgend ist die Umsetzung der Parameter Transformation via MATLAB\textsupers
 	i6 = 49400/6485103;
 	G = [i1, i2, i3, i4, i5, i6];
 \end{lstlisting}
-\begin{lstlisting}
-	end
-\end{lstlisting}
 %
 \section{RNEA}
 \label{add:rnea}
 %\includepdf[pages=1-2]{C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis/literature/Anhang/rnea_matlab.pdf}
-\subsection*{Funktionalitäten}
-%
-\begin{itemize}
-	\setlength{\itemsep}{-1ex}
-	\item Initialisierung
-	\item Vorwärtskinematik
-	\item Parameter in der Reihenfolge: $I^{i}_{i}$, $r^{i}_{i,C_i}$, $r^{i}_{i-1,i}$, $m_i$, $i_i$
-	\item Winkelgeschwindigkeit $\omega^{i}_i$
-	\item Winkelbeschleunigung $\dot\omega^{i}_i$
-	\item Lineare Beschleunigung $\ddot p^{i}_i$ (Siciliano) $a_e$ (Spong)
-	\item Lineare Beschleunigung $\ddot p^{i}_{C_i}$ (Siciliano) $a_c$ (Spong)
-	\item Gewichtsausgleich
-	\item Kraft $f^{i}_i$
-	\item Drehmoment $\mu^{i}_i$
-	\item Drehmoment $\tau_i$ im KS\{i-1\}
-\end{itemize}
-\begin{lstlisting}
+\begin{lstlisting}[language=Matlab, numbers=none]
 	function [tau,P_mech] = rnea(q1, q2, q3, q4, q5, q6, qd1, qd2, qd3, qd4, qd5, qd6, qdd1, qdd2, qdd3, qdd4, qdd5, qdd6)
 \end{lstlisting}
 %
-\subsection*{Initialisierung}
+\subsection{Initialisierung}
 %
-\begin{lstlisting}
+\begin{lstlisting}[language=Matlab, numbers=none]
 	qd = [qd1, qd2, qd3, qd4, qd5, qd6];
 	qdd = [qdd1, qdd2, qdd3, qdd4, qdd5, qdd6];
 	omega = zeros(3,1,6);
@@ -478,161 +562,148 @@ Nachfolgend ist die Umsetzung der Parameter Transformation via MATLAB\textsupers
 	P_mech = zeros(1,1,6);
 \end{lstlisting}
 %
-\subsection*{Vorwärtskinematik}
+\subsection{Vorwärtskinematik}
 %
-\begin{lstlisting}
+\begin{lstlisting}[language=Matlab, numbers=none]
 	[~,R,R0i] = dhtrafo(q1, q2, q3, q4, q5, q6);
 \end{lstlisting}
 %
-\subsection*{Parameter in der Reihenfolge: $I^{i}_{i}$, $r^{i}_{i,C_i}$, $r^{i}_{i-1,i}$, $m_i$, $i_i$}
+\subsection{Parameter in der Reihenfolge: $I^{i}_{i}$, $r^{i}_{i,C_i}$, $r^{i}_{i-1,i}$, $m_i$, $i_i$}
 %
-\begin{lstlisting}
+\begin{lstlisting}[language=Matlab, numbers=none]
 	[I,rec,rae,m,G] = parameter();
 \end{lstlisting}
 %
-\subsection*{Winkelgeschwindigkeit $\omega^{i}_i$}
+\subsection{Winkelgeschwindigkeit $\omega^{i}_i$}
 %
-\begin{lstlisting}
+\begin{lstlisting}[language=Matlab, numbers=none]
 	for i=1:6
-	if i == 1
-	omega(:,:,i) = R(:,:,i)'*([0;0;0] + qd(i)*[0;0;1]);
-	else
-	omega(:,:,i) = R(:,:,i)'*(omega(:,:,i-1) + qd(i)*[0;0;1]);
-	end
+		if i == 1
+			omega(:,:,i) = R(:,:,i)'*([0;0;0] + qd(i)*[0;0;1]);
+		else
+			omega(:,:,i) = R(:,:,i)'*(omega(:,:,i-1) + qd(i)*[0;0;1]);
+		end
 	end
 \end{lstlisting}
 %
-\subsection*{Winkelbeschleunigung $\dot\omega^{i}_i$}
+\subsection{Winkelbeschleunigung $\dot\omega^{i}_i$}
 %
-\begin{lstlisting}
+\begin{lstlisting}[language=Matlab, numbers=none]
 	for i=1:1:6
-	if i == 1
-	omega_d(:,:,i) = R(:,:,i)'*([0;0;0] + qdd(i)*[0;0;1]+cross(qd(i)*[0;0;0], [0;0;1]));
-	else
-	omega_d(:,:,i) = R(:,:,i)'*(omega_d(:,:,i-1) + qdd(i)*[0;0;1]+cross(qd(i)*omega(:,:,i-1), [0;0;1]));
-	end
+		if i == 1
+			omega_d(:,:,i) = R(:,:,i)'*([0;0;0] + qdd(i)*[0;0;1]+cross(qd(i)*[0;0;0], [0;0;1]));
+		else
+			omega_d(:,:,i) = R(:,:,i)'*(omega_d(:,:,i-1) + qdd(i)*[0;0;1]+cross(qd(i)*omega(:,:,i-1), [0;0;1]));
+		end
 	end
 \end{lstlisting}
 %
-\subsection*{Lineare Beschleunigung $\ddot p^{i}_i$ (Siciliano) $a_e$ (Spong)}
+\subsection{Lineare Beschleunigung $\ddot p^{i}_i$ (Siciliano) $a_e$ (Spong)}
 %
-\begin{lstlisting}
+\begin{lstlisting}[language=Matlab, numbers=none]
 	for i=1:6
-	if i == 1
-	a(:,:,i) = R(:,:,i)'* [0;0;-9.81] + cross(omega_d(:,:,i),rae(:,:,i)) + cross(omega(:,:,i),(cross(omega(:,:,i), rae(:,:,i))));
-	else
-	a(:,:,i) = R(:,:,i)'*a(:,:,i-1) + cross(omega_d(:,:,i),rae(:,:,i)) + cross(omega(:,:,i),(cross(omega(:,:,i), rae(:,:,i))));
-	end
+		if i == 1
+			a(:,:,i) = R(:,:,i)'* [0;0;-9.81] + cross(omega_d(:,:,i),rae(:,:,i)) + cross(omega(:,:,i),(cross(omega(:,:,i), rae(:,:,i))));
+		else
+			a(:,:,i) = R(:,:,i)'*a(:,:,i-1) + cross(omega_d(:,:,i),rae(:,:,i)) + cross(omega(:,:,i),(cross(omega(:,:,i), rae(:,:,i))));
+		end
 	end
 \end{lstlisting}
 %
-\subsection*{Lineare Beschleunigung $\ddot p^{i}_{C_i}$ (Siciliano) $a_c$ (Spong)}
+\subsection{Lineare Beschleunigung $\ddot p^{i}_{C_i}$ (Siciliano) $a_c$ (Spong)}
 %
-\begin{lstlisting}
+\begin{lstlisting}[language=Matlab, numbers=none]
 	for i=1:1:6
-	a_com(:,:,i) = a(:,:,i) + cross(omega_d(:,:,i),rec(:,:,i)) + cross(omega(:,:,i),(cross(omega(:,:,i), rec(:,:,i))));
+		a_com(:,:,i) = a(:,:,i) + cross(omega_d(:,:,i),rec(:,:,i)) + cross(omega(:,:,i),(cross(omega(:,:,i), rec(:,:,i))));
 	end
 \end{lstlisting}
 %
-\subsection*{Gewichtsausgleich}
+\subsection{Gewichtsausgleich}
 %
-\begin{lstlisting}
+\begin{lstlisting}[language=Matlab, numbers=none]
 	F_gravity = zeros(3, 1, 6); % Vektor für die Gewichtskraft
-	for i = 1:6
-	F_gravity(:,:,i) = m(i) * [0; 0; -9.81]; % Gewichtskraft in Weltkoordinaten
-	F_gravity(:,:,i) = R0i(:,:,i)' * F_gravity(:,:,i); % Gewichtskraft ins Körpersystem transformieren
+		for i = 1:6
+		F_gravity(:,:,i) = m(i) * [0; 0; -9.81]; % Gewichtskraft in Weltkoordinaten
+		F_gravity(:,:,i) = R0i(:,:,i)' * F_gravity(:,:,i); % Gewichtskraft ins Körpersystem transformieren
 	end
 	
 	for i = 3:-1:2
-	if i == 3
-	fgrav(:,:,i) = eye(3)*F_gravity(:,:,i);
-	mugrav(:,:,i) = cross(-fgrav(:,:,i),(rae(:,:,i)+rec(:,:,i)));
-	else
-	fgrav(:,:,i) = R(:,:,i+1)*fgrav(:,:,i+1) + eye(3)*F_gravity(:,:,i);
-	mugrav(:,:,i) = cross(-fgrav(:,:,i),(rae(:,:,i)+rec(:,:,i))) + R(:,:,i+1)*mugrav(:,:,i+1) + R(:,:,i+1)*cross(fgrav(:,:,i+1), rec(:,:,i));
-	end
+		if i == 3
+			fgrav(:,:,i) = eye(3)*F_gravity(:,:,i);
+			mugrav(:,:,i) = cross(-fgrav(:,:,i),(rae(:,:,i)+rec(:,:,i)));
+		else
+			fgrav(:,:,i) = R(:,:,i+1)*fgrav(:,:,i+1) + eye(3)*F_gravity(:,:,i);
+			mugrav(:,:,i) = cross(-fgrav(:,:,i),(rae(:,:,i)+rec(:,:,i))) + R(:,:,i+1)*mugrav(:,:,i+1) + R(:,:,i+1)*cross(fgrav(:,:,i+1), rec(:,:,i));
+		end
 	end
 \end{lstlisting}
 %
-\subsection*{Kraft $f^{i}_i$}
+\subsection{Kraft $f^{i}_i$}
 %
-\begin{lstlisting}
+\begin{lstlisting}[language=Matlab, numbers=none]
 	for i = 6:-1:1
-	if i == 6
-	f(:,:,i) = eye(3)*[0;0;0] + m(i)*a_com(:,:,i);
-	elseif i == 2
-	f(:,:,i) = R(:,:,i+1)*f(:,:,i+1) + m(i)*a_com(:,:,i);
-	else
-	f(:,:,i) = R(:,:,i+1)*f(:,:,i+1) + m(i)*a_com(:,:,i);
-	end
+		if i == 6
+			f(:,:,i) = eye(3)*[0;0;0] + m(i)*a_com(:,:,i);
+		elseif i == 2
+			f(:,:,i) = R(:,:,i+1)*f(:,:,i+1) + m(i)*a_com(:,:,i);
+		else
+			f(:,:,i) = R(:,:,i+1)*f(:,:,i+1) + m(i)*a_com(:,:,i);
+		end
 	end
 \end{lstlisting}
 %
-\subsection*{Drehmoment $\mu^{i}_i$}
-%
-\begin{par}
-	Übertragung des Drehmoments von der zweiten auf die ersten Achse ist zu Null gesetzt
-\end{par} \vspace{1em}
-\begin{lstlisting}
+\subsection{Drehmoment $\mu^{i}_i$}
+Übertragung des Drehmoments von der zweiten auf die ersten Achse ist zu Null gesetzt
+\begin{lstlisting}[language=Matlab, numbers=none]
 	for i = 6:-1:1
-	if i == 6
-	mu(:,:,i) = cross(-f(:,:,i),(rae(:,:,i)+rec(:,:,i))) + eye(3)*[0;0;0] + eye(3)*cross([0;0;0], rec(:,:,i)) + I(:,:,i)*omega_d(:,:,i) + cross(omega(:,:,i),(I(:,:,i)*omega(:,:,i)));
-	elseif i == 2
-	mu(:,:,i) = cross(-f(:,:,i),(rae(:,:,i)+rec(:,:,i))) + R(:,:,i+1)*mu(:,:,i+1) + R(:,:,i+1)*cross(f(:,:,i+1), rec(:,:,i)) + I(:,:,i)*omega_d(:,:,i) + cross(omega(:,:,i),(I(:,:,i)*omega(:,:,i)))- mugrav(:,:,i);
-	elseif i == 1
-	mu(:,:,i) = cross(-f(:,:,i),(rae(:,:,i)+rec(:,:,i))) + R(:,:,i+1)*cross(f(:,:,i+1), rec(:,:,i)) + I(:,:,i)*omega_d(:,:,i) + cross(omega(:,:,i),(I(:,:,i)*omega(:,:,i)));
-	else
-	mu(:,:,i) = cross(-f(:,:,i),(rae(:,:,i)+rec(:,:,i))) + R(:,:,i+1)*mu(:,:,i+1) + R(:,:,i+1)*cross(f(:,:,i+1), rec(:,:,i)) + I(:,:,i)*omega_d(:,:,i) + cross(omega(:,:,i),(I(:,:,i)*omega(:,:,i)));
-	end
+		if i == 6
+			mu(:,:,i) = cross(-f(:,:,i),(rae(:,:,i)+rec(:,:,i))) + eye(3)*[0;0;0] + eye(3)*cross([0;0;0], rec(:,:,i)) + I(:,:,i)*omega_d(:,:,i) + cross(omega(:,:,i),(I(:,:,i)*omega(:,:,i)));
+		elseif i == 2
+			mu(:,:,i) = cross(-f(:,:,i),(rae(:,:,i)+rec(:,:,i))) + R(:,:,i+1)*mu(:,:,i+1) + R(:,:,i+1)*cross(f(:,:,i+1), rec(:,:,i)) + I(:,:,i)*omega_d(:,:,i) + 	cross(omega(:,:,i),(I(:,:,i)*omega(:,:,i)))- mugrav(:,:,i);
+		elseif i == 1
+			mu(:,:,i) = cross(-f(:,:,i),(rae(:,:,i)+rec(:,:,i))) + R(:,:,i+1)*cross(f(:,:,i+1), rec(:,:,i)) + I(:,:,i)*omega_d(:,:,i) + 	cross(omega(:,:,i),(I(:,:,i)*omega(:,:,i)));
+		else
+			mu(:,:,i) = cross(-f(:,:,i),(rae(:,:,i)+rec(:,:,i))) + R(:,:,i+1)*mu(:,:,i+1) + R(:,:,i+1)*cross(f(:,:,i+1), rec(:,:,i)) + I(:,:,i)*omega_d(:,:,i) + 	cross(omega(:,:,i),(I(:,:,i)*omega(:,:,i)));
+		end
 	end
 \end{lstlisting}
 %
-\subsection*{Drehmoment $\tau_i$ im KS\{i-1\}}
+\subsection{Drehmoment $\tau_i$ im KS\{i-1\}}
 %
-\begin{lstlisting}
+\begin{lstlisting}[language=Matlab, numbers=none]
 	for i = 1:1:6
-	tau(i) = transpose(mu(:,:,i)) * transpose(R(:,:,i))*[0;0;1];%* G(i)
+		tau(i) = transpose(mu(:,:,i)) * transpose(R(:,:,i))*[0;0;1];%* G(i)
 	end
+	
 	for i = 1:1:6
-	P_mech(i) = tau(i)*qd(i);%/G(i);
+		P_mech(i) = tau(i)*qd(i);%/G(i);
 	end
 \end{lstlisting}
-\begin{lstlisting}
+\begin{lstlisting}[language=Matlab, numbers=none]
 	end
 \end{lstlisting}
 \section{Bahnplanung}
 \label{add:traj}
 %\includepdf[pages=1]{C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis/literature/Anhang/trajectorie_planning_sixth_order_matlab.pdf}
-\subsection*{Funktionalitäten}
-%
-\begin{itemize}
-	\setlength{\itemsep}{-1ex}
-	\item Initialisierung
-	\item Aufstellen der Polynome
-	\item Definition der Nebenbedingungen
-	\item Berechnnung der Koeffizienten $a_0,...,a_6$
-	\item Berechnung der Trajektorie
-\end{itemize}
-\begin{lstlisting}
+\begin{lstlisting}[language=Matlab, numbers=none]
 	function [q,qd,qdd,t] = trajectorie_planning_sixth_order(ts, te, tv, stepsize, qs, qds, qdds, qv, qe, qde, qdde)
 \end{lstlisting}
-\begin{lstlisting}
-	% Bahnplanung über ein Polynom 6-ter Ordnung inkl. Gelenkwinkel-Definition
-	% des Via-Punkts
+\begin{lstlisting}[language=Matlab, numbers=none]
+	% Bahnplanung über ein Polynom 6-ter Ordnung inkl. Gelenkwinkel-Definition des Via-Punkts
 \end{lstlisting}
 %
-\subsection*{Initialisierung}
+\subsection{Initialisierung}
 %
-\begin{lstlisting}
+\begin{lstlisting}[language=Matlab, numbers=none]
 	t = ts:stepsize:te;
 	q = zeros(1,1)*(length(t));
 	qd = zeros(1,1)*(length(t));
 	qdd = zeros(1,1)*(length(t));
 \end{lstlisting}
 %
-\subsection*{Aufstellen der Polynome}
+\subsection{Aufstellen der Polynome}
 %
-\begin{lstlisting}
+\begin{lstlisting}[language=Matlab, numbers=none]
 	T = [ 1, ts, ts^2, ts^3, ts^4, ts^5, ts^6;
 	0, 1, 2*ts, 3*ts^2, 4*ts^3, 5*ts^4, 6*ts^5;
 	0, 0, 2, 6*ts, 12*ts^2, 20*ts^3, 30*ts^4;
@@ -642,69 +713,41 @@ Nachfolgend ist die Umsetzung der Parameter Transformation via MATLAB\textsupers
 	0, 0, 2, 6*te, 12*te^2, 20*te^3, 30*te^4];
 \end{lstlisting}
 %
-\subsection*{Definition der Nebenbedingungen}
+\subsection{Definition der Nebenbedingungen}
 %
-\begin{lstlisting}
+\begin{lstlisting}[language=Matlab, numbers=none]
 	p = [qs, qds, qdds, qv, qe, qde, qdde];
 \end{lstlisting}
 %
-\subsection*{Berechnnung der Koeffizienten $a_0,...,a_6$}
+\subsection{Berechnnung der Koeffizienten $a_0,...,a_6$}
 %
 \begin{par}
 	a = [a0, a1, a2, a3, a4, a5, a6]'
 \end{par} \vspace{1em}
-\begin{lstlisting}
+\begin{lstlisting}[language=Matlab, numbers=none]
 	a = T\p';
 \end{lstlisting}
 %
-\subsection*{Berechnung der Trajektorie}
+\subsection{Berechnung der Trajektorie}
 %
-\begin{lstlisting}
+\begin{lstlisting}[language=Matlab, numbers=none]
 	for index = 1:length(t)
 	q(index) = a(1,1) + a(2,1)*t(index) + a(3,1)*(t(index))^2 + a(4,1)*(t(index))^3 +a(5,1)*(t(index))^4 + a(6,1)*(t(index))^5 + a(7,1)*(t(index))^6;
 	qd(index) = a(2,1) + 2*a(3,1)*(t(index)) + 3*a(4,1)*(t(index))^2 +4*a(5,1)*(t(index))^3 + 5*a(6,1)*(t(index))^4 + 6*a(7,1)*(t(index))^5;
 	qdd(index) = 2*a(3,1) + 6*a(4,1)*(t(index)) +12*a(5,1)*(t(index))^2 + 20*a(6,1)*(t(index))^3 + 30*a(7,1)*(t(index))^4;
 	end
 \end{lstlisting}
-\begin{lstlisting}
-	end
-\end{lstlisting}
-%
-\setcounter{chapter}{2}
-\setcounter{section}{5}
-\setcounter{table}{0}
-\setcounter{figure}{0}
 %
 \section{Testsimulation Bahnplanung}
 \label{add:sim}
-%\includepdf[pages=1-2]{C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis/literature/Anhang/simulation_matlab.pdf}
-\subsection*{Funktionalitäten}
 %
-\begin{itemize}
-	\setlength{\itemsep}{-1ex}
-	\item Trajektorie Kleben Seitenwand
-	\item Bewegung 1 (home -\ensuremath{>} Vorposition)
-	\item Bewegung 3 (letzter Punkt der Trajektorie Kleben Seitenwand -\ensuremath{>} home)
-	\item Bahnplanung
-	\item Modellberechnung der Drehmomente, Leistungsaufnahme
-	\item Daten Vorverarbeitung
-	\item Anzeige der Daten
-	\item Erzeuge die Abbildungen
-\end{itemize}
-\begin{lstlisting}
-	hold off
-	close all
-	clear
-	clc
-\end{lstlisting}
+\subsection{Trajektorie Kleben Seitenwand}
 %
-\subsection*{Trajektorie Kleben Seitenwand}
-%
-\begin{lstlisting}
+\begin{lstlisting}[language=Matlab, numbers=none]
 	te = 1.2; % Bewegungsdauer
 \end{lstlisting}
 %
-\subsection*{Bewegung 1 (home -\ensuremath{>} Vorposition)}
+\subsection{Bewegung 1 (home -\ensuremath{>} Vorposition)}
 %
 \begin{par}
 	\% Startwert Gelenkwinkel qs1 = deg2rad(-7.61); qs2 = deg2rad(-119.27); qs3 = deg2rad(88.49-90); qs4 = deg2rad(10.27); qs5 = deg2rad(32.41); qs6 = deg2rad(-10.19);
@@ -712,7 +755,7 @@ Nachfolgend ist die Umsetzung der Parameter Transformation via MATLAB\textsupers
 \begin{par}
 	\% Zielwert Gelenkwinkel qe1 = deg2rad(-14.83); qe2 = deg2rad(-105.81); qe3 = deg2rad(136.16-90); qe4 = deg2rad(-27.67); qe5 = deg2rad(-33.44); qe6 = deg2rad(22.89);
 \end{par} \vspace{1em}
-\begin{lstlisting}
+\begin{lstlisting}[language=Matlab, numbers=none]
 	% optimierte Via-Punkte
 	% qvd = [];
 	% qv1 = deg2rad(qvd(1));
@@ -723,12 +766,12 @@ Nachfolgend ist die Umsetzung der Parameter Transformation via MATLAB\textsupers
 	% qv6 = (deg2rad(qvd(6))+(qs6+qe6)*1/2)*1/2;
 \end{lstlisting}
 %
-\subsection*{Bewegung 3 (letzter Punkt der Trajektorie Kleben Seitenwand -\ensuremath{>} home)}
+\subsection{Bewegung 3 (letzter Punkt der Trajektorie Kleben Seitenwand -\ensuremath{>} home)}
 %
 \begin{par}
 	Startwert Gelenkwinkel
 \end{par} \vspace{1em}
-\begin{lstlisting}
+\begin{lstlisting}[language=Matlab, numbers=none]
 	qs1 = deg2rad(-53.8);
 	qs2 = deg2rad(-70.34);
 	qs3 = deg2rad(98.82-90);
@@ -762,9 +805,9 @@ Nachfolgend ist die Umsetzung der Parameter Transformation via MATLAB\textsupers
 	qv6 = (deg2rad(qvu(6))+(qs6+qe6)*1/2)*1/2;
 \end{lstlisting}
 %
-\subsection*{Bahnplanung}
+\subsection{Bahnplanung}
 %
-\begin{lstlisting}
+\begin{lstlisting}[language=Matlab, numbers=none]
 	stepsize = 0.004;
 	ts = 0; % Startzeit
 	tv = (te-ts)/2; % Via-Punkt Zeitpunkt
@@ -802,9 +845,9 @@ Nachfolgend ist die Umsetzung der Parameter Transformation via MATLAB\textsupers
 	[q6,qd6,qdd6,t] = trajectorie_planning_sixth_order(ts, te, tv, stepsize, qs(6), qds(6), qdds(6), qv(6), qe(6), qde(6), qdde(6));
 \end{lstlisting}
 %
-\subsection*{Modellberechnung der Drehmomente, Leistungsaufnahme}
+\subsection{Modellberechnung der Drehmomente, Leistungsaufnahme}
 %
-\begin{lstlisting}
+\begin{lstlisting}[language=Matlab, numbers=none]
 	% Initialisierung
 	tau = zeros(length(t));
 	Pmech = zeros(length(t));
@@ -829,25 +872,24 @@ Nachfolgend ist die Umsetzung der Parameter Transformation via MATLAB\textsupers
 	end
 \end{lstlisting}
 %
-\subsection*{Daten Vorverarbeitung}
+\subsection{Daten Vorverarbeitung}
 %
-\begin{lstlisting}
+\begin{lstlisting}[language=Matlab, numbers=none]
 	for index = 1:1:(length(t))
-	for var = 1:6
-	if Pmech(index,var) > 0
-	Pmech_sink(index,var) = Pmech(index,var);
-	else
-	Pmech_diss(index,var) = Pmech(index,var);
-	Pmech_sink(index,var) = 0;
-	
-	end
-	end
+		for var = 1:6
+			if Pmech(index,var) > 0
+				Pmech_sink(index,var) = Pmech(index,var);
+			else
+				Pmech_diss(index,var) = Pmech(index,var);
+				Pmech_sink(index,var) = 0;
+			end
+		end
 	end
 \end{lstlisting}
 %
-\subsection*{Anzeige der Daten}
+\subsection{Anzeige der Daten}
 %
-\begin{lstlisting}
+\begin{lstlisting}[language=Matlab, numbers=none]
 	disp('qv1');disp(rad2deg(qv1));
 	disp('qv2');disp(rad2deg(qv2));
 	disp('qv3');disp(rad2deg(qv3));
@@ -860,9 +902,9 @@ Nachfolgend ist die Umsetzung der Parameter Transformation via MATLAB\textsupers
 	E_mech = sum(sum(Pmech_sink)/length(t))*(te-ts); disp('Aufgenommene Energie in J'); disp(E_mech);
 \end{lstlisting}
 %
-\subsection*{Erzeuge die Abbildungen}
+\subsection{Erzeuge die Abbildungen}
 %
-\begin{lstlisting}
+\begin{lstlisting}[language=Matlab, numbers=none]
 	show_graphics(q1, q2, q3, q4, q5, q6, qd1, qd2, qd3, qd4, qd5, qd6, qdd1, qdd2, qdd3, qdd4, qdd5, qdd6, t, tau, Pmech)
 \end{lstlisting}
 %
@@ -870,27 +912,17 @@ Nachfolgend ist die Umsetzung der Parameter Transformation via MATLAB\textsupers
 \section{Berechnung der Zielfunktion}
 %
 \label{add:zielfunktion}
-\subsection*{Funktionalitäten}
-%
-\begin{itemize}
-	\setlength{\itemsep}{-1ex}
-	\item Bahnplanung
-	\item jacobi
-	\item Modellberechnung der Drehmomente, Leistungsaufnahme
-	\item Daten Vorverarbeitung
-	\item Anzeige der Daten
-\end{itemize}
-\begin{lstlisting}
+\begin{lstlisting}[language=Matlab, numbers=none]
 	function [E_mech] = calc_objective(qs,qe,qv,te)
 \end{lstlisting}
-\begin{lstlisting}
+\begin{lstlisting}[language=Matlab, numbers=none]
 	% Berechung der Zielfunktion (Energieverbrauch) über die nicht
 	% dissipierte mechanische Leistung
 \end{lstlisting}
 %
-\subsection*{Bahnplanung}
+\subsection{Bahnplanung}
 %
-\begin{lstlisting}
+\begin{lstlisting}[language=Matlab, numbers=none]
 	stepsize = 0.004;
 	ts = 0;
 	tv = (te-ts)/2;
@@ -922,9 +954,9 @@ Nachfolgend ist die Umsetzung der Parameter Transformation via MATLAB\textsupers
 	[q6,qd6,qdd6,t] = trajectorie_planning_sixth_order(ts, te, tv, stepsize, qs(6), qds(6), qdds(6), qv(6), qe(6), qde(6), qdde(6));
 \end{lstlisting}
 %
-\subsection*{Modellberechnung der Drehmomente, Leistungsaufnahme}
+\subsection{Modellberechnung der Drehmomente, Leistungsaufnahme}
 %
-\begin{lstlisting}
+\begin{lstlisting}[language=Matlab, numbers=none]
 	% Initialisierung
 	tau = zeros(length(t));
 	Pmech = zeros(length(t));
@@ -948,56 +980,35 @@ Nachfolgend ist die Umsetzung der Parameter Transformation via MATLAB\textsupers
 	end
 \end{lstlisting}
 %
-\subsection*{Daten Vorverarbeitung}
+\subsection{Daten Vorverarbeitung}
 %
-\begin{lstlisting}
+\begin{lstlisting}[language=Matlab, numbers=none]
 	for index = 1:1:(length(t))
-	for var = 1:6
-	if Pmech(index,var) > 0
-	Pmech_sink(index,var) = Pmech(index,var);
-	else
-	Pmech_diss(index,var) = Pmech(index,var);
-	Pmech_sink(index,var) = 0;
-	end
-	end
+		for var = 1:6
+			if Pmech(index,var) > 0
+				Pmech_sink(index,var) = Pmech(index,var);
+				else
+				Pmech_diss(index,var) = Pmech(index,var);
+				Pmech_sink(index,var) = 0;
+			end
+		end
 	end
 \end{lstlisting}
 %
-\subsection*{Anzeige der Daten}
+\subsection{Anzeige der Daten}
 %
-\begin{lstlisting}
+\begin{lstlisting}[language=Matlab, numbers=none]
 	torque = sum(sum((tau).^2))/length(t);
 	E_mech = sum(sum((Pmech_sink))/length(t))*(te-ts); disp('E in J'); disp(E_mech);
-\end{lstlisting}
-\begin{lstlisting}
-	end
 \end{lstlisting}
 %
 %
 \section{Optimierung}
-\label{acc:optimierer}
+\label{add:optimierer}
 %
-\subsection*{Funktionalitäten}
+\subsection{KlebenSeitenwand}
 %
-\begin{itemize}
-	\setlength{\itemsep}{-1ex}
-	\item KlebenSeitenwand
-	\item Bewegung 1 (home -\ensuremath{>} Vorposition)
-	\item Bewegung 3 (letzter Punkt der Trajektorie Kleben Seitenwand -\ensuremath{>} home)
-	\item Startwert Via-Punkte
-	\item Initial-Trajektorie-Definition
-	\item Definition Optimierer
-\end{itemize}
-\begin{lstlisting}
-	hold off
-	close all
-	clear
-	clc
-\end{lstlisting}
-%
-\subsection*{KlebenSeitenwand}
-%
-\subsection*{Bewegung 1 (home -\ensuremath{>} Vorposition)}
+\subsection{Bewegung 1 (home -\ensuremath{>} Vorposition)}
 %
 \begin{par}
 	\% Startwert Gelenkwinkel qs1 = deg2rad(-7.61); qs2 = deg2rad(-119.27); qs3 = deg2rad(88.49-90); qs4 = deg2rad(10.27); qs5 = deg2rad(32.41); qs6 = deg2rad(-10.19);
@@ -1006,12 +1017,12 @@ Nachfolgend ist die Umsetzung der Parameter Transformation via MATLAB\textsupers
 	\% Zielwert Gelenkwinkel qe1 = deg2rad(-14.83); qe2 = deg2rad(-105.81); qe3 = deg2rad(136.16-90); qe4 = deg2rad(-27.67); qe5 = deg2rad(-33.44); qe6 = deg2rad(22.89);
 \end{par} \vspace{1em}
 %
-\subsection*{Bewegung 3 (letzter Punkt der Trajektorie Kleben Seitenwand -\ensuremath{>} home)}
+\subsection{Bewegung 3 (letzter Punkt der Trajektorie Kleben Seitenwand -\ensuremath{>} home)}
 %
 \begin{par}
 	Startwert Gelenkwinkel
 \end{par} \vspace{1em}
-\begin{lstlisting}
+\begin{lstlisting}[language=Matlab, numbers=none]
 	qs1 = deg2rad(-53.8);
 	qs2 = deg2rad(-70.34);
 	qs3 = deg2rad(98.82-90);
@@ -1028,9 +1039,9 @@ Nachfolgend ist die Umsetzung der Parameter Transformation via MATLAB\textsupers
 	qe6 = deg2rad(-10.19);
 \end{lstlisting}
 %
-\subsection*{Startwert Via-Punkte}
+\subsection{Startwert Via-Punkte}
 %
-\begin{lstlisting}
+\begin{lstlisting}[language=Matlab, numbers=none]
 	denum = 1; % Testen von Startwerten, die von Mittelpunkt abweichen
 	qv1 = (qs1+qe1)*1/2;%-(abs(qs1-qe1)/2)/denum;
 	qv2 = (qs2+qe2)*1/2;%-(abs(qs1-qe1)/2)/denum;
@@ -1040,30 +1051,30 @@ Nachfolgend ist die Umsetzung der Parameter Transformation via MATLAB\textsupers
 	qv6 = (qs6+qe6)*1/2;%-(abs(qs1-qe1)/2)/denum;
 \end{lstlisting}
 %
-\subsection*{Initial-Trajektorie-Definition}
+\subsection{Initial-Trajektorie-Definition}
 %
-\begin{lstlisting}
+\begin{lstlisting}[language=Matlab, numbers=none]
 	te = 1.2;
 	qs = [qs1,qs2,qs3,qs4,qs5,qs6];
 	qe = [qe1,qe2,qe3,qe4,qe5,qe6];
 	qv = [qv1,qv2,qv3,qv4,qv5,qv6];
 \end{lstlisting}
 %
-\subsection*{Definition Optimierer}
+\subsection{Definition Optimierer}
 %
 \begin{par}
 	Zielfunktion
 \end{par} \vspace{1em}
-\begin{lstlisting}
+\begin{lstlisting}[language=Matlab, numbers=none]
 	objective = @(qv) calc_objective(qs,qe,qv,te);
 	% Startwert
 	x0 = qv;
 	% Anzeige des Energieverbrauchs beim Start der Optimierung
 	disp(['initial Objective: ' num2str(objective(x0))]);
-	% Gleichheitsnebenbedingungen
+	% Gleichungsnebenbedingungen
 	A = [];
 	b = [];
-	% Ungleichheitsnebenbedingungen
+	% Ungleichungssnebenbedingungen
 	Aeq = [];
 	beq = [];
 	% Grenzen des Parametervektors
@@ -1078,10 +1089,10 @@ Nachfolgend ist die Umsetzung der Parameter Transformation via MATLAB\textsupers
 	options = optimoptions(@fmincon,'Algorithm','sqp', 'MaxIterations', 25,'PlotFcn',@optimplotfval);
 	% Ausführen der Optimierung
 	[x,fval,ef,output,lambda] = fmincon(objective,x0,A,b,Aeq,beq,lb,ub,nonlcon,options);
-	% Anzeige des energieoptimalen Parametervektors
+	% Anzeige des energie-optimalen Parametervektors
 	disp(x*180/pi)
 \end{lstlisting}
-\color{lightgray} \begin{lstlisting}
+\color{lightgray} \begin{lstlisting}[language=Matlab, numbers=none]
 % Startwert
 E in J
 2.0013e+03
@@ -1095,15 +1106,17 @@ E in J
 
 \end{lstlisting} \color{black}
 %
-\includegraphics [width=4in]{images/optimization_01}
+%\section{MATLAB Optimization Toolbox Functions}
+%\label{add:OptimizationToolbox}
+%\includepdf[pages=1]{C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis/literature/Anhang/OptimizationToolbox}
 %
-\section{Vergleich der simulierten Verläufe für den initialen und justierten, energieoptimalen Parametervektor}
+\section{Vergleich der simulierten Verläufe für den initialen und justierten, energie-optimalen Parametervektor}
 \label{acc:optupjust}
 %
 in Abbildung \ref{fig:posoptfinal} wird ersichtlich, dass die Gelenkwinkel $q_{i,justiert}(t)$ innerhalb der Start- und Zielwinkel liegen.
 %
 \begin{equation}
-	q_{i,justiert}(t) \in [q_{i,s};q_{i,e}] ~\forall~ i \in \{1,2,3,4,5,6\}
+	q_{i,justiert}(t) \in [q_{i,s};q_{i,e}] ~\forall~ i \in \{1,...,6\}
 \end{equation}
 %
 Die erreichten Winkelgeschwindigkeiten liegen unterhalb der in \ref{add:datenblatt} notierten Winkelgeschwindigkeiten bei Nenn-Traglast.
@@ -1129,7 +1142,7 @@ Die erreichten Winkelgeschwindigkeiten liegen unterhalb der in \ref{add:datenbla
 	\label{fig:accoptfinal}
 \end{figure}
 %
-Der qualitative Verlauf der aufgenommenen Leistung für den justierten energieoptimalen Parametervektor entspricht dem des energieoptimalen Parametervektors. 
+Der qualitative Verlauf der aufgenommenen Leistung für den justierten energie-optimalen Parametervektor entspricht dem des energie-optimalen Parametervektors. 
 %
 \begin{figure}[tbph]
 	\centering
