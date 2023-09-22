@@ -1,27 +1,27 @@
-\addchap{Anhang A}
+\addchap{Anhang A - Theoretische Grundlagen}
 \setcounter{chapter}{1}
-\setcounter{section}{1}
+\setcounter{section}{0}
 \setcounter{table}{0}
 \setcounter{figure}{0}
 %
-\section{theoretische Grundlagen}
-\subsection{Kinematische Kette}
+\section{Kinematische Kette}
 \label{add:kinematische-kette}
 Als kinematische Kette wird die Zusammensetzung eines Roboterarms aus $n+1$ Gliedern und $n$ Gelenken definiert. Das letzte Glied der kinematischen Kette wird als Endeffektor bezeichnet. Die Glieder werden von der festen Basis (Glied $0$) bis $n$ durchnummeriert. Mit jedem Glied $i-1$ wird das Gelenk $i$ starr verbunden. Des Weiteren wird jedem Glied $i$ ein fest verbundenes Koordinatensystem $o_ix_iy_iz_i$ zugeordnet. Eine Aktuierung des Gelenks $i$ führt zu einer Bewegung von Glied $i$ und Koordinatensystem KS$\left\{i\right\}$. Die Gelenke weisen einen Freiheitsgrad (degree-of-freedom (DOF)) $q_i$ auf und können als Dreh- oder Schubgelenke ausgeführt werden. Die Gelenkvariable $q_i$ entspricht dem Rotationswinkel $\theta_i$ bzw. der Translation $d_i$. \cite[S.~75]{Spong.2020}
 %
-\subsection{Euklidische Gruppe}
+\setcounter{section}{1}
+\section{Euklidische Gruppe}
 \label{add:SE3}
 \begin{align} 
 	\text{SE(3)} = \left\{{\bm{T}} \ | \ \bm{T}=\begin{bmatrix} {\bm{R}} &\quad {\bm{o}}\\ {0}_{1x3} &\quad 1 \end{bmatrix}\right\}, \ \bm{R} \in {R}^{3x3}, \ {r} \in {R}^{3}  
 \end{align} 
 
 \cite[S.~534]{Spong.2020}
-
-\subsection{Geschwindigkeits-Kinematik}
+\setcounter{section}{2}
+\section{Geschwindigkeits-Kinematik}
 \label{add:geschwindigkeitskinematik}
 Die Herleitung der Zusammenhänge ist  \cite[S.~79~f.]{Kemmetmueller.2023} und  \cite[S.~106]{Spong.2020} entnommen. Die Rotation eines Starrk{\"o}rpers um eine feste Drehachse wird über die Beziehung $\bm{\omega} = \dot{\theta}\bm{k}$ ausgedr{\"u}ckt. Dabei sind $\dot{\theta}$ die zeitliche Ableitung des Gelenkwinkels $\theta$ und $\bm{k}$ der Einheitsvektor der Drehachse. Die lineare Geschwindigkeit eines Punktes P, welcher um die Drehachse rotiert, ergibt sich zu $\bm{v} = \bm{\omega} \times \bm{r}$. Wobei der Vektor $\bm{r}$ die Position des Punktes P orthogonal auf der Drehachse $\bm{k}$ angibt. \cite[S.~102]{Spong.2020} 
 %
-\subsubsection{Schiefsymmetrische Matrizen}
+\subsection{Schiefsymmetrische Matrizen}
 Die Berechnung der Geschwindigkeits-Kinematik l{\"a}sst sich durch Verwendung Schiefsymmetrischer Matrizen vereinfachen. Eine $n\times n$ Matrix $\bm{S}$ ist schief symmetrisch, wenn 
 \begin{equation}
 	\label{eqn:skewsymmetric}
@@ -41,7 +41,7 @@ Für weitere Eigenschaften schiefsymmetrischer Matrizen wird auf die referenzier
 	\bm{R}(\theta)\bm{R}(\theta)^T = E.
 \end{equation}
 %
-\subsubsection{Drehwinkelgeschwindigkeit}
+\subsection{Drehwinkelgeschwindigkeit}
 Die Ableitung beider Terme der Gleichung \ref{eqn:einheitsmatrix} ergibt
 \begin{equation} 
 	\frac{\text{d}}{\text{d}\theta}\left[\bm{R}(\theta)\bm{R}(\theta)^T\right] = 	\left[\frac{\text{d}}{\text{d}\theta} {\bm{R}}(\theta)\right]\bm{R}(\theta)^T + \bm{R}(\theta)\left[\frac{\text{d}}{\text{d}\theta} {\bm{R}}(\theta)^T\right] = 0
@@ -82,7 +82,7 @@ Für Verkettete Rotationen gilt
 	%	\end{array} \right]
 %\end{equation}
 %
-\subsubsection{Lineare Geschwindigkeit}
+\subsection{Lineare Geschwindigkeit}
 Für die Lineare Geschwindigkeit eines Punktes werden nachfolgend zwei Szenarien unterschieden. In beiden Fällen ist der Punkt P fest mit dem KS$\left\{i\right\}$ verbunden. Im ersten Fall wird eine Rotation des KS$\left\{i\right\}$ relativ zum KS$\left\{0\right\}$ betrachtet. 
 \begin{equation}
 	\bm{p}^0 = \bm{R}^0_i(t)\bm{p}^i
@@ -102,11 +102,6 @@ Im zweiten Fall bewegt sich KS$\left\{i\right\}$ rotatorisch und translatorisch 
 \end{equation}
 Auf eine Beschreibung des Szenarios, dass sich P gegenüber KS$\left\{i\right\}$ bewegt, wird verzichtet.
 %
-
-
-
-
-
 %\section{Newtonsche Axiome} 
 %\section{Zwangsbedingungen}
 %	- %todo holonom
@@ -147,9 +142,9 @@ Auf eine Beschreibung des Szenarios, dass sich P gegenüber KS$\left\{i\right\}$
 %
 %\section{Wichtige Teile des Quellcodes}
 %
-\addchap{Anhang B}
+\addchap{Anhang B - Roboterdaten}
 \setcounter{chapter}{2}
-\setcounter{section}{1}
+\setcounter{section}{0}
 \setcounter{table}{0}
 \setcounter{figure}{0}
 %
@@ -162,6 +157,7 @@ Auf eine Beschreibung des Szenarios, dass sich P gegenüber KS$\left\{i\right\}$
 \section{KR210 2700-2 Datenblatt}
 \label{add:datenblatt}
 \includepdf[pages=1]{C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis/literature/Anhang/DatenblattKR2102700-2.pdf}
+\setcounter{section}{1}
 \section{Systemparameter}
 \label{add:Systemparameterdef}
 Die Massen $m_i$ der Starrkörper $i$ sind dem CAD-Modell des Herstellers entnommen. Hierbei wird angenommen, dass der Werkstoff korrekt zugeordnet ist. 
@@ -244,6 +240,12 @@ Die Getriebeübersetzung ist der Datei Machine Data (MADA) der Robotersteuerung 
 	\item $i_5 = -\frac{483}{91834}$
 	\item $i_6 = \frac{49400}{6485103}$
 \end{itemize}
+%
+\addchap{Anhang C - MATLAB-Implementierung}
+\setcounter{chapter}{3}
+\setcounter{section}{0}
+\setcounter{table}{0}
+\setcounter{figure}{0}
 \section{DH-Transformation}
 \label{add:dh}
 %\includepdf[pages=1-2]{C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis/literature/Anhang/dhtrafo_matlab.pdf}
@@ -343,6 +345,7 @@ Die Getriebeübersetzung ist der Datei Machine Data (MADA) der Robotersteuerung 
 %Nachfolgend ist die Umsetzung der Parameter Transformation via MATLAB\textsuperscript{\textregistered} gezeigt. 
 %
 %\includepdf[pages=1-4]{C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis/literature/Anhang/parameter_matlab.pdf}
+\setcounter{section}{1}
 \section{Parameter}
 \begin{lstlisting}[language=Matlab, numbers=none]
 	function [I,rec,rae,m,G] = parameter()
@@ -540,6 +543,7 @@ Die Getriebeübersetzung ist der Datei Machine Data (MADA) der Robotersteuerung 
 	G = [i1, i2, i3, i4, i5, i6];
 \end{lstlisting}
 %
+\setcounter{section}{2}
 \section{RNEA}
 \label{add:rnea}
 %\includepdf[pages=1-2]{C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis/literature/Anhang/rnea_matlab.pdf}
@@ -682,6 +686,7 @@ Die Getriebeübersetzung ist der Datei Machine Data (MADA) der Robotersteuerung 
 \begin{lstlisting}[language=Matlab, numbers=none]
 	end
 \end{lstlisting}
+\setcounter{section}{3}
 \section{Bahnplanung}
 \label{add:traj}
 %\includepdf[pages=1]{C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis/literature/Anhang/trajectorie_planning_sixth_order_matlab.pdf}
@@ -738,6 +743,7 @@ Die Getriebeübersetzung ist der Datei Machine Data (MADA) der Robotersteuerung 
 	end
 \end{lstlisting}
 %
+\setcounter{section}{4}
 \section{Testsimulation Bahnplanung}
 \label{add:sim}
 %
@@ -909,100 +915,7 @@ Die Getriebeübersetzung ist der Datei Machine Data (MADA) der Robotersteuerung 
 \end{lstlisting}
 %
 %
-\section{Berechnung der Zielfunktion}
-%
-\label{add:zielfunktion}
-\begin{lstlisting}[language=Matlab, numbers=none]
-	function [E_mech] = calc_objective(qs,qe,qv,te)
-\end{lstlisting}
-\begin{lstlisting}[language=Matlab, numbers=none]
-	% Berechung der Zielfunktion (Energieverbrauch) über die nicht
-	% dissipierte mechanische Leistung
-\end{lstlisting}
-%
-\subsection{Bahnplanung}
-%
-\begin{lstlisting}[language=Matlab, numbers=none]
-	stepsize = 0.004;
-	ts = 0;
-	tv = (te-ts)/2;
-	
-	qds1 = 0; qde1 = 0;
-	qds2 = 0; qde2 = 0;
-	qds3 = 0; qde3 = 0;
-	qds4 = 0; qde4 = 0;
-	qds5 = 0; qde5 = 0;
-	qds6 = 0; qde6 = 0;
-	
-	qdds1 = 0; qdde1 = 0;
-	qdds2 = 0; qdde2 = 0;
-	qdds3 = 0; qdde3 = 0;
-	qdds4 = 0; qdde4 = 0;
-	qdds5 = 0; qdde5 = 0;
-	qdds6 = 0; qdde6 = 0;
-	
-	qds = [qds1,qds2,qds3,qds4,qds5,qds6];
-	qdds = [qdds1,qdds2,qdds3,qdds4,qdds5,qdds6];
-	qde = [qde1,qde2,qde3,qde4,qde5,qde6];
-	qdde = [qdde1,qdde2,qdde3,qdde4,qdde5,qdde6];
-	
-	[q1,qd1,qdd1,~] = trajectorie_planning_sixth_order(ts, te, tv, stepsize, qs(1), qds(1), qdds(1), qv(1), qe(1), qde(1), qdde(1));
-	[q2,qd2,qdd2,~] = trajectorie_planning_sixth_order(ts, te, tv, stepsize, qs(2), qds(2), qdds(2), qv(2), qe(2), qde(2), qdde(2));
-	[q3,qd3,qdd3,~] = trajectorie_planning_sixth_order(ts, te, tv, stepsize, qs(3), qds(3), qdds(3), qv(3), qe(3), qde(3), qdde(3));
-	[q4,qd4,qdd4,~] = trajectorie_planning_sixth_order(ts, te, tv, stepsize, qs(4), qds(4), qdds(4), qv(4), qe(4), qde(4), qdde(4));
-	[q5,qd5,qdd5,~] = trajectorie_planning_sixth_order(ts, te, tv, stepsize, qs(5), qds(5), qdds(5), qv(5), qe(5), qde(5), qdde(5));
-	[q6,qd6,qdd6,t] = trajectorie_planning_sixth_order(ts, te, tv, stepsize, qs(6), qds(6), qdds(6), qv(6), qe(6), qde(6), qdde(6));
-\end{lstlisting}
-%
-\subsection{Modellberechnung der Drehmomente, Leistungsaufnahme}
-%
-\begin{lstlisting}[language=Matlab, numbers=none]
-	% Initialisierung
-	tau = zeros(length(t));
-	Pmech = zeros(length(t));
-	Pmech_diss = zeros(length(t));
-	Pmech_sink = zeros(length(t));
-	
-	for index = 1:1:(length(t))
-	[ret_tau,ret_Pmech] = rnea(q1(index), q2(index), q3(index), q4(index), q5(index), q6(index), qd1(index), qd2(index), qd3(index), qd4(index), qd5(index), qd6(index), qdd1(index), qdd2(index), qdd3(index), qdd4(index), qdd5(index), qdd6(index));
-	tau(index,1) = ret_tau(1);
-	tau(index,2) = ret_tau(2);
-	tau(index,3) = ret_tau(3);
-	tau(index,4) = ret_tau(4);
-	tau(index,5) = ret_tau(5);
-	tau(index,6) = ret_tau(6);
-	Pmech(index,1) = ret_Pmech(1);
-	Pmech(index,2) = ret_Pmech(2);
-	Pmech(index,3) = ret_Pmech(3);
-	Pmech(index,4) = ret_Pmech(4);
-	Pmech(index,5) = ret_Pmech(5);
-	Pmech(index,6) = ret_Pmech(6);
-	end
-\end{lstlisting}
-%
-\subsection{Daten Vorverarbeitung}
-%
-\begin{lstlisting}[language=Matlab, numbers=none]
-	for index = 1:1:(length(t))
-		for var = 1:6
-			if Pmech(index,var) > 0
-				Pmech_sink(index,var) = Pmech(index,var);
-				else
-				Pmech_diss(index,var) = Pmech(index,var);
-				Pmech_sink(index,var) = 0;
-			end
-		end
-	end
-\end{lstlisting}
-%
-\subsection{Anzeige der Daten}
-%
-\begin{lstlisting}[language=Matlab, numbers=none]
-	torque = sum(sum((tau).^2))/length(t);
-	E_mech = sum(sum((Pmech_sink))/length(t))*(te-ts); disp('E in J'); disp(E_mech);
-\end{lstlisting}
-%
-%
+\setcounter{section}{5}
 \section{Optimierung}
 \label{add:optimierer}
 %
@@ -1093,23 +1006,123 @@ Die Getriebeübersetzung ist der Datei Machine Data (MADA) der Robotersteuerung 
 	disp(x*180/pi)
 \end{lstlisting}
 \color{lightgray} \begin{lstlisting}[language=Matlab, numbers=none]
-% Startwert
-E in J
-2.0013e+03
-
-% Zielwert
-E in J
-1.8074e+03
-
-% identifzierter Parametervektor
--24.8857 -96.0716 8.8200 10.2700 -47.5666 -10.1900
-
+	% Startwert
+	E in J
+	2.0013e+03
+	
+	% Zielwert
+	E in J
+	1.8074e+03
+	
+	% identifzierter Parametervektor
+	-24.8857 -96.0716 8.8200 10.2700 -47.5666 -10.1900
+	
 \end{lstlisting} \color{black}
 %
 %\section{MATLAB Optimization Toolbox Functions}
 %\label{add:OptimizationToolbox}
 %\includepdf[pages=1]{C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis/literature/Anhang/OptimizationToolbox}
 %
+\setcounter{section}{6}
+\section{Berechnung der Zielfunktion}
+%
+\label{add:zielfunktion}
+\begin{lstlisting}[language=Matlab, numbers=none]
+	function [E_mech] = calc_objective(qs,qe,qv,te)
+\end{lstlisting}
+\begin{lstlisting}[language=Matlab, numbers=none]
+	% Berechung der Zielfunktion (Energieverbrauch) über die nicht
+	% dissipierte mechanische Leistung
+\end{lstlisting}
+%
+\subsection{Bahnplanung}
+%
+\begin{lstlisting}[language=Matlab, numbers=none]
+	stepsize = 0.004;
+	ts = 0;
+	tv = (te-ts)/2;
+	
+	qds1 = 0; qde1 = 0;
+	qds2 = 0; qde2 = 0;
+	qds3 = 0; qde3 = 0;
+	qds4 = 0; qde4 = 0;
+	qds5 = 0; qde5 = 0;
+	qds6 = 0; qde6 = 0;
+	
+	qdds1 = 0; qdde1 = 0;
+	qdds2 = 0; qdde2 = 0;
+	qdds3 = 0; qdde3 = 0;
+	qdds4 = 0; qdde4 = 0;
+	qdds5 = 0; qdde5 = 0;
+	qdds6 = 0; qdde6 = 0;
+	
+	qds = [qds1,qds2,qds3,qds4,qds5,qds6];
+	qdds = [qdds1,qdds2,qdds3,qdds4,qdds5,qdds6];
+	qde = [qde1,qde2,qde3,qde4,qde5,qde6];
+	qdde = [qdde1,qdde2,qdde3,qdde4,qdde5,qdde6];
+	
+	[q1,qd1,qdd1,~] = trajectorie_planning_sixth_order(ts, te, tv, stepsize, qs(1), qds(1), qdds(1), qv(1), qe(1), qde(1), qdde(1));
+	[q2,qd2,qdd2,~] = trajectorie_planning_sixth_order(ts, te, tv, stepsize, qs(2), qds(2), qdds(2), qv(2), qe(2), qde(2), qdde(2));
+	[q3,qd3,qdd3,~] = trajectorie_planning_sixth_order(ts, te, tv, stepsize, qs(3), qds(3), qdds(3), qv(3), qe(3), qde(3), qdde(3));
+	[q4,qd4,qdd4,~] = trajectorie_planning_sixth_order(ts, te, tv, stepsize, qs(4), qds(4), qdds(4), qv(4), qe(4), qde(4), qdde(4));
+	[q5,qd5,qdd5,~] = trajectorie_planning_sixth_order(ts, te, tv, stepsize, qs(5), qds(5), qdds(5), qv(5), qe(5), qde(5), qdde(5));
+	[q6,qd6,qdd6,t] = trajectorie_planning_sixth_order(ts, te, tv, stepsize, qs(6), qds(6), qdds(6), qv(6), qe(6), qde(6), qdde(6));
+\end{lstlisting}
+%
+\subsection{Modellberechnung der Drehmomente, Leistungsaufnahme}
+%
+\begin{lstlisting}[language=Matlab, numbers=none]
+	% Initialisierung
+	tau = zeros(length(t));
+	Pmech = zeros(length(t));
+	Pmech_diss = zeros(length(t));
+	Pmech_sink = zeros(length(t));
+	
+	for index = 1:1:(length(t))
+	[ret_tau,ret_Pmech] = rnea(q1(index), q2(index), q3(index), q4(index), q5(index), q6(index), qd1(index), qd2(index), qd3(index), qd4(index), qd5(index), qd6(index), qdd1(index), qdd2(index), qdd3(index), qdd4(index), qdd5(index), qdd6(index));
+	tau(index,1) = ret_tau(1);
+	tau(index,2) = ret_tau(2);
+	tau(index,3) = ret_tau(3);
+	tau(index,4) = ret_tau(4);
+	tau(index,5) = ret_tau(5);
+	tau(index,6) = ret_tau(6);
+	Pmech(index,1) = ret_Pmech(1);
+	Pmech(index,2) = ret_Pmech(2);
+	Pmech(index,3) = ret_Pmech(3);
+	Pmech(index,4) = ret_Pmech(4);
+	Pmech(index,5) = ret_Pmech(5);
+	Pmech(index,6) = ret_Pmech(6);
+	end
+\end{lstlisting}
+%
+\subsection{Daten Vorverarbeitung}
+%
+\begin{lstlisting}[language=Matlab, numbers=none]
+	for index = 1:1:(length(t))
+	for var = 1:6
+	if Pmech(index,var) > 0
+	Pmech_sink(index,var) = Pmech(index,var);
+	else
+	Pmech_diss(index,var) = Pmech(index,var);
+	Pmech_sink(index,var) = 0;
+	end
+	end
+	end
+\end{lstlisting}
+%
+\subsection{Anzeige der Daten}
+%
+\begin{lstlisting}[language=Matlab, numbers=none]
+	torque = sum(sum((tau).^2))/length(t);
+	E_mech = sum(sum((Pmech_sink))/length(t))*(te-ts); disp('E in J'); disp(E_mech);
+\end{lstlisting}
+%
+%
+\addchap{Anhang D - Messdaten}
+\setcounter{chapter}{4}
+\setcounter{section}{0}
+\setcounter{table}{0}
+\setcounter{figure}{0}
 \section{Vergleich der simulierten Verläufe für den initialen und justierten, energie-optimalen Parametervektor}
 \label{acc:optupjust}
 %
@@ -1142,7 +1155,7 @@ Die erreichten Winkelgeschwindigkeiten liegen unterhalb der in \ref{add:datenbla
 	\label{fig:accoptfinal}
 \end{figure}
 %
-Der qualitative Verlauf der aufgenommenen Leistung für den justierten energie-optimalen Parametervektor entspricht dem des energie-optimalen Parametervektors. 
+%Der qualitative Verlauf der aufgenommenen Drehmomente für den justierten energie-optimalen Parametervektor entspricht dem des energie-optimalen Parametervektors. 
 %
 \begin{figure}[tbph]
 	\centering
@@ -1150,10 +1163,70 @@ Der qualitative Verlauf der aufgenommenen Leistung für den justierten energie-o
 	\caption{Drehmomentverläufe der Initialbahn und justierten energieoptimierten Bewegungsbahn}
 	\label{fig:tauoptfinal}
 \end{figure}
+%\begin{figure}[tbph]
+%	\centering
+%	\includegraphics[width=1\linewidth]{images/e_down500}
+%	\caption{Energieverbrauch Bewegung Eins}
+%	\label{fig:edown500}
+%\end{figure}
+%\begin{figure}[tbph]
+%	\centering
+%	\includegraphics[width=1\linewidth]{images/P_down}
+%	\caption{Leistungsaufnahme Bewegung Eins}
+%	\label{fig:pdown}
+%\end{figure}
+%\begin{figure}[tbph]
+%	\centering
+%	\includegraphics[width=1\linewidth]{images/aiposdown}
+%	\caption{Gelenkwinkel Bewegung Eins}
+%	\label{fig:aiposdown}
+%\end{figure}
+%\begin{figure}[tbph]
+%	\centering
+%	\includegraphics[width=1\linewidth]{images/velposdown1}
+%	\caption{Winkelgeschwindigkeit in den Gelenken 1-3 Bewegung Eins}
+%	\label{fig:velposdown1}
+%\end{figure}
+%\begin{figure}[tbph]
+%	\centering
+%	\includegraphics[width=1\linewidth]{images/velposdown2}
+%	\caption{Winkelgeschwindigkeit in den Gelenken 4-6 Bewegung Eins}
+%	\label{fig:velposdown2}
+%\end{figure}
+%\begin{figure}[tbph]
+%	\centering
+%	\includegraphics[width=1\linewidth]{images/accdown1}
+%	\caption{Winkelbeschleunigung in den Gelenken 1-3 Bewegung Eins}
+%	\label{fig:accdown1}
+%\end{figure}
+%\begin{figure}[tbph]
+%	\centering
+%	\includegraphics[width=1\linewidth]{images/accdown2}
+%	\caption{Winkelbeschleunigung in den Gelenken 4-6 Bewegung Eins}
+%	\label{fig:accdown2}
+%\end{figure}
 %
-\begin{figure}[tbph]
-	\centering
-	\includegraphics[width=1\linewidth]{images/Optimierungsergebnisse_up/poptfinal}
-	\caption{Verläufe der aufgenommen Leistung je Gelenkwinkel für die Initialbahn und justierte energieoptimierte Bewegungsbahn}
-	\label{fig:poptfinal}
-\end{figure}
+%\begin{figure}[tbph]
+%	\centering
+%	\includegraphics[width=1\linewidth]{images/aiposup}
+%	\caption{Gelenkwinkel Bewegung Eins}
+%	\label{fig:aiposup}
+%\end{figure}
+%\begin{figure}[tbph]
+%	\centering
+%	\includegraphics[width=1\linewidth]{images/velposup2}
+%	\caption{Winkelgeschwindigkeit in den Gelenken 4-6 Bewegung Zwei}
+%	\label{fig:velposup2}
+%\end{figure}
+%\begin{figure}[tbph]
+%	\centering
+%	\includegraphics[width=1\linewidth]{images/accup1}
+%	\caption{Winkelbeschleunigung in den Gelenken 1-3 Bewegung Zwei}
+%	\label{fig:accup1}
+%\end{figure}
+%\begin{figure}[tbph]
+%	\centering
+%	\includegraphics[width=1\linewidth]{images/accup2}
+%	\caption{Winkelbeschleunigung in den Gelenken 4-6 Bewegung Zwei}
+%	\label{fig:accup2}
+%\end{figure}

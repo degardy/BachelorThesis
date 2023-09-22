@@ -1,7 +1,7 @@
 \chapter{Mechanische Modellbildung}
 % todo Bild HMI Roboterkoordinaten ablesen
 %
-Gegenstand der Modellbildung ist die Definition von Bewegungsgleichungen zur Simulationen der Roboterdynamik \cite[S.~247]{Grimble.2009}. Damit soll die aufgenommene Energie des Roboters entlang einer Bewegungsbahnen bestimmt werden, ohne dass das reale System angesteuert werden muss. Zunächst erfolgt eine Beschreibung der Vorwärtskinematik mithilfe der Denavit-Hartenberg (DH) Konvention. Nach einer Betrachtung der Geschwindigkeits-Kinematik wird die inverse Dynamik des Systems beschrieben.  Abschließend wird der Wahrheitsgehalt des Modells überprüft.
+Gegenstand der Modellbildung ist die Definition von Bewegungsgleichungen zur Simulationen der Roboterdynamik \cite[S.~247]{Grimble.2009}. Damit soll die aufgenommene Energie des Roboters entlang einer Bewegungsbahnen bestimmt werden, ohne dass das reale System angesteuert werden muss. Zunächst erfolgt eine Beschreibung der Vorwärtskinematik mithilfe der Denavit-Hartenberg (DH) Konvention. Nach einer Betrachtung der Geschwindigkeits-Kinematik wird die inverse Dynamik des Systems beschrieben.  Abschließend werden Annahmen und Vernachlässigen im Kontext der Modellbildung betrachtet.
 
 \section{Vorwärtskinematik}
 Über die Vorwärtskinematik erfolgt eine geometrische Beschreibung der Endeffektor Bewegung des Roboters entlang der kinematischen Kette \footnote{siehe Anhang \ref{add:kinematische-kette}}. Entsprechend der Gelenkvariablen wird dabei die Position und Orientierung (Pose) des Endeffektors im Basis-Koordinatensystem berechnet. Ausgehend vom Basis-Koordinatensystem werden homogene Transformationsmatrizen $\bm{A}(i) = \bm{T}^{i-1}_i \in \text{SE(3)}$\footnote{siehe Anhang \ref{add:SE3}} zwischen zwei aufeinanderfolgenden Koordinatensystemen $0_{i-1}x_{i-1}y_{i-1}z_{i-1}$ und $0_ix_iy_iz_i$ der kinematischen Kette definiert. $\bm{T}^{i-1}_i$ repräsentiert die  Rotation und Translation des KS$\left\{i\right\}$ im $\left\{i-1\right\}$. Die Transformationsmatrizen sind abhängig von der Konfiguration der Gelenkvariablen $q_i$ des Roboters. 
@@ -17,9 +17,8 @@ Eine Repräsentation der Endeffektor-Pose $H$ im Basis-Koordinatensystem wird ü
 	\bm{H} =\begin{bmatrix} \bm{R}^0_n &\quad \bm{o}^0_n\\ \mathbf{0}_{1x3} &\quad 1\end{bmatrix}
 \end{align}
 Der Spaltenvektor $\bm{o}^0_n$ repräsentiert die Koordinaten des Ursprungs des Endeffektor-Koordinatensystems im Basis-Koordinatensystem. Die $3 \times 3 $ Matrix $\bm{R}^n_0$ entspricht der Rotation des Endeffektor-Koordinatensystems gegenüber dem Basis-Koordinatensystem. \cite[S.~75~ff.]{Spong.2020} 
-%
-\section{Denavit-Hartenberg Konvention}
-Eine Methode zur Bestimmung der homogenen Transformationsmatrizen ist die, nach  dem Physiker Jacques Denavit und dem Ingenieur Richard Hartenberg benannte Denavit-Hartenberg Konvention. Diese besagt, dass jede homogene Transformation $\bm{A}_i$ als Produkt vier nacheinander ausgeführter elementarer Transformationen ausgedrückt werden kann. 
+\subsection*{Denavit-Hartenberg Konvention}
+Eine Methode zur Bestimmung der homogenen Transformationsmatrizen ist die, nach  dem Physiker Jacques Denavit und dem Ingenieur Richard Hartenberg benannte Denavit-Hartenberg (DH) Konvention. Diese besagt, dass jede homogene Transformation $\bm{A}_i$ als Produkt vier nacheinander ausgeführter elementarer Transformationen, gemäß \ref{eqn:elementarTransformation} ausgedrückt werden kann. 
 \begin{align}
 	\label{eqn:elementarTransformation}
 	A_i &= \text{Rot}_{z,\theta_i}\text{Trans}_{z,d_i}\text{Trans}_{x,a_i}\text{Rot}_{x,\alpha_i} \\
@@ -117,7 +116,7 @@ Die Implementierung der DH-Transformation ist im Anhang \ref{add:dh}  aufgeführ
 %
 \section{Geschwindigkeits-Kinematik}
 Die Geschwindigkeits-Kinematik definiert die lineare Endeffektor-Geschwindigkeit, sowie die  Endeffektor-Winkelgeschwindigkeit in Abh{\"a}ngigkeit der Gelenkwinkelgeschwindigkeiten des Roboters. Eine mathematische Beschreibung des Zusammenhangs erfolgt {\"u}ber die Jacobi-Matrix der Vorw{\"a}rtskinematik \cite[S.~101]{Spong.2020}. Grundlegende Definitionen zur Aufstellung der Jacobi-Matrizen werden in \ref{add:geschwindigkeitskinematik} betrachtet. 
-\subsection{Jacobi-Matrizen}
+\subsection*{Jacobi-Matrizen}
 Die lineare Geschwindigkeit $\bm{v}^0_n$ des Endeffektors, sowie seine Winkelgeschwindigkeit $\bm{\omega}^0_{0,i}$ im  KS$\left\{0\right\}$ lassen sich über die $3\times n$-Jacobi-Matrizen $\bm{J}_v$ und $\bm{J}_{\omega}$ berechnen. 
 %
 \begin{equation}
@@ -153,7 +152,7 @@ Die lineare Geschwindigkeit $\bm{v}^0_n$ des Endeffektors, sowie seine Winkelges
 %
 \section{Dynamik}
 Ziel des Kapitels ist die Berechnung der aufzubringenden Momente in den sechs Gelenken des Roboters bei Ansteuerung entlang einer Bewegungsbahn.
-Die Bewegungsgleichungen werden zunächst formal mithilfe der Euler-Lagrange Gleichungen formuliert. Anschließend folgt die numerisch effiziente Implementierung  über den Rekursiven-Newton-Euler-Algorithmus (RNEA) \cite[S.~247]{Grimble.2009}. 
+Der dynamische Zusammenhang zwischen Gelenkkräften und Gelenkbewegungen wird zunächst formal mithilfe der Euler-Lagrange Gleichungen formuliert. Anschließend folgt die numerisch effiziente Implementierung  über den Rekursiven-Newton-Euler-Algorithmus (RNEA) \cite[S.~247]{Grimble.2009}. 
 %
 \subsection{Euler-Lagrange Gleichungen}
 Die Lagrange Funktion $L$ eines mechanischen Systems entspricht der Differenz der kinetischen Energie $K$ und potentiellen Energie $P$ \cite[S.~175]{Spong.2020}. 
@@ -303,7 +302,7 @@ Bei der Entwicklung des mechanischen Modells zur Simulation der Roboterdynamik w
 %
 \begin{figure}[tbph]
 	\centering
-	\includegraphics[width=1\linewidth]{images/zk}
+	\includegraphics[width=0.8\linewidth]{images/zk}
 	\caption{Ersatzschaltbild der aufgenommenen Netzleistung \cite[S.~20]{Eggers.2019}}
 	\label{fig:zk}
 \end{figure}

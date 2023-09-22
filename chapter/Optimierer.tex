@@ -4,6 +4,7 @@
 %\cite{Ziaukas.2017}
 %\cite{Hansen.2012}
 %\cite{Spong.2020}
+Im Folgenden wird die zuvor im Kapitel \ref{} eingeführte Bewegungsbahn des Programms $Kleben-Seitenwand$ unter Berücksichtigung der vom Roboter aufgenommenen Energie optimiert. Dazu wird das Optimierungsproblem zunächst definiert, eine passende Zielfunktion aufgestellt und geeignete Nebenbedingungen festgelegt. Anschließend werden der numerische Solver sowie der verwendete Algorithmus beschrieben. Zum Abschluss werden die Ergebnisse der  Optimierung analysiert. 
 %
 \section{Definition des Optimierungsproblems}
 Gegenstand der Optimierung ist die Minimierung des Energieverbrauchs eines KR210 R2700-2 Industrieroboters entlang einer Bewegungsbahn. Im Ziel der Arbeit ist festgelegt, den Ansatz möglichst praktikabel für die Automobilproduktion zu gestalten. Dazu wird der Begriff der Bewegungsbahn weiter eingegrenzt. Es wird unterschieden zwischen prozessbezogenen Bewegungen, z.B. entlang einer Schweißnaht oder Klebebahn, und nicht-prozessbezogenen Bewegungen, z.B. das Anfahren einer Vorposition oder der Home-Position in der Bewegungsart PTP. Im Folgenden werden explizit nicht prozessrelevante Trajektorien betrachtet. Der Ansatz basiert auf der geometrischen Anpassung  der Bewegungsbahn durch einen zu optimierenden Parametervektor $\bm{q}_{v}$. Dieser umfasst die Gelenkwinkel des, nach der Hälfte der Bewegungsdauer definierten Via-Punkts \cite[S~532~ f.]{Ziaukas.2017}.
@@ -63,6 +64,7 @@ Die numerische Implementierung der Zielfunktion in  MATLAB\textsuperscript{\text
 \end{equation}
 %
 \section{Nebenbedingungen}
+\label{sec:Nebenbedingungen}
 Die Verfahrzeit bleibt gegenüber der Initialbahn konstant und wird durch den Zielzeitpunkt $t_e$ vorgegeben. 
 %Eine Anpassung der Variablen für die maximale relative Geschwindigkeit $vel axis[i]$ und Maximalbeschleunigung $acc axis[i]$ im KRL Programm siehe \cite[S.~532]{Ziaukas.2017} erfolgt nicht.
 In \cite[S.~40]{Eggers.2019} bzw. \cite[S.~5]{Hansen.2012} werden die Gelenkwinkel der energie-optimalen Bewegungsbahn in der Robotersteuerung über einen Software-in-the-Loop (SiL) Ansatz berechnet. Dadurch ist die Einhaltung von Drehmoment-, Gelenkwinkel-, Geschwindigkeit- und Beschleunigungsgrenzen entsprechend der Gleichungen \ref{eqn:conpos},\ref{eqn:convel}, \ref{eqn:conacc} und \ref{eqn:contau} gewährleistet. 
@@ -96,17 +98,10 @@ Grenzwerte für die Drehmomente, Winkelgeschwindigkeiten und Winkelbeschleunigun
 %
 \section{Solver- und Optimierungsalgorithmus}
 Die numerische Umsetzung der Optimierung erfolgt unter Verwendung der MATLAB\textsuperscript{\textregistered} Optimization Toolbox\texttrademark. Für das nichtlineare Optimierungsproblem wird anhand einer Entscheidungstabelle in \cite[S.~80]{OptimizationToolbox.2023} der Solver fmincon ausgewählt.  Im Anhang \ref{add:optimierer} ist der implementierte Code aufgeführt. Die Zielfunktion wird mithilfe des inversen Dynamik-Modells in der separaten MATLAB\textsuperscript{\textregistered}-Funktion $calc\_objective(qs,qe,qv,te)$ berechnet, siehe Anhang \ref{add:zielfunktion}. Es sind keine Gleichungs- bzw. Ungleichungssnebenbedingungen definiert. Es ist jedoch möglich, die im letzten Abschnitt beschriebenen Nebenbedingungen zu einem späteren Zeitpunkt hinzuzufügen. Für die einzelnen Via-Punkte des Parametervektors $\bm{q}_{v}$ sind jeweils die obere und untere Schranke entsprechend der Gleichung \ref{eqn:Schranken} festgelegt. Für den Algorithmus wird das Verfahren der sequentiellen quadratischen Programmierung (sequential quadratic programming (SQP)) gewählt.  SQP ist eine Verallgemeinerung des Newton-Verfahren\footnote{Das Newton-Verfahren ist ein numerischer Ansatz zur Lösung nichtlinearer Gleichungssysteme, bei dem eine iterative Approximation mithilfe der nach ersten Glied abgebrochenen Taylorreihe erfolgt \cite[S.~46]{Papageorgiou.2015}.} für beschränkte Problemstellungen \cite[S.~113]{Papageorgiou.2015}. In \cite[S.~253]{OptimizationToolbox.2023} wird beschrieben, dass für jeden Iterationsschritt die Einhaltung der Schranken gewährleistet ist. Diese wird als Vorteil aufgrund der Komplexität  der Inversen-Dynamik zur Berechnung der Zielfunktion  bewertet. Notwendige Bedingungen zur Identifikation eines lokalen Minimums sind die  Karush-Kuhn-Tucker (KKT) Konvergenzkriterien  \cite[S.~321]{Nocedal.2006}.  In jeder Iteration des SQP-Verfahrens wird versucht, die KKT-Bedingungen für das ursprüngliche Problem durch eine quadratische Approximation der Zielfunktion zu erfüllen \cite[S.~337~ff.]{Reinhardt.2013}. Zusätzlich bietet MATLAB\textsuperscript{\textregistered} für fmincon die Option, Konvergenzkriterien zu definieren. Im Rahmen der ersten KKT Bedingung wird der Gradient der Zielfunktion überprüft. Falls dieser Wert nur annähernd Null erreicht, kann ein Schwellenwert festgelegt werden, bei dessen Unterschreitung die erste KKT-Bedingung erfüllt ist. Es ist außerdem möglich, eine maximale Anzahl von Iterationen festzulegen, bei deren Erreichen der Algorithmus beendet wird. Die Variable \lstinline[language=Matlab]|'MaxIterations'| wird mit 25 frei gewählt.  Für eine ausführliche Herleitung von SQP-Algorithmen auf der Basis des Newton-Lagrange-Verfahren wird auf \cite[S.~529~ff.]{Nocedal.2006} verwiesen.
-
-
-
-
-
-
-
-
+%
 \section{Durchführung der Optimierung}
 % todo bereits voerher Erwähnen?
-Die Arbeit verfolgt den Anspruch, dass die identifizierten Einsparungen über das Laborumfeld hinaus in der industriellen Praxis realisiert werden können. Dazu wird eine Bewegung der Bewegungsart PTP betrachtet, die in nahezu jedem Programm den Verfahrweg nach Programmende in die Grundstellung abbildet. Exemplarisch wird die Fahrt vom letzten Prozesspunkt zurück in die Grundstellung im Fertigungsprogramm  $Kleben-Seitenwand$  optimiert. Diese wurde bereits im Kapitel Trajektorie-Planung \ref{sec:trajektorie} eingeführt. Die Start- und Zielkonfiguration ist in der Tabelle \ref{tab:simu} aufgeführt.  Im ersten Schritt wird die Initial-Trajektorie abgefahren. Dabei werden die Bewegungsdaten über die RSI-Signalaufzeichnung erfasst. Anhand der Genlenkwinkelgeschwindigkeitsverläufe, siehe Abbildung \ref{fig:winkelgeschwindigkeit_py1} wird die Gesamtbewegungsdauer mit 1,2 s geschätzt. Für die Startwerte \ref{eqn:parametervektor-startkonfiguration} des Parametervektors \ref{eqn:parametervektor} wird die Optimierung in MATLAB\textsuperscript{\textregistered}, siehe Anhang \ref{acc:optimierer} ausgeführt. Die Anzahl der Iterationen ist auf 25 beschränkt. In der Abbildung \ref{fig:funktionswerte-iteration} wird deutlich, dass die energie-optimalen Gelenkwinkel bereits nach acht Iterationsschritten näherungsweise erreicht sind.
+Die Arbeit verfolgt den Anspruch, dass die identifizierten Einsparungen über das Laborumfeld hinaus in der industriellen Praxis realisiert werden können. Dazu wird eine Bewegung der Bewegungsart PTP betrachtet, die in nahezu jedem Programm den Verfahrweg nach Programmende in die Grundstellung abbildet. Exemplarisch wird die Fahrt vom letzten Prozesspunkt zurück in die Grundstellung im Fertigungsprogramm  $Kleben-Seitenwand$  optimiert. Diese wurde bereits im Kapitel Trajektorie-Planung \ref{sec:trajektorie} eingeführt. Die Start- und Zielkonfiguration ist in der Tabelle \ref{tab:simu} aufgeführt.  Im ersten Schritt wird die Initial-Trajektorie abgefahren. Dabei werden die Bewegungsdaten über die RSI-Signalaufzeichnung erfasst. Anhand der Genlenkwinkelgeschwindigkeitsverläufe, siehe Abbildung \ref{fig:winkelgeschwindigkeit_py1} wird die Gesamtbewegungsdauer mit 1,2 s geschätzt. Für die Startwerte \ref{eqn:parametervektor-startkonfiguration} des Parametervektors \ref{eqn:parametervektor} wird die Optimierung in MATLAB\textsuperscript{\textregistered}, siehe Anhang \ref{add:optimierer} ausgeführt. Die Anzahl der Iterationen ist auf 25 beschränkt. In der Abbildung \ref{fig:funktionswerte-iteration} wird deutlich, dass die energie-optimalen Gelenkwinkel bereits nach acht Iterationsschritten näherungsweise erreicht sind.
 %
 \begin{figure}[tbph]
 	\centering
@@ -173,7 +168,9 @@ Für den Verlauf der Winkel im zweiten Gelenk sind keine auffälligen Abweichung
 	{q}_{v,i,justiert} = \dfrac{{q}_{v,i,opt} + \dfrac{q_{s,i}+q_{e,i}}{2}}{2}~\forall~ i \in \{4,5,6\}
 \end{equation}
 %
-Die resultierenden Winkelgeschwindigkeiten in Abbildung \ref{fig:veloptedit} und Winkelbeschleunigungen in Abbildung \ref{fig:accoptedit}  werden damit auf ein akzeptables Maß reduziert. Die energie-optimalen Verläufe sind gestrichelt, die justierten Verläufe gepunktet dargestellt.
+Die resultierenden Winkelgeschwindigkeiten in Abbildung \ref{fig:veloptedit} 
+%und Winkelbeschleunigungen in Abbildung \ref{fig:accoptedit} 
+werden damit auf ein akzeptables Maß reduziert. Die energie-optimalen Verläufe sind gestrichelt, die justierten Verläufe gepunktet dargestellt.
 %
 \begin{figure}[tbph]
 	\centering
@@ -182,166 +179,18 @@ Die resultierenden Winkelgeschwindigkeiten in Abbildung \ref{fig:veloptedit} und
 	\label{fig:veloptedit}
 \end{figure}
 %
-\begin{figure}[tbph]
-	\centering
-	\includegraphics[width=1\linewidth]{images/Optimierungsergebnisse_up/accoptedit}
-	\caption{Winkelbeschleunigungsverläufe der energieoptimierten Bewegungsbahn und justierten energieoptimierten Bewegungsbahn}
-	\label{fig:accoptedit}
-\end{figure}
+%\begin{figure}[tbph]
+%	\centering
+%	\includegraphics[width=1\linewidth]{images/Optimierungsergebnisse_up/accoptedit}
+%	\caption{Winkelbeschleunigungsverläufe der energieoptimierten Bewegungsbahn und justierten energieoptimierten Bewegungsbahn}
+%	\label{fig:accoptedit}
+%\end{figure}
 %
-Für den justierten Parametervektor beträgt der Energieverbrauch 1858 Joule. Damit wird eine Energieeinsparung von 7,15 \% gegenüber der Initialbahn erzielt. Die Abbildungen für den Vergleich der initialen und justierten Verläufe aller relevanten Größen sind im Anhang \ref{acc:optupjust} aufgeführt.
-%
-\section{Validierung der Optimierungsergebnisse}
-Im Rahmen der Validierung werden die Simulationsergebnisse der Energieeinsparung am realen System überprüft. Dazu wird der 
-justierte-energieoptimierte Via-Punkts \lstinline{ViaJustOptUp}
-im Programm $Kleben-Seitenwand$ auf der KR C5 angelegt. In der Standarddefinition des Via-Punkts fährt der Roboter diesen millimetergenau an. Hierbei reduziert er seine Geschwindigkeit bei Erreichen des Punkts auf Null. 
-%
-\begin{lstlisting}[numbers=none]
-	;FOLD PTP ViaJustOptUp Vel=100 % PDAT8 Tool[1] Base[0] ;%{PE}
-\end{lstlisting}
-%
-Ziel der Optimierung ist nicht die Anpassung des zeitlichen Verhaltens. Eine signifikante Abweichung von der originalen Bewegungsdauer ist deshalb unzulässig. Im Rahmen der Implementierung des Via-Punkts auf der KR C5 wird dieser um einen \lstinline{CONT} 
-Überschleifbefehl erweitert. 
-%
-\begin{lstlisting}[numbers=none]
-	;FOLD PTP ViaJustOptUp CONT Vel=100 % PDAT8 Tool[1] Base[0] ;%{PE}
-\end{lstlisting}
-%
-In der Parameterdefinition \lstinline{PDAT} 
-wird der Modus der Approximation \lstinline{APO_MODE}  
-des Via-Punkts \lstinline{ViaJustOptUp}
-mit \lstinline{CDIS}  
-festgelegt. D. h. ein Überschleifen beginnt frühestens, wenn die Entfernung zum Punkt den Wert von \lstinline{APO_DIST}    
-unterschreitet \cite[S.~578]{KSS.2023}.
-%
-\begin{lstlisting}[numbers=none]
-	DECL PDAT PPDAT8={VEL 100.0000,ACC 100.000,APO_DIST 500.000,APO_MODE #CDIS,GEAR_JERK 100.000,EXAX_IGN 0}
-\end{lstlisting}
-Die maximale Überschleifdistanz wird auf 500 mm definiert. Von einem vollen Überschliff mit 1000 mm wird Abstand genommen, um das Risiko einer Kollision des Roboters mit peripheren Bauteilen nicht zu maximieren. Die Bewegung vom Startpunkt über den Via-Punkt zum Zielpunkt wird zunächst auf Kollisionsfreiheit durch manuelles Abfahren mit reduzierter Geschwindigkeit in der KUKA Betriebsart T1 getestet. Nach einer Verifizierung der Überschleif-Bewegung für eine programmierte Geschwindigkeit von 50\% in der Betriebsart T2 erfolgt die Signalaufzeichnung der justierten-energieoptimierten Trajektorie mit eine programmierten Geschwindigkeit von 100\%. Die über alle sechs Gelenke summierte Leistungsaufnahme des Roboters  wird in \ref{fig:pup} abgebildet. 
+Für den justierten Parametervektor beträgt der Energieverbrauch 1858 Joule. Damit wird eine Energieeinsparung von 7,15 \% gegenüber der Initialbahn erzielt. Der Leistungsverlauf für den justierten Parametervektor wird dem der Initial-Trajektorie in Abbildung \ref{fig:poptfinal} gegenüber gestellt. Der Verlauf entspricht näherungsweise dem der  energieoptimierten Bewegungsbahn. Die Gelenkwinkel-, Winkelgeschwindigkeits- Beschleunigungsverläufe der  initialen- und justierten-Trajektorie sind im Anhang \ref{acc:optupjust} aufgeführt.
 %
 \begin{figure}[tbph]
 	\centering
-	\includegraphics[width=1\linewidth]{images/P_up}
-	\caption{Summierte Leistungsaufnahme des Roboters für den Verfahrweg vom letzten Prozesspunkt auf die  Home Position im Programm $Kleben-Seitenwand$}
-	\label{fig:pup}
+	\includegraphics[width=1\linewidth]{images/Optimierungsergebnisse_up/poptfinal}
+	\caption{Verläufe der aufgenommen Leistung je Gelenkwinkel für die Initialbahn und justierte energieoptimierte Bewegungsbahn}
+	\label{fig:poptfinal}
 \end{figure}
-%
-Dabei ist die Bewegungsdauer der justierten-energieoptimierten Trajektorie ca. 0,2 s länger als die der Initial-Trajektorie. In der PTP-Bewegungsart führt der Roboter den Tool-Center-Point (TCP) entlang der schnellsten Bahn zum Zielpunkt \cite[S.~429]{KSS.2023}. Die Zunahme wird der Definition des Via-Punkts mit \lstinline{CDIS=500 mm}
-zugeschrieben. Da dieser zusätzlich in der Bahnplanung berücksichtigt wird, bewegt sich der TCP nicht mehr auf der schnellsten Bahn. Die erzielte Energieeinsparung wird in \ref{fig:eup500} gezeigt. Dabei wird die Prognose der Simulation erfüllt, dass die höchste Einsparung für das zweite Gelenk erreicht wird. Wie erwartet ist für den mechanischen Energieverbrauch im ersten Gelenk eine leichte Zunahme festzustellen.  Die Optimierungsergebnisse werden anhand des qualitativen Verlaufs als plausibel eingestuft. Für einen quantitativen Vergleich sind die Tabellen \ref{tab:energieverbrauch-simuliert} und \ref{tab:energieverbrauch-gemessen} heranzuziehen. Dass der gemessene Energieverbrauch ca. 25 \% höher ausfällt wird darauf zurückgeführt, dass das Modell den Verbrauch in den Gelenken drei bis sechs signifikant geringer berechnet. Die gemessene Einsparung fällt mit 11,7 \% höher aus als in der Simulation. Dabei ist die Zunahme der Bewegungsdauer zu berücksichtigen. 
-%
-\begin{figure}[tbph]
-	\centering
-	\includegraphics[width=1\linewidth]{images/e_up500}
-	\caption{Energieverbrauch des Roboters für den Verfahrweg vom letzten Prozesspunkt auf die  Home Position im Programm $Kleben-Seitenwand$}
-	\label{fig:eup500}        
-\end{figure}
-%
-\begin{table}[tbph]
-	\centering
-	\caption{Energieverbrauch simuliert $Kleben-Seitenwand$ Verfahrweg vom letzten Prozesspunkt auf die  Home Position}
-	\label{tab:energieverbrauch-simuliert}
-	\begin{tabular}{|c|c|c|c|}
-		\hline
-		Trajektorie & Größe & Einheit & Wert \\
-		\hline
-		Initial & Energieverbrauch & [kJ] &2.001  \\
-		\hline
-		Justiert-Energieoptimiert & Energieverbrauch & [kJ] &1.858  \\
-		\hline
-		& Energieeinsparung & [kJ] &0.143  \\
-		\hline
-		& Energieeinsparung & [\%] &7,15  \\
-		\hline
-	\end{tabular}
-	\centering
-	\caption{Energieverbrauch gemessen $Kleben-Seitenwand$ Verfahrweg vom letzten Prozesspunkt auf die  Home Position}
-	\label{tab:energieverbrauch-gemessen}
-	\begin{tabular}{|c|c|c|c|}
-		\hline
-		Trajektorie & Größe & Einheit & Wert \\
-		\hline
-		Initial & Energieverbrauch & [kJ] &2.553  \\
-		\hline
-		Justiert-Energieoptimiert & Energieverbrauch & [kJ] &2.254 \\
-		\hline
-		& Energieeinsparung & [kJ] &0.299  \\
-		\hline
-		& Energieeinsparung & [\%] &11,7 \\
-		\hline
-	\end{tabular}
-\end{table}
-%\begin{figure}[tbph]
-%	\centering
-%	\includegraphics[width=1\linewidth]{images/e_down500}
-%	\caption{Energieverbrauch Bewegung Eins}
-%	\label{fig:edown500}
-%\end{figure}
-%\begin{figure}[tbph]
-%	\centering
-%	\includegraphics[width=1\linewidth]{images/P_down}
-%	\caption{Leistungsaufnahme Bewegung Eins}
-%	\label{fig:pdown}
-%\end{figure}
-%\begin{figure}[tbph]
-%	\centering
-%	\includegraphics[width=1\linewidth]{images/aiposdown}
-%	\caption{Gelenkwinkel Bewegung Eins}
-%	\label{fig:aiposdown}
-%\end{figure}
-%\begin{figure}[tbph]
-%	\centering
-%	\includegraphics[width=1\linewidth]{images/velposdown1}
-%	\caption{Winkelgeschwindigkeit in den Gelenken 1-3 Bewegung Eins}
-%	\label{fig:velposdown1}
-%\end{figure}
-%\begin{figure}[tbph]
-%	\centering
-%	\includegraphics[width=1\linewidth]{images/velposdown2}
-%	\caption{Winkelgeschwindigkeit in den Gelenken 4-6 Bewegung Eins}
-%	\label{fig:velposdown2}
-%\end{figure}
-%\begin{figure}[tbph]
-%	\centering
-%	\includegraphics[width=1\linewidth]{images/accdown1}
-%	\caption{Winkelbeschleunigung in den Gelenken 1-3 Bewegung Eins}
-%	\label{fig:accdown1}
-%\end{figure}
-%\begin{figure}[tbph]
-%	\centering
-%	\includegraphics[width=1\linewidth]{images/accdown2}
-%	\caption{Winkelbeschleunigung in den Gelenken 4-6 Bewegung Eins}
-%	\label{fig:accdown2}
-%\end{figure}
-%
-%\begin{figure}[tbph]
-%	\centering
-%	\includegraphics[width=1\linewidth]{images/aiposup}
-%	\caption{Gelenkwinkel Bewegung Eins}
-%	\label{fig:aiposup}
-%\end{figure}
-%\begin{figure}[tbph]
-%	\centering
-%	\includegraphics[width=1\linewidth]{images/velposup1}
-%	\caption{Winkelgeschwindigkeit in den Gelenken 1-3 Bewegung Zwei}
-%	\label{fig:velposup1}
-%\end{figure}
-%\begin{figure}[tbph]
-%	\centering
-%	\includegraphics[width=1\linewidth]{images/velposup2}
-%	\caption{Winkelgeschwindigkeit in den Gelenken 4-6 Bewegung Zwei}
-%	\label{fig:velposup2}
-%\end{figure}
-%\begin{figure}[tbph]
-%	\centering
-%	\includegraphics[width=1\linewidth]{images/accup1}
-%	\caption{Winkelbeschleunigung in den Gelenken 1-3 Bewegung Zwei}
-%	\label{fig:accup1}
-%\end{figure}
-%\begin{figure}[tbph]
-%	\centering
-%	\includegraphics[width=1\linewidth]{images/accup2}
-%	\caption{Winkelbeschleunigung in den Gelenken 4-6 Bewegung Zwei}
-%	\label{fig:accup2}
-%\end{figure}
-%\subsection{Fehlerquellen}
-%Temperatureinfluss auf die Reibung 
