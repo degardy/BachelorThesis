@@ -1,0 +1,52 @@
+\chapter{Bewertung der Optimierungsergebnisse}
+\label{cha:Bewertung}
+Der Arbeit liegt die Forschungsfrage zugrunde, ob ein für die Produktion entwickeltes Roboterprogramm durch Hinzufügen und Verschieben von Via-Punkten energetisch optimiert werden kann, ohne die Bewegungsdauer signifikant zu erhöhen. Hierfür wurde die Bewegung vom letzten Prozesspunkt zurück in die Grundstellung im Fertigungsprogramm  $Kleben-Seitenwand$  um einen Via-Punkt erweitert.  Die Bewegung zeichnet sich dadurch aus, dass der TCP im kartesischen Raum nach oben bewegt wird und der Roboter somit gegen die Schwerkraft arbeitet. Der Via-Punkt wurde auf Basis eines Modells hinsichtlich des Energieverbrauchs des Roboters optimiert. Eine quantitative Gegenüberstellung der Ergebnisse aus Messung und Simulation erfolgt in den Tabellen \ref{tab:energieverbrauch-simuliert} und \ref{tab:energieverbrauch-gemessen}. Die gemessene, relative Einsparung beträgt 11,7 \% und liegt damit über der vorhergesagten Einsparung in der Simulation. Der gemessene Energieverbrauch ist insgesamt etwa 25 \% höher als die prognostizierten Werte der Simulation. Dies lässt sich darauf zurückführen, dass der Verbrauch in den Gelenken drei bis sechs im Modell deutlich niedriger berechnet wird. Die Zunahme der Bewegungsdauer beträgt ca. 15 \% und ist im Kontext vor- und nachgelagerter Bearbeitungsschritte bzw. unter Berücksichtigung des langsamsten Prozessschrittes für einen in der Linienfertigung eingesetzten Roboter zu bewerten.  Für das isoliert betrachtete Szenario wird die Erhöhung der Bewegungsdauer um 0,2 s als akzeptabel beurteilt.
+Der Anteil der Energieeinsparung, der auf die Erhöhung der Fahrzeit zurückzuführen ist, wird als marginal eingeschätzt. Aus dem Leistungsverlauf in Abbildung \ref{fig:pup} geht hervor, dass sowohl die Initial-Trajektorie als auch die optimierte Trajektorie zum Zeitpunkt $t = 1,2~\text{s}$ einen annähernd gleichen Wert nahe Null erreichen. 
+%
+Die Zielsetzung dieser Arbeit definiert die Durchführung einer Bahnoptimierung für einen Industrieroboter mit serieller Kinematik. Die Prämisse der Arbeit, den Via-Punkt auf Basis eines Modells zu optimieren, wurde erreicht. Für den untersuchten Fall wird die Forschungsfrage bestätigt.
+%
+\begin{table}[tbph]
+	\centering
+	\caption{Energieverbrauch simuliert $Kleben-Seitenwand$ Verfahrweg vom letzten Prozesspunkt auf die  Home Position}
+	\label{tab:energieverbrauch-simuliert}
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		Trajektorie & Größe & Einheit & Wert \\
+		\hline
+		Initial & Energieverbrauch & [kJ] &2.001  \\
+		\hline
+		Justiert-Energieoptimiert & Energieverbrauch & [kJ] &1.858  \\
+		\hline
+		& Energieeinsparung & [kJ] &0.143  \\
+		\hline
+		& Energieeinsparung & [\%] &7,15  \\
+		\hline
+	\end{tabular}
+	\centering
+	\caption{Energieverbrauch gemessen $Kleben-Seitenwand$ Verfahrweg vom letzten Prozesspunkt auf die  Home Position}
+	\label{tab:energieverbrauch-gemessen}
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		Trajektorie & Größe & Einheit & Wert \\
+		\hline
+		Initial & Energieverbrauch & [kJ] &2.553  \\
+		\hline
+		Justiert-Energieoptimiert & Energieverbrauch & [kJ] &2.254 \\
+		\hline
+		& Energieeinsparung & [kJ] &0.299  \\
+		\hline
+		& Energieeinsparung & [\%] &11,7 \\
+		\hline
+	\end{tabular}
+\end{table}
+%
+Kritisch wird dabei der Testumfang zur Beurteilung des Optimierers bewertet. Die Ursache hierfür liegt in der zeitlichen Planung der Bachelorarbeit. Infolgedessen beschränkt sich die Bewertung des Optimierers ausschließlich auf die untersuchte Trajektorie. Für den ausgewählten SQP-Algorithmus weist der fmincon-Solver aus der MATLAB\textsuperscript{\textregistered} Optimization Toolbox\texttrademark eine hohe Effizienz auf. Bereits nach acht Iterationsschritten wird der energieoptimierte Parametervektor näherungsweise identifiziert. Ein Nachteil des SQP-Algorithmus besteht darin, dass dieser nicht garantiert, ein globales Optimum zu finden, für den Fall, dass eine nicht-konvexe Zielfunktion wie im Beispiel der Roboterdynamik verwendet wird,  \cite[S.~535]{Nocedal.2006}. Eine Möglichkeit zur Lösung des Problems besteht darin, die Startdefinition des Parametervektors $\bm{q}_v$ zu variieren.  Alternativ kann durch die Anwendung von stochastischen Verfahren, wie beispielsweise Evolutionären Algorithmen (vgl. \cite[S.~]{Papageorgiou.2015}), die Wahrscheinlichkeit erhöht werden, ein globales anstelle eines lokalen Minimums zu finden.  Hierzu wird auf die Arbeit \cite{Nonoyama.2022} verwiesen. 
+%
+Abschließend wird die absolute Energieeinsparung gemäß der Berechnung \ref{eqn:abseinsparung} bewertet. 
+% 
+\begin{equation}
+	\label{eqn:abseinsparung}
+	 0,299~\text{kJ} \cdot \dfrac{1}{3600}~ \dfrac{\text{Wh}}{\text{J}} = 8,306 \cdot 10^{-5}~\text{kWh}
+\end{equation}
+%
+Unter der Annahme, dass das Programm "Kleben-Seitenwand" pro Fahrzeugseite einmal ausgeführt wird, täglich 2.400 Einheiten produziert werden und die Produktion an 250 Tagen im Jahr erfolgt, ergibt sich eine elektrische Gesamtenergieeinsparung von ca. 100 kWh. Hierbei wurden die Wirkungsgrade der Antriebe nicht berücksichtigt. Des Weiteren wurde ausschließlich aufgenommene Energie betrachtet und von eine Dissipation der Bremsenergie angenommen. Die Berechnung führt zu dem Schluss, dass die Modellbildung erst dann rentabel ist, wenn die Optimierung auf eine große Anzahl baugleicher Roboter skaliert werden kann. Alternativ sind Lösungsansätze zu verfolgen, die wie in \cite[S.~40]{Eggers.2019} beschreiben ein SiL-Verfahren zur Bahnplanung und Zielfunktionsberechnung nutzen. Eine weitere Möglichkeit ist die Verwendung von KUKA.RCS, zur Simulation der Roboterdynamik in einer proprietären Softwareumgebung von Siemens PLM oder Dassault Systemes \cite{RCS.2019}. 

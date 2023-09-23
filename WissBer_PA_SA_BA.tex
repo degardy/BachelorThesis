@@ -88,6 +88,10 @@ hang,
 marginal
 ]{footmisc}
 
+\newcommand{\D}[2]{\frac{\partial #2}{\partial #1}}
+\newcommand{\DD}[2]{\frac{\partial^2 #2}{\partial #1^2}}
+\renewcommand{\vec}[1]{\text{\boldmath$#1$}}
+
 \usepackage{calc}				% Paket zum Berechnen von Längen z.B. 0.8\linewidth
 
 \usepackage{xcolor} 			% einfache Verwendung von Farben in nahezu allen Farbmodellen
@@ -193,7 +197,7 @@ marginal
 \setcounter{tocdepth}{3}
 \sffamily								% für die Titelei serifenlose Schrift verwenden
 
-% ------------------------------ Titelei -----------------------------------------------------
+% ------------------------------ Titelseite -----------------------------------------------------
 
 \include{pages/titelseite} 				% erzeugt die Titelseite
 \pagenumbering{roman}					% kleine, römische Seitenzahlen für Titelei
@@ -209,15 +213,16 @@ marginal
 \pagenumbering{arabic}					% arabische Seitenzahlen für den Hauptteil
 
 \rmfamily
-
+%\include{chapter/vorlagen}
 \include{chapter/einleitung}
 \include{chapter/modellbildung}
 \include{chapter/Bahnplanung}
 \include{chapter/modellvalidierung}
 \include{chapter/Optimierer}
-\include{Bewertung}
-\include{Ausblick}
-\include{chapter/zusammenfassung}
+\include{chapter/Validierung}
+\include{chapter/Bewertung}
+\include{chapter/ZusammenfassungAusblick}
+
 
 % ---- Literaturverzeichnis ----------
 \interlinepenalty 10000					% Verhindert einen Umbruch mitten in Literatureinträgen

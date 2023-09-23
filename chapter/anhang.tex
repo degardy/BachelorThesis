@@ -1002,7 +1002,7 @@ Die Getriebeübersetzung ist der Datei Machine Data (MADA) der Robotersteuerung 
 	options = optimoptions(@fmincon,'Algorithm','sqp', 'MaxIterations', 25,'PlotFcn',@optimplotfval);
 	% Ausführen der Optimierung
 	[x,fval,ef,output,lambda] = fmincon(objective,x0,A,b,Aeq,beq,lb,ub,nonlcon,options);
-	% Anzeige des energie-optimalen Parametervektors
+	% Anzeige des energieoptimierten Parametervektors
 	disp(x*180/pi)
 \end{lstlisting}
 \color{lightgray} \begin{lstlisting}[language=Matlab, numbers=none]
@@ -1123,8 +1123,8 @@ Die Getriebeübersetzung ist der Datei Machine Data (MADA) der Robotersteuerung 
 \setcounter{section}{0}
 \setcounter{table}{0}
 \setcounter{figure}{0}
-\section{Vergleich der simulierten Verläufe für den initialen und justierten, energie-optimalen Parametervektor}
-\label{acc:optupjust}
+\section{Vergleich der simulierten Verläufe für den initialen und justierten-energieoptimierten Parametervektor}
+\label{add:optupjust}
 %
 in Abbildung \ref{fig:posoptfinal} wird ersichtlich, dass die Gelenkwinkel $q_{i,justiert}(t)$ innerhalb der Start- und Zielwinkel liegen.
 %
@@ -1137,30 +1137,30 @@ Die erreichten Winkelgeschwindigkeiten liegen unterhalb der in \ref{add:datenbla
 \begin{figure}[tbph]
 	\centering
 	\includegraphics[width=1\linewidth]{images/Optimierungsergebnisse_up/posoptfinal}
-	\caption{Gelenkwinkelverläufe der Initialbahn und justierten energieoptimierten Bewegungsbahn}
+	\caption{Gelenkwinkelverläufe der Initialbahn und justierten-energieoptimierten Bewegungsbahn}
 	\label{fig:posoptfinal}
 \end{figure}
 %
 \begin{figure}[tbph]
 	\centering
 	\includegraphics[width=1\linewidth]{images/Optimierungsergebnisse_up/veloptfinal}
-	\caption{Winkelgeschwindigkeitsverläufe der Initialbahn und justierten energieoptimierten Bewegungsbahn}
+	\caption{Winkelgeschwindigkeitsverläufe der Initialbahn und justierten-energieoptimierten Bewegungsbahn}
 	\label{fig:veloptfinal}
 \end{figure}
 %
 \begin{figure}[tbph]
 	\centering
 	\includegraphics[width=1\linewidth]{images/Optimierungsergebnisse_up/accoptfinal}
-	\caption{Winkelbeschleunigungsverläufe der Initialbahn und justierten energieoptimierten Bewegungsbahn}
+	\caption{Winkelbeschleunigungsverläufe der Initialbahn und justierten-energieoptimierten Bewegungsbahn}
 	\label{fig:accoptfinal}
 \end{figure}
 %
-%Der qualitative Verlauf der aufgenommenen Drehmomente für den justierten energie-optimalen Parametervektor entspricht dem des energie-optimalen Parametervektors. 
+%Der qualitative Verlauf der aufgenommenen Drehmomente für den justierten-energieoptimierten Parametervektor entspricht dem des energieoptimierten Parametervektors. 
 %
 \begin{figure}[tbph]
 	\centering
 	\includegraphics[width=1\linewidth]{images/Optimierungsergebnisse_up/tauoptfinal}
-	\caption{Drehmomentverläufe der Initialbahn und justierten energieoptimierten Bewegungsbahn}
+	\caption{Drehmomentverläufe der Initialbahn und justierten-energieoptimierten Bewegungsbahn}
 	\label{fig:tauoptfinal}
 \end{figure}
 %\begin{figure}[tbph]

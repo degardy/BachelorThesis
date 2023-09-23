@@ -150,7 +150,7 @@ Ein weiteres Beispiel eines Diagramms ist in Bild~\ref{fig:historamm} dargestell
 
 \begin{figure}[hbt]
 	\centering
-	\input{pgfplot/mess5s_histogramm.tex}
+%	\input{pgfplot/mess5s_histogramm.tex}
 	\caption[Histogramm der Häufigkeitsverteilung für eine Zeitmessung]{Histogramm der Häufigkeitsverteilung für die Zeitmessung. Der grau markierte Bereich gibt das Vertrauensintervall für $1 \cdot \sigma $ an.}
 	\label{fig:historamm}
 \end{figure}
@@ -160,7 +160,7 @@ Sollte \textit{pgfplot} trotzdem zu aufwändig erscheinen, so sei das Programm O
 
 \begin{figure}[hbt]
 	\centering
-	\includegraphics[width=0.7\linewidth]{origin/mess_fehlerbalken_origin}
+%	\includegraphics[width=0.7\linewidth]{origin/mess_fehlerbalken_origin}
 	\caption{Diagramm erstellt mit Origin}
 	\label{fig:origin}
 \end{figure}
@@ -181,7 +181,7 @@ In \LaTeX~können alternativ grafische Elemente direkt in der Kommandozeile ange
 \begin{figure}[hbt]
 	\centering
 	%\includegraphics[width=0.3\linewidth]{bilder/le_block_p}
-	\input{tikz/le_block_tt.tex}
+%	\input{tikz/le_block_tt.tex}
 	\caption[Tikzpicture Grafik]{Tikzpicture-Grafik, erstellt mit TikZ.}
 	% Die Angabe in der eckigen Klammer würde für den Eintrag in einem Abbildungsverzeichnis verwendet werden. Manche Angaben in der Bildunterschrift sind im verzeichnis ggf. nicht erforderlich.
 	\label{fig:le_block_p}
@@ -190,16 +190,7 @@ In \LaTeX~können alternativ grafische Elemente direkt in der Kommandozeile ange
 \subsection{Einsatz von Programmlistings}
 Für die Vorlage wird das paket \textit{listings} verwendet. Für die geeignete Markierung von Befehlen kann die verwendete Programmiersprache angegeben werden.
 
-\begin{lstlisting}[language=PHP]
-define('PATH_site', dirname(PATH_thisScript).'/');
-\begin{lstlisting}
-if (@is_dir(PATH_site.'typo3/sysext/cms/tslib/')) {
-define('PATH_tslib', PATH_site.'typo3/sysext/cms/tslib/');
-} elseif (@is_dir(PATH_site.'tslib/')) {
-define('PATH_tslib', PATH_site.'tslib/');
-} else {
-}
-\end{lstlisting}
+
 
 Das Paket \textit{listings} bietet zahlreiche Konfigurationsmöglichkeiten, um die Quellcodedarstellung an die eigenen Wünsche anzupassen. In einer fertig konfigurierten TexLive-Umgebung erfahren Sie mit dem Kommando
 

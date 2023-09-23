@@ -1,5 +1,5 @@
 \chapter{Mechanische Modellbildung}
-% todo Bild HMI Roboterkoordinaten ablesen
+\label{cha:Modellbildung}
 %
 Gegenstand der Modellbildung ist die Definition von Bewegungsgleichungen zur Simulationen der Roboterdynamik \cite[S.~247]{Grimble.2009}. Damit soll die aufgenommene Energie des Roboters entlang einer Bewegungsbahnen bestimmt werden, ohne dass das reale System angesteuert werden muss. Zunächst erfolgt eine Beschreibung der Vorwärtskinematik mithilfe der Denavit-Hartenberg (DH) Konvention. Nach einer Betrachtung der Geschwindigkeits-Kinematik wird die inverse Dynamik des Systems beschrieben.  Abschließend werden Annahmen und Vernachlässigen im Kontext der Modellbildung betrachtet.
 
@@ -148,8 +148,6 @@ Die lineare Geschwindigkeit $\bm{v}^0_n$ des Endeffektors, sowie seine Winkelges
 %
 \cite{Rieber.2022}
 %
-% todo Relevanz Geeschwindigkeitskinematik
-%
 \section{Dynamik}
 Ziel des Kapitels ist die Berechnung der aufzubringenden Momente in den sechs Gelenken des Roboters bei Ansteuerung entlang einer Bewegungsbahn.
 Der dynamische Zusammenhang zwischen Gelenkkräften und Gelenkbewegungen wird zunächst formal mithilfe der Euler-Lagrange Gleichungen formuliert. Anschließend folgt die numerisch effiziente Implementierung  über den Rekursiven-Newton-Euler-Algorithmus (RNEA) \cite[S.~247]{Grimble.2009}. 
@@ -297,7 +295,7 @@ Im nächsten Schritt erfolgt die rekursive Berechnung der Kräfte und Drehmoment
 %
 Aufgrund der Lagerausführung des ersten Gelenks wird angenommen, dass das nachfolgende Drehmoment nicht auf das erste Gelenk übertragen wird, sodass der Term $\bm{R}^{i}_{i+1} \bm{\mu}^{i+1}_{i+1}$ hierbei entfällt. Aus der den identifizierten Drehmomenten $\tau_i$ erfolgt durch Multiplikation mit den Winkelgeschwindigkeiten $\dot{{d}}$ die Berechnung der mechanischen Leistung $P_{mech,i}$ Die Implementierung des Modells ist dem Anhang \ref{add:rnea} zu entnehmen. \cite[S.~282~ff.]{Grimble.2009}
 %
-\section{Annahmen und Vernachlässigungen}
+\section{Modellannahmen und Vernachlässigungen}
 Bei der Entwicklung des mechanischen Modells zur Simulation der Roboterdynamik wurden Annahmen getroffen und Komponenten vernachlässigt, um den Modellierungsaufwand zu reduzieren. Ein wesentlicher Einfluss wird der Vernachlässigung des hydraulischen Gewichtsausgleichs am zweiten Gelenk zugeschrieben. Der Gewichtsausgleich ist aus einem Hydraulikzylinder mit Membranspeicher aufgebaut und wirkt dem am zweiten Gelenk auftretenden Drehmoment entgegen. Im Modell wurde dieser aufgrund fehlender Konstruktionsdaten zu Kolbendurchmesser und Kolbenstangendurchmesser nicht berücksichtigt. Fehlende Daten sind auch der Grund für die Auslassung des Gewichts und der Steifigkeit der Schlauchpakete. Das Gewicht der Elektromotoren (Statorseite) wurde aufgrund fehlender Informationen aus der Verschiebung der Massenschwerpunkte der Achsen vernachlässigt. Aufgrund des Verhältnisses zwischen der Masse der Motoren (Statorseite) und dem Gewicht der Achsen  wird diese Vernachlässigung toleriert. Am Beispiel des dritten Verbindungsglieds beträgt dieses mindesten 1:15. Genaue Daten wie viel Gewicht der Rotor bzw. der Stator einnehmen liegen nicht vor.  Die gleiche Schlussfolgerung gilt für die Massenträgheit der Motoren (Rotorseite) und die daraus resultierenden Momente. \cite[S.~287~f.]{Grimble.2009} berücksichtigt bei der Berechnung der Drehmomente die Einflüsse der viskosen und der coloumbschen Reibung. Die entsprechenden Koeffizienten wurden nicht ermittelt, so dass dieser Einfluss ebenfalls als Vernachlässigung festgehalten wird. Neben der Berechnung der mechanisch aufzuwendenden Leistung erfordert eine hohe Modellgenauigkeit die Berücksichtigung der elektrischen Komponenten in Abbildung \ref{fig:zk}. Bei den Motoren handelt es sich um dreiphasige permanenterregte Synchronmaschinen (PMSM).  Die Steuerung erfolgt über Frequenzumrichter. Im Ersatzschaltbild (ESB) sind alle Antriebe über einen gemeinsamen Gleichrichter vom Netz auf einen Gleichspannungszwischenkreis gekoppelt. PMSM können sowohl motorisch als auch generatorisch betrieben werden. Für die Berechnung des Energieverbrauchs wird angenommen, dass die generatorisch umgewandelte Energie über einen Bremswiderstand als Wärme abgeführt wird. Von einer Spannungs-Schwellwert gesteuerten Zu- und Abschaltung des Bremswiderstands wird abgesehen. \cite[S.~21~ff.]{Eggers.2019}
 %
 \begin{figure}[tbph]
