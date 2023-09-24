@@ -1,0 +1,94 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: BA.aux
+Reallocating 'name_of_file' (item size: 1) to 9 items.
+The style file: biblatex.bst
+Reallocating 'name_of_file' (item size: 1) to 7 items.
+Reallocating 'name_of_file' (item size: 1) to 77 items.
+Reallocating 'name_of_file' (item size: 1) to 21 items.
+A level-1 auxiliary file: pages/titelseite.aux
+Reallocating 'name_of_file' (item size: 1) to 21 items.
+A level-1 auxiliary file: pages/erklaerung.aux
+Reallocating 'name_of_file' (item size: 1) to 24 items.
+A level-1 auxiliary file: chapter/kurzfassung.aux
+Reallocating 'name_of_file' (item size: 1) to 21 items.
+A level-1 auxiliary file: chapter/abstract.aux
+Reallocating 'name_of_file' (item size: 1) to 23 items.
+A level-1 auxiliary file: chapter/einleitung.aux
+Reallocating 'name_of_file' (item size: 1) to 26 items.
+A level-1 auxiliary file: chapter/modellbildung.aux
+Reallocating 'name_of_file' (item size: 1) to 24 items.
+A level-1 auxiliary file: chapter/Bahnplanung.aux
+Reallocating 'name_of_file' (item size: 1) to 30 items.
+A level-1 auxiliary file: chapter/modellvalidierung.aux
+Reallocating 'name_of_file' (item size: 1) to 23 items.
+A level-1 auxiliary file: chapter/Optimierer.aux
+Reallocating 'name_of_file' (item size: 1) to 24 items.
+A level-1 auxiliary file: chapter/Validierung.aux
+Reallocating 'name_of_file' (item size: 1) to 22 items.
+A level-1 auxiliary file: chapter/Bewertung.aux
+Reallocating 'name_of_file' (item size: 1) to 36 items.
+A level-1 auxiliary file: chapter/ZusammenfassungAusblick.aux
+Reallocating 'name_of_file' (item size: 1) to 19 items.
+A level-1 auxiliary file: chapter/anhang.aux
+Reallocating 'glb_str_end' (item size: 4) to 20 items.
+Reallocating 'glb_str_ptr' (item size: 4) to 20 items.
+Reallocating 'global_strs' (item size: 1) to 4000000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'wiz_functions' (item size: 4) to 6000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Database file #1: BA-blx.bib
+Database file #2: C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis/literature/literatur1.bib
+Biblatex version: 3.18
+Reallocating 'wiz_functions' (item size: 4) to 9000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+You've used 31 entries,
+            6399 wiz_defined-function locations,
+            1483 strings with 23780 characters,
+and the built_in function-call counts, 284646 in all, are:
+= -- 22866
+> -- 4707
+< -- 1670
++ -- 8745
+- -- 2037
+* -- 19604
+:= -- 31751
+add.period$ -- 0
+call.type$ -- 31
+change.case$ -- 1013
+chr.to.int$ -- 92
+cite$ -- 60
+duplicate$ -- 30680
+empty$ -- 24018
+format.name$ -- 2406
+if$ -- 57316
+int.to.chr$ -- 0
+int.to.str$ -- 104
+missing$ -- 0
+newline$ -- 1337
+num.names$ -- 2086
+pop$ -- 11727
+preamble$ -- 1
+purify$ -- 1209
+quote$ -- 0
+skip$ -- 6972
+stack$ -- 0
+substring$ -- 40743
+swap$ -- 5967
+text.length$ -- 1099
+text.prefix$ -- 49
+top$ -- 1
+type$ -- 1032
+warning$ -- 0
+while$ -- 4016
+width$ -- 0
+write$ -- 1307

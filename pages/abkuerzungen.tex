@@ -2,39 +2,149 @@
 
 % Bei den unten stehenden Formelzeichen ist erläutert, wie explizite Sortierschlüssel über den Inhalt der eckigen Klammer angegeben werden.
 
-% Allgemeine Abkürzungen %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\nomenclature{Abb.}{Abbildung}
-%\nomenclature{bzw.}{beziehungsweise}
-%\nomenclature{DHBW}{Duale Hochschule Baden-Württemberg}
-%\nomenclature{ebd.}{ebenda}
-%\nomenclature{et al.}{at alii}
-%\nomenclature{etc.}{et cetera}
-%\nomenclature{evtl.}{eventuell}
-\nomenclature{f.}{folgende Seite}
-\nomenclature{ff.}{fortfolgende Seiten}
-%\nomenclature{ggf.}{gegebenenfalls}
-%\nomenclature{Hrsg.}{Herausgeber}
-%\nomenclature{Tab.}{Tabelle}
-%\nomenclature{u. a.}{unter anderem}
-%\nomenclature{usw.}{und so weiter}
-\nomenclature{vgl.}{vergleiche}
-%\nomenclature{z. B.}{zum Beispiel}
-%\nomenclature{z. T.}{zum Teil}
 
+%\subsection*{Allgemeine Abkürzungen} %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\nomenclature[c]{Abb.}{Abbildung}
+%\nomenclature[c]{bzw.}{beziehungsweise}
+%\nomenclature[c]{DHBW}{Duale Hochschule Baden-Württemberg}
+%\nomenclature[c]{ebd.}{ebenda}
+%\nomenclature[c]{et al.}{at alii}
+%\nomenclature[c]{etc.}{et cetera}
+%\nomenclature[c]{evtl.}{eventuell}
+\nomenclature[b]{f.}{folgende Seite}
+\nomenclature[b]{ff.}{fortfolgende Seiten}
+%\nomenclature[c]{ggf.}{gegebenenfalls}
+%\nomenclature[c]{Hrsg.}{Herausgeber}
+%\nomenclature[c]{Tab.}{Tabelle}
+%\nomenclature[c]{u. a.}{unter anderem}
+%\nomenclature[c]{usw.}{und so weiter}
+%\nomenclature[c]{vgl.}{vergleiche}
+%\nomenclature[c]{z. B.}{zum Beispiel}
+%\nomenclature[c]{}{}
 % Dateiendungen %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\nomenclature{EMF}{Enhanced Metafile}
-\nomenclature{JPG}{Joint Photographic Experts Group}
-\nomenclature{PDF}{Portable Document Format}
-\nomenclature{PNG}{Portable Network Graphics}
-%\nomenclature{XML}{Extensible Markup Language}
+%\nomenclature[c]{EMF}{Enhanced Metafile}
+%\nomenclature[c]{JPG}{Joint Photographic Experts Group}
+%\nomenclature[c]{PDF}{Portable Document Format}
+%\nomenclature[c]{PNG}{Portable Network Graphics}
+%\nomenclature[c]{XML}{Extensible Markup Language}
+\nomenclature[a]{Skaler}{Kleinbuchstabe, kursiv: $a$}
+\nomenclature[a]{Vektor}{Kleinbuchstabe, fett, kursiv: $\bm{a}$}
+\nomenclature[a]{Matrix}{Großbuchstabe, fett, kursiv: $\bm{A}$}
+\nomenclature[a]{Punkt}{Großbuchstabe: A}
 
-
-% Formelzeichen %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\nomenclature[a]{$a$}{Beschleunigung}
-\nomenclature[F]{$F$}{Kraft}
-\nomenclature[m]{$m$}{Masse}
-\nomenclature[P]{$P$}{Leistung}
-\nomenclature[U]{$U$}{Spannung}
-\nomenclature[R]{$R$}{Widerstand}
-
-
+%\subsection*{Formelzeichen}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\nomenclature[c][a]{$a$}{Beschleunigung}
+%\nomenclature[c][F]{$F$}{Kraft}
+%\nomenclature[c][m]{$m$}{Masse}
+%\nomenclature[c][P]{$P$}{Leistung}
+%\nomenclature[c][U]{$U$}{Spannung}
+\nomenclature[c]{${q}_{v,i,justiert}$}{Justierter, energieoptimierter Via-Punkt}
+\nomenclature[c]{$\bm{g}$}{Fallbeschleunigung}
+\nomenclature[c]{$q_{i,min}$}{minimaler Gelenkwinkel des $i$-ten Gelenks}
+\nomenclature[c]{$q_{i,min}$}{maximaler Gelenkwinkel des $i$-ten Gelenks}
+\nomenclature[c]{$\dot{q}_{i,max}$}{maximale Gelenkwinkelgeschwindigkeit des $i$-ten Gelenks}
+\nomenclature[c]{$\ddot{q}_{i,max}$}{maximale Gelenkwinkelbeschleunigung des $i$-ten Gelenks}
+\nomenclature[c]{$\tau_{i,max}$}{maximaled Drehmoment des $i$-ten Gelenks}
+\nomenclature[c]{$J$}{Zielfunktion}
+\nomenclature[c]{$E_{mech}$}{mechanische Energie}
+\nomenclature[c]{$\bm{v}^0_n$}{lineare Endeffektor-Geschwindigkeit ausgedrückt in KS$\left\{0\right\}$}
+\nomenclature[c]{$\bm{\omega}^0_{0,n}$}{Endeffektor-Winkelgeschwindigkeit ausgedrückt in KS$\left\{0\right\}$}
+\nomenclature[c]{$\bm{q}_s$}{Startpunkt in Gelenkkoordinaten}
+\nomenclature[c]{$\bm{q}_e$}{Zielpunkt in Gelenkkoordinaten}
+\nomenclature[c]{$L$}{Lagrange Funktion}
+\nomenclature[c]{${\theta}$}{Gelenkwinkel}
+\nomenclature[c]{$\bm{q}$}{generalisierte Koordinaten}
+\nomenclature[c]{$\bm{\tau}$}{generalisierte Kräfte}
+\nomenclature[c]{$\bm{J}_v$}{Lineare-Geschwindigkeits-Jacobi-Matrix}
+\nomenclature[c]{$\bm{J}_{\omega}$}{Winkelgeschwindigkeits-Jacobi-Matrix}
+\nomenclature[c]{K}{Kinetische Energie}
+\nomenclature[c]{U}{Potenzielle Energie}
+%\nomenclature[c]{$\bm{\mu}^{i}_{i}_{grav}$}{Anteil der Gewichtskraft am Drehmoment vom Verbindungsglied $i$ ausgedrückt in KS$\left\{i\right\}$}
+%\nomenclature[c]{$\bm{f}^{i}_{i{grav}$}{Anteil der Gewichtskraft vom Verbindungsglied $i$ ausgedrückt in KS$\left\{i\right\}$}
+\nomenclature[c]{$\bm{q}_v$}{Parametervektor des Via-Punktes in Gelenkkoordinaten}
+\nomenclature[c]{$\bm{T}^{i-1}_i$}{homogene Transformationsmatrix zur Lagebeschreibung des KS$\left\{i\right\}$ ausgedrückt in KS$\left\{i-1\right\}$ }
+\nomenclature[c]{$\bm{o}^0_n$}{Koordinaten des Ursprungs des Endeffektor-Koordinatensystems im Basis-Koordinatensystem}
+\nomenclature[c]{$\bm{R}^n_0$}{Rotation des Endeffektor-Koordinatensystems gegenüber dem Basis-Koordinatensystem}
+\nomenclature[c]{$\bm{H}$}{Endeffektor-Pose im Basis-Koordinatensystem}
+\nomenclature[c]{$\theta_i$}{Gelenkwinkel}
+\nomenclature[c]{$\dot{{\theta_i}}$}{Gelenkwinkel des $i$-ten Gelenks}
+\nomenclature[c]{$\theta$}{Gelenkwinkel}
+\nomenclature[c]{$\dot{\theta}$}{Gelenkwinkelgeschwindigkeit}
+\nomenclature[c]{$\ddot{\theta}$}{Gelenkwinkelbeschleunigung}
+\nomenclature[c]{$d_i$}{Gelenkabstand}
+\nomenclature[c]{$a_i$}{Armelementlänge}
+\nomenclature[c]{$\alpha_i$}{Verwindung}
+\nomenclature[c]{KS$\left\{i\right\}$}{Koordinatensystem $i$}
+\nomenclature[c]{$\bm{I}^{i}_{i}$}{Trägheitstensor des Verbindungsglieds $i$ ausgedrückt in KS$\left\{i\right\}$}
+\nomenclature[c]{$\bm{I}^{0}_{i}$}{Trägheitstensor des Verbindungsglieds $i$ ausgedrückt in KS$\left\{0\right\}$}
+\nomenclature[c]{$\bm{M}(\bm{q})$}{Massenmatrix}
+\nomenclature[c]{$\bm{r}^0_{C_i}$}{Lage des Masseschwerpunkts vom Verbindungsglied $i$ im  KS$\left\{0\right\}$}
+\nomenclature[c]{$\bm{g}$}{Fallbeschleunigung}
+\nomenclature[c]{$m_i$}{Masse des Körpers $i$}
+\nomenclature[c]{$\bm{C}(\bm{q},\dot{\bm{q}})$}{Anteil der Corioliskrft und Zentrifugalkraft an den generalisierten Kräften}
+\nomenclature[c]{$\bm{g}(\bm{q}$)}{Anteil der Schwerkraft  an den generalisierten Kräften}
+\nomenclature[c]{$ \boldsymbol{f}_i $}{Kraft, die vom Verbindungsglied $ i-1 $ auf das Verbindungsglied $ i $ ausgeübt wird}
+\nomenclature[c]{$ -\boldsymbol{f}_{i+1} $}{Kraft, die vom Verbindungsglied $ i+1 $ auf das Verbindungsglied $ i $ ausgeübt wird}
+\nomenclature[c]{$ \boldsymbol{\mu}_i $}{Drehmoment, welches vom Verbindungsglied $ i-1 $ auf das Verbindungsglied $ i $  ausgeübt wird}
+\nomenclature[c]{$ -\boldsymbol{\mu}_{i+1} $}{Drehmoment, welches vom Verbindungsglied $ i+1 $ auf das Verbindungsglied $ i $ ausgeübt wird}
+\nomenclature[c]{$ \boldsymbol{f}_i $}{Kraft, die vom Verbindungsglied $ i-1 $ auf das Verbindungsglied $ i $ ausgeübt wird, ausgedrückt in KS$\left\{i\right\}$}
+\nomenclature[c]{$ -\boldsymbol{f}^{i+1}_{i+1} $}{Kraft, die vom Verbindungsglied $ i+1 $ auf das Verbindungsglied $ i $ ausgeübt wird,  ausgedrückt in KS$\left\{i+1\right\}$}
+\nomenclature[c]{$ \boldsymbol{\mu}^{i}_i $}{Drehmoment, welches vom Verbindungsglied $ i-1 $ auf das Verbindungsglied $ i $  ausgeübt wird,  ausgedrückt in KS$\left\{i\right\}$}
+\nomenclature[c]{$ -\boldsymbol{\mu}^{i+1}_{i+1} $}{Drehmoment, welches vom Verbindungsglied $ i+1 $ auf das Verbindungsglied $ i $ ausgeübt wird,  ausgedrückt in KS$\left\{i+1\right\}$}
+\nomenclature[c]{$ \boldsymbol{r}^{i}_{i-1,C_i} $}{Vektor vom Ursprung des KS$\left\{i-1\right\}$ zum Masseschwerpunkt $ C_i $ des Verbindungsglieds $i$ ausgedrückt in KS$\left\{i\right\}$ }
+\nomenclature[c]{$ \boldsymbol{r}^{i}_{i,C_i} $}{Vektor vom Ursprung des KS$\left\{i\right\}$ zum Masseschwerpunkt $ C_i $ ausgedrückt in KS$\left\{i\right\}$}
+\nomenclature[c]{$ \boldsymbol{r}^{i}_{i-1,i} $}{Vektor vom Ursprung des KS$\left\{i-1\right\}$ zum Ursprung des  KS$\left\{i\right\}$ ausgedrückt in KS$\left\{i\right\}$ }
+\nomenclature[c]{$ i_i$}{Übersetzungsverhältnis des Getriebes $i$}
+\nomenclature[c]{ $ \dot{\boldsymbol{p}}_{C_i} $}{ Lineare Geschwindigkeit im Masseschwerpunkt $ C_i $}
+\nomenclature[c]{ $ \dot{\boldsymbol{p}}_i $}{Lineare Geschwindigkeit im Ursprung des KS$\left\{i\right\}$}
+\nomenclature[c]{ $ \boldsymbol{\omega}_i $}{Winkelgeschwindigkeit des Verbindungsglieds $i$}
+\nomenclature[c]{ $ \ddot{\boldsymbol{p}}_{C_i} $}{Lineare Beschleunigung im Masseschwerpunkt $ C_i $}
+\nomenclature[c]{ $ \ddot{\boldsymbol{p}}_i $}{Lineare Beschleunigung im Ursprung des KS$\left\{i\right\}$}
+\nomenclature[c]{ $ \boldsymbol{\dot{\omega}}_i $}{Winkelbeschleunigung des Verbindungsglieds $i$}
+\nomenclature[c]{ $ \dot{\boldsymbol{p}}^i_{C_i} $}{ Lineare Geschwindigkeit im Masseschwerpunkt $ C_i $ ausgedrückt in KS$\left\{i\right\}$ } 
+\nomenclature[c]{ $ \dot{\boldsymbol{p}}^i_i $}{Lineare Geschwindigkeit im Ursprung des KS$\left\{i\right\}$ ausgedrückt in KS$\left\{i\right\}$}
+\nomenclature[c]{ $ \boldsymbol{\omega}^i_i $}{Winkelgeschwindigkeit des Verbindungsglieds $i$ ausgedrückt in KS$\left\{i\right\}$}
+\nomenclature[c]{ $ \ddot{\boldsymbol{p}}^i_{C_i} $}{Lineare Beschleunigung im Masseschwerpunkt $ C_i $ ausgedrückt in KS$\left\{i\right\}$}
+\nomenclature[c]{ $ \ddot{\boldsymbol{p}}^i_i $}{Lineare Beschleunigung im Ursprung des KS$\left\{i\right\}$ ausgedrückt in KS$\left\{i\right\}$}
+\nomenclature[c]{ $ \boldsymbol{\dot{\omega}}^i_i $}{Winkelbeschleunigung des Verbindungsglieds $i$ ausgedrückt in KS$\left\{i\right\}$}
+\nomenclature[c]{$t$}{Zeit}
+\nomenclature[c]{$t_s$}{Startzeit der Bahnbewegung}
+\nomenclature[c]{$t_v$}{Zeitpunkt für dasn Erreichen des Via-Punkts}
+\nomenclature[c]{$t_e$}{Endzeitpunkt der Bahnbewegung}
+%\nomenclature[c]{$a$}{Parameter der Bahnplanung für i = 0,...,6}
+\nomenclature[c]{$P_{i}$}{Mechanische Leistung für den Antrieb des $i$ten Gelenks}
+\nomenclature[c]{$P_{mech}$}{Mechanische Leistung}
+\nomenclature[c]{${q}$}{Gelenkwinkel}
+\nomenclature[c]{$\dot{q}$}{Gelenkwinkelgeschwindigkeit}
+\nomenclature[c]{$\ddot{q}$}{Gelenkwinkelbeschleunigung}
+\nomenclature[c]{$\bm{E}$}{Einheitsmatrix}
+\nomenclature[c]{$\bm{S}$}{Schiefsymmetrische Matrix}
+\nomenclature[d]{IR}{Industrieroboter}
+\nomenclature[d]{$\text{CO}_2$}{Kohlenstoffdioxid }
+\nomenclature[d]{DC-Net}{Gleichstromnetz}
+\nomenclature[d]{OR}{Override}
+\nomenclature[d]{PTP}{Point-to-Point}
+\nomenclature[d]{DOE}{Design of Experiments}
+\nomenclature[d]{DH}{Denavit-Hartenberg}
+\nomenclature[d]{RNEA}{Rekursiver-Newton-Euler-Algorithmus}
+\nomenclature[d]{Pose}{Position und Orientierung}
+\nomenclature[d]{KR C}{KUKA Robot Control}
+\nomenclature[d]{CAD}{Computer Aided Design}
+\nomenclature[d]{PMSM}{permanentmagneterregte Synchronmaschinen}
+\nomenclature[d]{ESB}{Ersatzschaltbild}
+\nomenclature[d]{Home}{Grundstellung}
+\nomenclature[d]{TP-Filter}{Tiefpassfilter}
+\nomenclature[d]{RSI}{RobotSensorInterface}
+\nomenclature[d]{UDP}{User Datagram Protocol}
+\nomenclature[d]{API}{Application Programming Interface}
+\nomenclature[d]{Winsock}{Windows Sockets 2}
+\nomenclature[d]{KRL}{KUKA Robot Language}
+\nomenclature[d]{ASCII}{American Standard Code for Information Interchange}
+\nomenclature[d]{JSON}{JavaScript Object Notation}
+\nomenclature[d]{TCP}{Tool-Center-Point}
+\nomenclature[d]{SiL}{Software-in-the-Loop}
+\nomenclature[d]{SQP}{sequential quadratic programming}
+\nomenclature[d]{KKT-Konvergenzkriterien}{Karush-Kuhn-Tucker-Konvergenzkriterien}
+\nomenclature[d]{src}{source-file}
+\nomenclature[d]{dat}{data-file}

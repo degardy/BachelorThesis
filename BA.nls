@@ -1,0 +1,120 @@
+
+\begin{thenomenclature} 
+\nomgroup{A}
+  \item [{Matrix}]\begingroup Großbuchstabe, fett, kursiv: $\bm{A}$\nomeqref {0.0}\nompageref{1}
+  \item [{Punkt}]\begingroup Großbuchstabe: A\nomeqref {0.0}\nompageref{1}
+  \item [{Skaler}]\begingroup Kleinbuchstabe, kursiv: $a$\nomeqref {0.0}\nompageref{1}
+  \item [{Vektor}]\begingroup Kleinbuchstabe, fett, kursiv: $\bm{a}$\nomeqref {0.0}\nompageref{1}
+\nomgroup{B}
+  \item [{f.}]\begingroup folgende Seite\nomeqref {0.0}\nompageref{1}
+  \item [{ff.}]\begingroup fortfolgende Seiten\nomeqref {0.0}\nompageref{1}
+\nomgroup{C}
+  \item [{KS$\left\{i\right\}$}]\begingroup Koordinatensystem $i$\nomeqref {0.0}\nompageref{1}
+\nomgroup{D}
+  \item [{ $ \boldsymbol{\dot{\omega}}^i_i $}]\begingroup Winkelbeschleunigung des Verbindungsglieds $i$ ausgedrückt in KS$\left\{i\right\}$\nomeqref {0.0}\nompageref{1}
+  \item [{ $ \boldsymbol{\dot{\omega}}_i $}]\begingroup Winkelbeschleunigung des Verbindungsglieds $i$\nomeqref {0.0}\nompageref{1}
+  \item [{ $ \boldsymbol{\omega}^i_i $}]\begingroup Winkelgeschwindigkeit des Verbindungsglieds $i$ ausgedrückt in KS$\left\{i\right\}$\nomeqref {0.0}\nompageref{1}
+  \item [{ $ \boldsymbol{\omega}_i $}]\begingroup Winkelgeschwindigkeit des Verbindungsglieds $i$\nomeqref {0.0}\nompageref{1}
+  \item [{ $ \ddot{\boldsymbol{p}}^i_i $}]\begingroup Lineare Beschleunigung im Ursprung des KS$\left\{i\right\}$ ausgedrückt in KS$\left\{i\right\}$\nomeqref {0.0}\nompageref{1}
+  \item [{ $ \ddot{\boldsymbol{p}}^i_{C_i} $}]\begingroup Lineare Beschleunigung im Masseschwerpunkt $ C_i $ ausgedrückt in KS$\left\{i\right\}$\nomeqref {0.0}\nompageref{1}
+  \item [{ $ \ddot{\boldsymbol{p}}_i $}]\begingroup Lineare Beschleunigung im Ursprung des KS$\left\{i\right\}$\nomeqref {0.0}\nompageref{1}
+  \item [{ $ \ddot{\boldsymbol{p}}_{C_i} $}]\begingroup Lineare Beschleunigung im Masseschwerpunkt $ C_i $\nomeqref {0.0}\nompageref{1}
+  \item [{ $ \dot{\boldsymbol{p}}^i_i $}]\begingroup Lineare Geschwindigkeit im Ursprung des KS$\left\{i\right\}$ ausgedrückt in KS$\left\{i\right\}$\nomeqref {0.0}\nompageref{1}
+  \item [{ $ \dot{\boldsymbol{p}}^i_{C_i} $}]\begingroup  Lineare Geschwindigkeit im Masseschwerpunkt $ C_i $ ausgedrückt in KS$\left\{i\right\}$ \nomeqref {0.0}\nompageref{1}
+  \item [{ $ \dot{\boldsymbol{p}}_i $}]\begingroup Lineare Geschwindigkeit im Ursprung des KS$\left\{i\right\}$\nomeqref {0.0}\nompageref{1}
+  \item [{ $ \dot{\boldsymbol{p}}_{C_i} $}]\begingroup  Lineare Geschwindigkeit im Masseschwerpunkt $ C_i $\nomeqref {0.0}\nompageref{1}
+  \item [{$ -\boldsymbol{\mu}^{i+1}_{i+1} $}]\begingroup Drehmoment, welches vom Verbindungsglied $ i+1 $ auf das Verbindungsglied $ i $ ausgeübt wird,  ausgedrückt in KS$\left\{i+1\right\}$\nomeqref {0.0}\nompageref{1}
+  \item [{$ -\boldsymbol{\mu}_{i+1} $}]\begingroup Drehmoment, welches vom Verbindungsglied $ i+1 $ auf das Verbindungsglied $ i $ ausgeübt wird\nomeqref {0.0}\nompageref{1}
+  \item [{$ -\boldsymbol{f}^{i+1}_{i+1} $}]\begingroup Kraft, die vom Verbindungsglied $ i+1 $ auf das Verbindungsglied $ i $ ausgeübt wird,  ausgedrückt in KS$\left\{i+1\right\}$\nomeqref {0.0}\nompageref{1}
+  \item [{$ -\boldsymbol{f}_{i+1} $}]\begingroup Kraft, die vom Verbindungsglied $ i+1 $ auf das Verbindungsglied $ i $ ausgeübt wird\nomeqref {0.0}\nompageref{1}
+  \item [{$ \boldsymbol{\mu}^{i}_i $}]\begingroup Drehmoment, welches vom Verbindungsglied $ i-1 $ auf das Verbindungsglied $ i $  ausgeübt wird,  ausgedrückt in KS$\left\{i\right\}$\nomeqref {0.0}\nompageref{1}
+  \item [{$ \boldsymbol{\mu}_i $}]\begingroup Drehmoment, welches vom Verbindungsglied $ i-1 $ auf das Verbindungsglied $ i $  ausgeübt wird\nomeqref {0.0}\nompageref{1}
+  \item [{$ \boldsymbol{f}_i $}]\begingroup Kraft, die vom Verbindungsglied $ i-1 $ auf das Verbindungsglied $ i $ ausgeübt wird, ausgedrückt in KS$\left\{i\right\}$\nomeqref {0.0}\nompageref{1}
+  \item [{$ \boldsymbol{f}_i $}]\begingroup Kraft, die vom Verbindungsglied $ i-1 $ auf das Verbindungsglied $ i $ ausgeübt wird\nomeqref {0.0}\nompageref{1}
+  \item [{$ \boldsymbol{r}^{i}_{i,C_i} $}]\begingroup Vektor vom Ursprung des KS$\left\{i\right\}$ zum Masseschwerpunkt $ C_i $ ausgedrückt in KS$\left\{i\right\}$\nomeqref {0.0}\nompageref{1}
+  \item [{$ \boldsymbol{r}^{i}_{i-1,C_i} $}]\begingroup Vektor vom Ursprung des KS$\left\{i-1\right\}$ zum Masseschwerpunkt $ C_i $ des Verbindungsglieds $i$ ausgedrückt in KS$\left\{i\right\}$ \nomeqref {0.0}\nompageref{1}
+  \item [{$ \boldsymbol{r}^{i}_{i-1,i} $}]\begingroup Vektor vom Ursprung des KS$\left\{i-1\right\}$ zum Ursprung des  KS$\left\{i\right\}$ ausgedrückt in KS$\left\{i\right\}$ \nomeqref {0.0}\nompageref{1}
+  \item [{$ i_i$}]\begingroup Übersetzungsverhältnis des Getriebes $i$\nomeqref {0.0}\nompageref{1}
+  \item [{$\alpha_i$}]\begingroup Verwindung\nomeqref {0.0}\nompageref{1}
+  \item [{$\bm{\omega}^0_{0,n}$}]\begingroup Endeffektor-Winkelgeschwindigkeit ausgedrückt in KS$\left\{0\right\}$\nomeqref {0.0}\nompageref{1}
+  \item [{$\bm{\tau}$}]\begingroup generalisierte Kräfte\nomeqref {0.0}\nompageref{1}
+  \item [{$\bm{C}(\bm{q},\dot{\bm{q}})$}]\begingroup Anteil der Corioliskrft und Zentrifugalkraft an den generalisierten Kräften\nomeqref {0.0}\nompageref{1}
+  \item [{$\bm{E}$}]\begingroup Einheitsmatrix\nomeqref {0.0}\nompageref{1}
+  \item [{$\bm{g}$}]\begingroup Fallbeschleunigung\nomeqref {0.0}\nompageref{1}
+  \item [{$\bm{g}(\bm{q}$)}]\begingroup Anteil der Schwerkraft  an den generalisierten Kräften\nomeqref {0.0}\nompageref{1}
+  \item [{$\bm{H}$}]\begingroup Endeffektor-Pose im Basis-Koordinatensystem\nomeqref {0.0}\nompageref{1}
+  \item [{$\bm{I}^{0}_{i}$}]\begingroup Trägheitstensor des Verbindungsglieds $i$ ausgedrückt in KS$\left\{0\right\}$\nomeqref {0.0}\nompageref{1}
+  \item [{$\bm{I}^{i}_{i}$}]\begingroup Trägheitstensor des Verbindungsglieds $i$ ausgedrückt in KS$\left\{i\right\}$\nomeqref {0.0}\nompageref{1}
+  \item [{$\bm{J}_v$}]\begingroup Lineare-Geschwindigkeits-Jacobi-Matrix\nomeqref {0.0}\nompageref{1}
+  \item [{$\bm{J}_{\omega}$}]\begingroup Winkelgeschwindigkeits-Jacobi-Matrix\nomeqref {0.0}\nompageref{1}
+  \item [{$\bm{M}(\bm{q})$}]\begingroup Massenmatrix\nomeqref {0.0}\nompageref{1}
+  \item [{$\bm{o}^0_n$}]\begingroup Koordinaten des Ursprungs des Endeffektor-Koordinatensystems im Basis-Koordinatensystem\nomeqref {0.0}\nompageref{1}
+  \item [{$\bm{q}$}]\begingroup generalisierte Koordinaten\nomeqref {0.0}\nompageref{1}
+  \item [{$\bm{q}_e$}]\begingroup Zielpunkt in Gelenkkoordinaten\nomeqref {0.0}\nompageref{1}
+  \item [{$\bm{q}_s$}]\begingroup Startpunkt in Gelenkkoordinaten\nomeqref {0.0}\nompageref{1}
+  \item [{$\bm{q}_v$}]\begingroup Parametervektor des Via-Punktes in Gelenkkoordinaten\nomeqref {0.0}\nompageref{1}
+  \item [{$\bm{r}^0_{C_i}$}]\begingroup Lage des Masseschwerpunkts vom Verbindungsglied $i$ im  KS$\left\{0\right\}$\nomeqref {0.0}\nompageref{1}
+  \item [{$\bm{R}^n_0$}]\begingroup Rotation des Endeffektor-Koordinatensystems gegenüber dem Basis-Koordinatensystem\nomeqref {0.0}\nompageref{1}
+  \item [{$\bm{S}$}]\begingroup Schiefsymmetrische Matrix\nomeqref {0.0}\nompageref{1}
+  \item [{$\bm{T}^{i-1}_i$}]\begingroup homogene Transformationsmatrix zur Lagebeschreibung des KS$\left\{i\right\}$ ausgedrückt in KS$\left\{i-1\right\}$ \nomeqref {0.0}\nompageref{1}
+  \item [{$\bm{v}^0_n$}]\begingroup lineare Endeffektor-Geschwindigkeit ausgedrückt in KS$\left\{0\right\}$\nomeqref {0.0}\nompageref{1}
+  \item [{$\ddot{\theta}$}]\begingroup Gelenkwinkelbeschleunigung\nomeqref {0.0}\nompageref{1}
+  \item [{$\ddot{q}$}]\begingroup Gelenkwinkelbeschleunigung\nomeqref {0.0}\nompageref{1}
+  \item [{$\ddot{q}_{i,max}$}]\begingroup maximale Gelenkwinkelbeschleunigung des $i$-ten Gelenks\nomeqref {0.0}\nompageref{1}
+  \item [{$\dot{\theta}$}]\begingroup Gelenkwinkelgeschwindigkeit\nomeqref {0.0}\nompageref{1}
+  \item [{$\dot{q}$}]\begingroup Gelenkwinkelgeschwindigkeit\nomeqref {0.0}\nompageref{1}
+  \item [{$\dot{q}_{i,max}$}]\begingroup maximale Gelenkwinkelgeschwindigkeit des $i$-ten Gelenks\nomeqref {0.0}\nompageref{1}
+  \item [{$\dot{{\theta_i}}$}]\begingroup Gelenkwinkel des $i$-ten Gelenks\nomeqref {0.0}\nompageref{1}
+  \item [{$\tau_{i,max}$}]\begingroup maximaled Drehmoment des $i$-ten Gelenks\nomeqref {0.0}\nompageref{1}
+  \item [{$\theta$}]\begingroup Gelenkwinkel\nomeqref {0.0}\nompageref{1}
+  \item [{$\theta_i$}]\begingroup Gelenkwinkel\nomeqref {0.0}\nompageref{1}
+  \item [{$a_i$}]\begingroup Armelementlänge\nomeqref {0.0}\nompageref{1}
+  \item [{$d_i$}]\begingroup Gelenkabstand\nomeqref {0.0}\nompageref{1}
+  \item [{$E_{mech}$}]\begingroup \nomenclature[d]anische Energie\nomeqref {0.0}\nompageref{1}
+  \item [{$J$}]\begingroup Zielfunktion\nomeqref {0.0}\nompageref{1}
+  \item [{$L$}]\begingroup Lagrange Funktion\nomeqref {0.0}\nompageref{1}
+  \item [{$m_i$}]\begingroup Masse des Körpers $i$\nomeqref {0.0}\nompageref{1}
+  \item [{$P_{i}$}]\begingroup Mechanische Leistung für den Antrieb des $i$ten Gelenks\nomeqref {0.0}\nompageref{1}
+  \item [{$P_{mech}$}]\begingroup Mechanische Leistung\nomeqref {0.0}\nompageref{1}
+  \item [{$q_{i,min}$}]\begingroup maximaler Gelenkwinkel des $i$-ten Gelenks\nomeqref {0.0}\nompageref{1}
+  \item [{$q_{i,min}$}]\begingroup minimaler Gelenkwinkel des $i$-ten Gelenks\nomeqref {0.0}\nompageref{1}
+  \item [{$t$}]\begingroup Zeit\nomeqref {0.0}\nompageref{1}
+  \item [{$t_e$}]\begingroup Endzeitpunkt der Bahnbewegung\nomeqref {0.0}\nompageref{1}
+  \item [{$t_s$}]\begingroup Startzeit der Bahnbewegung\nomeqref {0.0}\nompageref{1}
+  \item [{$t_v$}]\begingroup Zeitpunkt für dasn Erreichen des Via-Punkts\nomeqref {0.0}\nompageref{1}
+  \item [{${\theta}$}]\begingroup Gelenkwinkel\nomeqref {0.0}\nompageref{1}
+  \item [{${q}$}]\begingroup Gelenkwinkel\nomeqref {0.0}\nompageref{1}
+  \item [{${q}_{v,i,justiert}$}]\begingroup Justierter, energieoptimierter Via-Punkt\nomeqref {0.0}\nompageref{1}
+  \item [{K}]\begingroup Kinetische Energie\nomeqref {0.0}\nompageref{1}
+  \item [{U}]\begingroup Potenzielle Energie\nomeqref {0.0}\nompageref{1}
+\nomgroup{E}
+  \item [{$\text{CO}_2$}]\begingroup Kohlenstoffdioxid \nomeqref {0.0}\nompageref{1}
+  \item [{API}]\begingroup Application Programming Interface\nomeqref {0.0}\nompageref{1}
+  \item [{ASCII}]\begingroup American Standard Code for Information Interchange\nomeqref {0.0}\nompageref{1}
+  \item [{CAD}]\begingroup Computer Aided Design\nomeqref {0.0}\nompageref{1}
+  \item [{dat}]\begingroup data-file\nomeqref {0.0}\nompageref{1}
+  \item [{DC-Net}]\begingroup Gleichstromnetz\nomeqref {0.0}\nompageref{1}
+  \item [{DH}]\begingroup Denavit-Hartenberg\nomeqref {0.0}\nompageref{1}
+  \item [{DOE}]\begingroup Design of Experiments\nomeqref {0.0}\nompageref{1}
+  \item [{ESB}]\begingroup Ersatzschaltbild\nomeqref {0.0}\nompageref{1}
+  \item [{Home}]\begingroup Grundstellung\nomeqref {0.0}\nompageref{1}
+  \item [{IR}]\begingroup Industrieroboter\nomeqref {0.0}\nompageref{1}
+  \item [{JSON}]\begingroup JavaScript Object Notation\nomeqref {0.0}\nompageref{1}
+  \item [{KKT-Konvergenzkriterien}]\begingroup Karush-Kuhn-Tucker-Konvergenzkriterien\nomeqref {0.0}\nompageref{1}
+  \item [{KR C}]\begingroup KUKA Robot Control\nomeqref {0.0}\nompageref{1}
+  \item [{KRL}]\begingroup KUKA Robot Language\nomeqref {0.0}\nompageref{1}
+  \item [{OR}]\begingroup Override\nomeqref {0.0}\nompageref{1}
+  \item [{PMSM}]\begingroup permanentmagneterregte Synchronmaschinen\nomeqref {0.0}\nompageref{1}
+  \item [{Pose}]\begingroup Position und Orientierung\nomeqref {0.0}\nompageref{1}
+  \item [{PTP}]\begingroup Point-to-Point\nomeqref {0.0}\nompageref{1}
+  \item [{RNEA}]\begingroup Rekursiver-Newton-Euler-Algorithmus\nomeqref {0.0}\nompageref{1}
+  \item [{RSI}]\begingroup RobotSensorInterface\nomeqref {0.0}\nompageref{1}
+  \item [{SiL}]\begingroup Software-in-the-Loop\nomeqref {0.0}\nompageref{1}
+  \item [{SQP}]\begingroup sequential quadratic programming\nomeqref {0.0}\nompageref{1}
+  \item [{src}]\begingroup source-file\nomeqref {0.0}\nompageref{1}
+  \item [{TCP}]\begingroup Tool-Center-Point\nomeqref {0.0}\nompageref{1}
+  \item [{TP-Filter}]\begingroup Tiefpassfilter\nomeqref {0.0}\nompageref{1}
+  \item [{UDP}]\begingroup User Datagram Protocol\nomeqref {0.0}\nompageref{1}
+  \item [{Winsock}]\begingroup Windows Sockets 2\nomeqref {0.0}\nompageref{1}
+
+\end{thenomenclature}

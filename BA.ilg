@@ -1,0 +1,14 @@
+This is makeindex, version 2.16 [MiKTeX 22.10].
+Scanning style file C:/Users/denni/AppData/Local/Programs/MiKTeX/makeindex/nomencl/nomencl.ist........
+** Input style error (file = C:/Users/denni/AppData/Local/Programs/MiKTeX/makeindex/nomencl/nomencl.ist, line = 36):
+   -- Unknown specifier lethead_prefix.
+** Input style error (file = C:/Users/denni/AppData/Local/Programs/MiKTeX/makeindex/nomencl/nomencl.ist, line = 37):
+   -- Unknown specifier lethead_suffix.
+** Input style error (file = C:/Users/denni/AppData/Local/Programs/MiKTeX/makeindex/nomencl/nomencl.ist, line = 38):
+   -- Unknown specifier lethead_flag.
+....done (12 attributes redefined, 3 ignored).
+Scanning input file BA.nlo....done (112 entries accepted, 0 rejected).
+Sorting entries....done (818 comparisons).
+Generating output file BA.nls....done (120 lines written, 0 warnings).
+Output written in BA.nls.
+Transcript written in BA.ilg.

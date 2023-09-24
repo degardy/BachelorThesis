@@ -1,0 +1,1420 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{anyt/global//global/global}
+  \entry{Bjorkenstam.2013}{inproceedings}{}
+    \name{author}{5}{}{%
+      {{hash=BS}{%
+         family={Bjorkenstam},
+         familyi={B\bibinitperiod},
+         given={Staffan},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=GD}{%
+         family={Gleeson},
+         familyi={G\bibinitperiod},
+         given={Daniel},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=BR}{%
+         family={Bohlin},
+         familyi={B\bibinitperiod},
+         given={Robert},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=CJS}{%
+         family={Carlson},
+         familyi={C\bibinitperiod},
+         given={Johan\bibnamedelima S.},
+         giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=LB}{%
+         family={Lennartson},
+         familyi={L\bibinitperiod},
+         given={Bengt},
+         giveni={B\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{BS+1}
+    \strng{fullhash}{BSGDBRCJSLB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Bjo+13}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{booktitle}{2013 IEEE International Conference on Automation Science
+  and Engineering (CASE)}
+    \verb{doi}
+    \verb 10.1109/CoASE.2013.6654025
+    \endverb
+    \field{isbn}{978-1-4799-1515-6}
+    \field{pages}{510\bibrangedash 515}
+    \field{title}{Energy efficient and collision free motion of industrial
+  robots using optimal control}
+    \verb{file}
+    \verb 2013{\_}Bjoerkenstam{\_}Energy{\_}efficient{\_}and{\_}collision{\_}fr
+    \verb ee{\_}motion{\_}of{\_}industrial{\_}robots{\_}using{\_}optimal{\_}con
+    \verb trol:Attachments/2013{\_}Bjoerkenstam{\_}Energy{\_}efficient{\_}and{\
+    \verb _}collision{\_}free{\_}motion{\_}of{\_}industrial{\_}robots{\_}using{
+    \verb \_}optimal{\_}control.pdf:application/pdf
+    \endverb
+    \field{year}{2013}
+  \endentry
+
+  \entry{Carabin.2017}{article}{}
+    \name{author}{3}{}{%
+      {{hash=CG}{%
+         family={Carabin},
+         familyi={C\bibinitperiod},
+         given={Giovanni},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=WE}{%
+         family={Wehrle},
+         familyi={W\bibinitperiod},
+         given={Erich},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=VR}{%
+         family={Vidoni},
+         familyi={V\bibinitperiod},
+         given={Renato},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CGWEVR1}
+    \strng{fullhash}{CGWEVR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{CWV17}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \verb{doi}
+    \verb 10.3390/robotics6040039
+    \endverb
+    \field{number}{4}
+    \field{pages}{39}
+    \field{title}{A Review on Energy-Saving Optimization Methods for Robotic
+  and Automatic Systems}
+    \verb{url}
+    \verb https://www.mdpi.com/2218-6581/6/4/39
+    \endverb
+    \field{volume}{6}
+    \verb{file}
+    \verb Carabin, Wehrle et al 2017 - A Review on Energy-Saving Optimization:A
+    \verb ttachments/Carabin, Wehrle et al 2017 - A Review on Energy-Saving Opt
+    \verb imization.pdf:application/pdf
+    \endverb
+    \field{journaltitle}{Robotics}
+    \field{year}{2017}
+    \warn{\item Invalid format of field 'urldate'}
+  \endentry
+
+  \entry{Patent.2016}{patent}{}
+    \name{author}{4}{}{%
+      {{hash=EK}{%
+         family={Eggers},
+         familyi={E\bibinitperiod},
+         given={Kai},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=KJ}{%
+         family={Kotlarski},
+         familyi={K\bibinitperiod},
+         given={Jens},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=OT}{%
+         family={Ortmaier},
+         familyi={O\bibinitperiod},
+         given={Tobias},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=HC}{%
+         family={Hansen},
+         familyi={H\bibinitperiod},
+         given={Christian},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \list{organization}{1}{%
+      {{Gottfried Wilhelm Leibniz Universit{\"a}t}}%
+    }
+    \strng{namehash}{EK+1}
+    \strng{fullhash}{EKKJOTHC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Egg+06}
+    \field{sortinit}{E}
+    \field{sortinithash}{E}
+    \field{number}{EP 3 255 513 A1}
+    \field{title}{Verfahren zur echtzeit{\"u}berwachung des leistungsverlaufs
+  und/oder energieflusses einer antriebseinrichtung und antriebseinrichtung
+  sowie computerprogramm hierzu: Europ{\"a}ische Patentanmeldung}
+    \field{type}{patent}
+    \field{year}{09.06.2016}
+    \warn{\item Invalid format of field 'urldate'}
+  \endentry
+
+  \entry{Eggers.2019}{thesis}{}
+    \name{author}{1}{}{%
+      {{hash=EKB}{%
+         family={Eggers},
+         familyi={E\bibinitperiod},
+         given={Kai\bibnamedelima Benjamin},
+         giveni={K\bibinitperiod\bibinitdelim B\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Fakult{\"a}t f{\"u}r Maschinenbau}%
+    }
+    \strng{namehash}{EKB1}
+    \strng{fullhash}{EKB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Egg19}
+    \field{sortinit}{E}
+    \field{sortinithash}{E}
+    \field{abstract}{%
+    Beim Erwerb eines Industrieroboters werden heutzutage nicht mehr nur
+  klassische Faktoren wie die minimal erreichbare Taktzeit und die
+  Anschaffungskosten als Kaufkriterien betrachtet, sondern auch der Leistungs-
+  und Energiebedarf des Roboters sowie die laufenden Kosten {\"u}ber dessen
+  gesamte Lebensdauer (TCO: Total Cost of Ownership). Konzepte zur Steigerung
+  der Energieeffizienz von Industrierobotern sind somit sowohl aus
+  {\"o}kologischer als auch aus {\"o}konomischer Sicht erstrebenswert. Die
+  Verbesserungsans{\"a}tze lassen sich in zwei Kategorien unterteilen: Bei den
+  hardwareseitigen Ans{\"a}tzen wird eine Effizienzsteigerung durch Anpassung
+  der verwendeten mechanischen und elektrischen Komponenten und/oder durch
+  hardwarebezogene Erweiterung des Systems, zum Beispiel in Form von
+  Energiespeichern, angestrebt. Die zweite Kategorie bilden Ans{\"a}tze zur
+  Optimierung der Software, bei denen die Ersparnisse durch energieeffizientere
+  Bahnplanungsalgorithmen und Ablaufsteuerungen erzielt werden sollen. Die
+  folgenden Untersuchungen fokussieren sich dabei auf die zweite Kategorie. Im
+  Rahmen der vorliegenden Arbeit werden softwarebasierte Ans{\"a}tze zum
+  energieeffizienten Betrieb von Industrierobotern unter m{\"o}glichst
+  praxisnahen Bedingungen vorgestellt und auf zwei Roboter verschiedener
+  Traglastklassen angewendet. Als Szenarien werden unterschiedliche
+  industrietypische Applikationen wie zum Beispiel Pick-and-Place- und
+  Schwei{\ss}aufgaben untersucht. Die Bahnen der Ausgangsszenarien, die als
+  Referenz zur Bewertung des Einsparpotentials dienen, werden direkt auf einer
+  modernen, kommerziellen Robotersteuerung geplant, sodass diese dem Stand der
+  Technik entsprechen. Es wird ein Modell erstellt, das den Leistungs- und
+  Energiebedarf des betrachteten Roboters in Abh{\"a}ngigkeit von der
+  durchgef{\"u}hrten Bewegung wiedergibt. Das Modell wird f{\"u}r beide Roboter
+  am Pr{\"u}fstand validiert. Die vorgestellten Verfahren zum
+  energieeffizienten Betrieb von Industrierobotern lassen sich im Wesentlichen
+  anhand der Freiheitsgrade des Ausgangsszenarios klassifizieren: Im ersten
+  Fall werden zeitlich ver{\"a}nderliche Bewegungen mit fest vorgegebener
+  Geometrie untersucht. Anschlie{\ss}end werden f{\"u}r Aufgaben mit
+  ver{\"a}nderlicher Bahngeometrie zwei Verfahren zur Bestimmung einer
+  energieoptimalen Bahngeometrie unter Verwendung nichtlinearer
+  Optimierungsverfahren pr{\"a}sentiert. Im dritten Fall wird das
+  Einsparpotential durch {\"A}nderung der relativen Lage des Roboters zum
+  Werkst{\"u}ck aufgezeigt. F{\"u}r jedes Verfahren werden die Bedingungen zur
+  Umsetzung in der Praxis sowie die Ursachen und Einflussfaktoren f{\"u}r die
+  erreichbaren Ersparnisse diskutiert.%
+    }
+    \verb{doi}
+    \verb 10.15488/5332
+    \endverb
+    \field{title}{Energieeffizienter Betrieb von Industrierobotern}
+    \verb{url}
+    \verb https://www.repo.uni-hannover.de/handle/123456789/5379
+    \endverb
+    \list{location}{1}{%
+      {Hannover}%
+    }
+    \list{institution}{1}{%
+      {{Gottfried Wilhelm Leibniz Universit{\"a}t}}%
+    }
+    \verb{file}
+    \verb Dissertation{\_}Kai{\_}Eggers:Attachments/Dissertation{\_}Kai{\_}Egge
+    \verb rs.pdf:application/pdf
+    \endverb
+    \field{type}{Dissertation}
+    \field{year}{2019}
+    \warn{\item Invalid format of field 'urldate'}
+  \endentry
+
+  \entry{Engelke.2008}{thesis}{}
+    \name{author}{1}{}{%
+      {{hash=ER}{%
+         family={Engelke},
+         familyi={E\bibinitperiod},
+         given={Robert},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Lehrstuhl f{\"u}r Angewandte Mechanik}%
+    }
+    \strng{namehash}{ER1}
+    \strng{fullhash}{ER1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Eng08}
+    \field{sortinit}{E}
+    \field{sortinithash}{E}
+    \field{title}{Modellierung und Optimierung von Robotern mit einseitigen
+  Bindungen und lokalen Verspannungen}
+    \list{location}{1}{%
+      {M{\"u}nchen}%
+    }
+    \list{institution}{1}{%
+      {{Technische Universit{\"a}t M{\"u}nchen}}%
+    }
+    \field{type}{Dissertation}
+    \field{year}{2008}
+  \endentry
+
+  \entry{Gattringer.2013}{article}{}
+    \name{author}{3}{}{%
+      {{hash=GH}{%
+         family={Gattringer},
+         familyi={G\bibinitperiod},
+         given={Hubert},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=RR}{%
+         family={Riepl},
+         familyi={R\bibinitperiod},
+         given={Roland},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=NM}{%
+         family={Neubauer},
+         familyi={N\bibinitperiod},
+         given={Matthias},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{GHRRNM1}
+    \strng{fullhash}{GHRRNM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{GRN13}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \verb{doi}
+    \verb 10.1155/2013/625638
+    \endverb
+    \field{issn}{2314-4882}
+    \field{pages}{1\bibrangedash 12}
+    \field{title}{Optimizing Industrial Robots for Accurate High-Speed
+  Applications}
+    \field{volume}{2013}
+    \verb{file}
+    \verb 2013{\_}Gattringer,{\_}Optimizing Industrial Robots for Accurate:Atta
+    \verb chments/2013{\_}Gattringer,{\_}Optimizing Industrial Robots for Accur
+    \verb ate.pdf:application/pdf
+    \endverb
+    \field{journaltitle}{Journal of Industrial Engineering}
+    \field{year}{2013}
+  \endentry
+
+  \entry{Hansen.2012}{inproceedings}{}
+    \name{author}{4}{}{%
+      {{hash=HC}{%
+         family={Hansen},
+         familyi={H\bibinitperiod},
+         given={Christian},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=OJ}{%
+         family={Oltjen},
+         familyi={O\bibinitperiod},
+         given={Julian},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=MD}{%
+         family={Meike},
+         familyi={M\bibinitperiod},
+         given={Davis},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=OT}{%
+         family={Ortmaier},
+         familyi={O\bibinitperiod},
+         given={Tobias},
+         giveni={T\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{HC+1}
+    \strng{fullhash}{HCOJMDOT1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Han+12}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{booktitle}{2012 IEEE International Conference on Automation Science
+  and Engineering (CASE)}
+    \verb{doi}
+    \verb 10.1109/CoASE.2012.6386343
+    \endverb
+    \field{isbn}{978-1-4673-0430-6}
+    \field{pages}{1\bibrangedash 7}
+    \field{title}{Enhanced approach for energy-efficient trajectory generation
+  of industrial robots}
+    \verb{file}
+    \verb 2012{\_}Hansen{\_}B-Spline (2):Attachments/2012{\_}Hansen{\_}B-Spline
+    \verb  (2).pdf:application/pdf
+    \endverb
+    \field{year}{2012}
+  \endentry
+
+  \entry{Kemmetmueller.2023}{misc}{}
+    \name{author}{2}{}{%
+      {{hash=KW}{%
+         family={Kemmetmueller},
+         familyi={K\bibinitperiod},
+         given={Wolfgang},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=KA}{%
+         family={Kugi},
+         familyi={K\bibinitperiod},
+         given={Andreas},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KWKA1}
+    \strng{fullhash}{KWKA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{KK}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{title}{Modellbildung: Vorlesung und {\"U}bung SS 2023}
+    \list{institution}{1}{%
+      {{Institut f{\"u}r Automatisierungs- und Regelungstechnik, TU Wien}}%
+    }
+    \verb{file}
+    \verb 2023{\_}Modellbildung{\_}Skript:Attachments/2023{\_}Modellbildung{\_}
+    \verb Skript.pdf:application/pdf
+    \endverb
+  \endentry
+
+  \entry{Lin.2018}{inproceedings}{}
+    \name{author}{5}{}{%
+      {{hash=LJ}{%
+         family={Lin},
+         familyi={L\bibinitperiod},
+         given={Jianjie},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=SN}{%
+         family={Somani},
+         familyi={S\bibinitperiod},
+         given={Nikhil},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=HB}{%
+         family={Hu},
+         familyi={H\bibinitperiod},
+         given={Biao},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=RM}{%
+         family={Rickert},
+         familyi={R\bibinitperiod},
+         given={Markus},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=KA}{%
+         family={Knoll},
+         familyi={K\bibinitperiod},
+         given={Alois},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{LJ+1}
+    \strng{fullhash}{LJSNHBRMKA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Lin+18}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{booktitle}{2018 IEEE/RSJ International Conference on Intelligent
+  Robots and Systems (IROS)}
+    \verb{doi}
+    \verb 10.1109/IROS.2018.8593577
+    \endverb
+    \field{isbn}{978-1-5386-8094-0}
+    \field{pages}{5869\bibrangedash 5876}
+    \field{title}{An Efficient and Time-Optimal Trajectory Generation Approach
+  for Waypoints Under Kinematic Constraints and Error Bounds}
+    \verb{file}
+    \verb Lim{\_}Paper{\_}An Efficient and Time-Optimal Trajectory Generation A
+    \verb pproach forAn Efficient and Time-Optimal Trajectory Generation Approa
+    \verb ch for:Attachments/Lim{\_}Paper{\_}An Efficient and Time-Optimal Traj
+    \verb ectory Generation Approach forAn Efficient and Time-Optimal Trajector
+    \verb y Generation Approach for.pdf:application/pdf
+    \endverb
+    \field{year}{2018}
+  \endentry
+
+  \entry{Luenberger.2021}{book}{}
+    \name{author}{2}{}{%
+      {{hash=LDG}{%
+         family={Luenberger},
+         familyi={L\bibinitperiod},
+         given={David\bibnamedelima G.},
+         giveni={D\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+      {{hash=YY}{%
+         family={Ye},
+         familyi={Y\bibinitperiod},
+         given={Yinyu},
+         giveni={Y\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {{Springer International Publishing}}%
+    }
+    \strng{namehash}{LDGYY1}
+    \strng{fullhash}{LDGYY1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{LY21}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \verb{doi}
+    \verb 10.1007/978-3-030-85450-8
+    \endverb
+    \field{isbn}{978-3-030-85449-2}
+    \field{title}{Linear and Nonlinear Programming}
+    \field{volume}{228}
+    \list{location}{1}{%
+      {Cham}%
+    }
+    \verb{file}
+    \verb Linear and Nonlinear Programming Luenberger:Attachments/Linear and No
+    \verb nlinear Programming Luenberger.pdf:application/pdf
+    \endverb
+    \field{year}{2021}
+  \endentry
+
+  \entry{Nonoyama.2022}{article}{}
+    \name{author}{5}{}{%
+      {{hash=NK}{%
+         family={Nonoyama},
+         familyi={N\bibinitperiod},
+         given={Kazuki},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=LZ}{%
+         family={Liu},
+         familyi={L\bibinitperiod},
+         given={Ziang},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=FT}{%
+         family={Fujiwara},
+         familyi={F\bibinitperiod},
+         given={Tomofumi},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=AMM}{%
+         family={Alam},
+         familyi={A\bibinitperiod},
+         given={Md\bibnamedelima Moktadir},
+         giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=NT}{%
+         family={Nishi},
+         familyi={N\bibinitperiod},
+         given={Tatsushi},
+         giveni={T\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{NK+1}
+    \strng{fullhash}{NKLZFTAMMNT1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Non+22}
+    \field{sortinit}{N}
+    \field{sortinithash}{N}
+    \verb{doi}
+    \verb 10.3390/en15062074
+    \endverb
+    \field{number}{6}
+    \field{pages}{2074}
+    \field{title}{Energy-Efficient Robot Configuration and Motion Planning
+  Using Genetic Algorithm and Particle Swarm Optimization}
+    \field{volume}{15}
+    \verb{file}
+    \verb 2022{\_}Nonoyama{\_}article:Attachments/2022{\_}Nonoyama{\_}article.p
+    \verb df:application/pdf
+    \endverb
+    \field{journaltitle}{Energies}
+    \field{year}{2022}
+  \endentry
+
+  \entry{Nocedal.2006}{book}{}
+    \name{author}{2}{}{%
+      {{hash=NJ}{%
+         family={Nocedal},
+         familyi={N\bibinitperiod},
+         given={Jorge},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=WSJ}{%
+         family={Wright},
+         familyi={W\bibinitperiod},
+         given={Stephen\bibnamedelima J.},
+         giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{NJWSJ1}
+    \strng{fullhash}{NJWSJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{NW06}
+    \field{sortinit}{N}
+    \field{sortinithash}{N}
+    \field{edition}{Second edition}
+    \field{isbn}{978-0387-30303-1}
+    \field{series}{Springer series in operation research and financial
+  engineering}
+    \field{title}{Numerical optimization}
+    \verb{url}
+    \verb http://www.loc.gov/catdir/enhancements/fy0818/2006923897-d.html
+    \endverb
+    \list{location}{1}{%
+      {New York, NY}%
+    }
+    \verb{file}
+    \verb Numerical Optimization Nocedal:Attachments/Numerical Optimization Noc
+    \verb edal.pdf:application/pdf
+    \endverb
+    \field{year}{2006}
+  \endentry
+
+  \entry{RCS.2019}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=o}{%
+         family={{o. V.}},
+         familyi={o\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{o2}
+    \strng{fullhash}{o2}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{{o. }19}
+    \field{sortinit}{O}
+    \field{sortinithash}{O}
+    \field{title}{KUKA.RCS Module 8.6: Installations- und Bedienanleitung}
+    \verb{url}
+    \verb https://xpert.kuka.com/service-express/portal/project1_p/document/kuk
+    \verb a-project1_p-common_PB13326_de?context=%7B%22filter%22%3A%7B%7D,%22te
+    \verb xt%22%3A%22KUKA.RobotSensorInterface%205.0%22,%22page%22%3A1,%22useEx
+    \verb pertQuery%22%3A0%7D
+    \endverb
+    \list{location}{1}{%
+      {Augsburg}%
+    }
+    \verb{file}
+    \verb KST{\_}RSI{\_}50{\_}de (2):Attachments/KST{\_}RSI{\_}50{\_}de (2).pdf
+    \verb :application/pdf
+    \endverb
+    \field{year}{2019}
+    \warn{\item Invalid format of field 'urldate'}
+  \endentry
+
+  \entry{RSI.2020}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=o}{%
+         family={{o. V.}},
+         familyi={o\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{o2}
+    \strng{fullhash}{o2}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{{o. }20}
+    \field{sortinit}{O}
+    \field{sortinithash}{O}
+    \field{title}{KUKA.RobotSensorInterface 5.0: F{\"u}r KUKA System Software
+  8.7}
+    \verb{url}
+    \verb https://xpert.kuka.com/service-express/portal/project1_p/document/kuk
+    \verb a-project1_p-common_PB13326_de?context=%7B%22filter%22%3A%7B%7D,%22te
+    \verb xt%22%3A%22KUKA.RobotSensorInterface%205.0%22,%22page%22%3A1,%22useEx
+    \verb pertQuery%22%3A0%7D
+    \endverb
+    \list{location}{1}{%
+      {Augsburg}%
+    }
+    \verb{file}
+    \verb KST{\_}RSI{\_}50{\_}de:Attachments/KST{\_}RSI{\_}50{\_}de.pdf:applica
+    \verb tion/pdf
+    \endverb
+    \field{year}{2020}
+    \warn{\item Invalid format of field 'urldate'}
+  \endentry
+
+  \entry{Stapmanns.2022}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=o}{%
+         family={{o. V.}},
+         familyi={o\bibinitperiod},
+      }}%
+    }
+    \name{editor}{2}{}{%
+      {{hash=SC}{%
+         family={Stapmanns},
+         familyi={S\bibinitperiod},
+         given={Christoph},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=SK}{%
+         family={Schuhl},
+         familyi={S\bibinitperiod},
+         given={Karolina},
+         giveni={K\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{o2}
+    \strng{fullhash}{o2}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{{o. }22}
+    \field{sortinit}{O}
+    \field{sortinithash}{O}
+    \field{title}{Aktualisierte Umwelterkl{\"a}rung 2022 Mercedes-Benz AG
+  Standort Sindelfingen}
+    \verb{url}
+    \verb https://group.mercedes-benz.com/nachhaltigkeit/betrieblicher-umweltsc
+    \verb hutz/umwelterklaerungen/
+    \endverb
+    \verb{file}
+    \verb Umwelterkl{\"a}rungSIFI.2022:Attachments/Umwelterkl{\"a}rungSIFI.2022
+    \verb .pdf:application/pdf
+    \endverb
+    \field{year}{2022}
+    \warn{\item Invalid format of field 'urldate'}
+  \endentry
+
+  \entry{OptimizationToolbox.2023}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=o}{%
+         family={{o. A.}},
+         familyi={o\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{o1}
+    \strng{fullhash}{o1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{{o. }23}
+    \field{extraalpha}{1}
+    \field{sortinit}{O}
+    \field{sortinithash}{O}
+    \field{title}{Optimization Toolbox: User's Guide}
+    \verb{url}
+    \verb https://de.mathworks.com/help/pdf_doc/optim/index.html
+    \endverb
+    \field{year}{2023}
+  \endentry
+
+  \entry{KSS.2023}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=o}{%
+         family={{o. V.}},
+         familyi={o\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{o2}
+    \strng{fullhash}{o2}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{{o. }23}
+    \field{extraalpha}{2}
+    \field{sortinit}{O}
+    \field{sortinithash}{O}
+    \field{title}{KUKA System Software 8.7: Bedien- und Programmieranleitung
+  f{\"u}r Systemintegratoren}
+    \list{location}{1}{%
+      {Augsburg}%
+    }
+    \verb{file}
+    \verb KSS{\_}87{\_}SI{\_}de:Attachments/KSS{\_}87{\_}SI{\_}de.pdf:applicati
+    \verb on/pdf
+    \endverb
+    \field{year}{2023}
+    \warn{\item Invalid format of field 'urldate'}
+  \endentry
+
+  \entry{Paryanto.2015}{article}{}
+    \name{author}{4}{}{%
+      {{hash=P}{%
+         family={Paryanto},
+         familyi={P\bibinitperiod},
+      }}%
+      {{hash=BM}{%
+         family={Brossog},
+         familyi={B\bibinitperiod},
+         given={Matthias},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=BM}{%
+         family={Bornschlegl},
+         familyi={B\bibinitperiod},
+         given={Martin},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=FJ}{%
+         family={Franke},
+         familyi={F\bibinitperiod},
+         given={J{\"o}rg},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{P+1}
+    \strng{fullhash}{PBMBMFJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Par+15}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \verb{doi}
+    \verb 10.1007/s00170-014-6737-z
+    \endverb
+    \field{issn}{0268-3768}
+    \field{number}{5-8}
+    \field{pages}{1315\bibrangedash 1328}
+    \field{title}{Reducing the energy consumption of industrial robots in
+  manufacturing systems}
+    \field{volume}{78}
+    \verb{file}
+    \verb 2014{\_}Paryanto{\_}Paper{\_}Reducing the energy consumption of indus
+    \verb trial robots:Attachments/2014{\_}Paryanto{\_}Paper{\_}Reducing the en
+    \verb ergy consumption of industrial robots.pdf:application/pdf
+    \endverb
+    \field{journaltitle}{The International Journal of Advanced Manufacturing
+  Technology}
+    \field{year}{2015}
+  \endentry
+
+  \entry{Pellicciari.2011}{inproceedings}{}
+    \name{author}{4}{}{%
+      {{hash=PM}{%
+         family={Pellicciari},
+         familyi={P\bibinitperiod},
+         given={Marcello},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=BG}{%
+         family={Berselli},
+         familyi={B\bibinitperiod},
+         given={Giovanni},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=LF}{%
+         family={Leali},
+         familyi={L\bibinitperiod},
+         given={Francesco},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=VA}{%
+         family={Vergnano},
+         familyi={V\bibinitperiod},
+         given={Alberto},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{PM+2}
+    \strng{fullhash}{PMBGLFVA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Pel+11}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{booktitle}{2011 15th International Conference on Advanced Robotics
+  (ICAR)}
+    \verb{doi}
+    \verb 10.1109/ICAR.2011.6088620
+    \endverb
+    \field{isbn}{978-1-4577-1159-6}
+    \field{pages}{100\bibrangedash 105}
+    \field{title}{A minimal touch approach for optimizing energy efficiency in
+  pick-and-place manipulators}
+    \verb{file}
+    \verb A{\_}minimal{\_}touch{\_}approach{\_}for{\_}optimizing{\_}energy{\_}e
+    \verb fficiency{\_}in{\_}pick-and-place{\_}manipulators:Attachments/A{\_}mi
+    \verb nimal{\_}touch{\_}approach{\_}for{\_}optimizing{\_}energy{\_}efficien
+    \verb cy{\_}in{\_}pick-and-place{\_}manipulators.pdf:application/pdf
+    \endverb
+    \field{year}{2011}
+  \endentry
+
+  \entry{Pellicciari.2015}{inproceedings}{}
+    \name{author}{7}{}{%
+      {{hash=PM}{%
+         family={Pellicciari},
+         familyi={P\bibinitperiod},
+         given={M.},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=AA}{%
+         family={Avotins},
+         familyi={A\bibinitperiod},
+         given={A.},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=BK}{%
+         family={Bengtsson},
+         familyi={B\bibinitperiod},
+         given={K.},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=BG}{%
+         family={Berselli},
+         familyi={B\bibinitperiod},
+         given={G.},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=BN}{%
+         family={Bey},
+         familyi={B\bibinitperiod},
+         given={N.},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=LB}{%
+         family={Lennartson},
+         familyi={L\bibinitperiod},
+         given={B.},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=MD}{%
+         family={Meike},
+         familyi={M\bibinitperiod},
+         given={D.},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{PM+1}
+    \strng{fullhash}{PMAABKBGBNLBMD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Pel+15}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{booktitle}{2015 IEEE International Conference on Automation Science
+  and Engineering (CASE)}
+    \verb{doi}
+    \verb 10.1109/CoASE.2015.7294282
+    \endverb
+    \field{isbn}{978-1-4673-8183-3}
+    \field{pages}{1325\bibrangedash 1332}
+    \field{title}{AREUS --- Innovative hardware and software for sustainable
+  industrial robotics}
+    \verb{file}
+    \verb Hardwareoptimierung Projekt AREUS:Attachments/Hardwareoptimierung Pro
+    \verb jekt AREUS.pdf:application/pdf
+    \endverb
+    \field{year}{2015}
+  \endentry
+
+  \entry{Papageorgiou.2015}{book}{}
+    \name{author}{3}{}{%
+      {{hash=PM}{%
+         family={Papageorgiou},
+         familyi={P\bibinitperiod},
+         given={Markos},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=LM}{%
+         family={Leibold},
+         familyi={L\bibinitperiod},
+         given={Marion},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=BM}{%
+         family={Buss},
+         familyi={B\bibinitperiod},
+         given={Martin},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {{Springer Berlin Heidelberg}}%
+    }
+    \strng{namehash}{PMLMBM1}
+    \strng{fullhash}{PMLMBM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{PLB15}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \verb{doi}
+    \verb 10.1007/978-3-662-46936-1
+    \endverb
+    \field{isbn}{978-3-662-46935-4}
+    \field{title}{Optimierung}
+    \list{location}{1}{%
+      {Berlin, Heidelberg}%
+    }
+    \verb{file}
+    \verb 978-3-662-46936-1:Attachments/978-3-662-46936-1.pdf:application/pdf
+    \endverb
+    \field{year}{2015}
+  \endentry
+
+  \entry{Reinhardt.2013}{book}{}
+    \name{author}{3}{}{%
+      {{hash=RR}{%
+         family={Reinhardt},
+         familyi={R\bibinitperiod},
+         given={R{\"u}diger},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=HA}{%
+         family={Hoffmann},
+         familyi={H\bibinitperiod},
+         given={Armin},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=GT}{%
+         family={Gerlach},
+         familyi={G\bibinitperiod},
+         given={Tobias},
+         giveni={T\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {{Springer Berlin Heidelberg}}%
+    }
+    \strng{namehash}{RRHAGT1}
+    \strng{fullhash}{RRHAGT1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{RHG13}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \verb{doi}
+    \verb 10.1007/978-3-8274-2949-0
+    \endverb
+    \field{isbn}{978-3-8274-2948-3}
+    \field{title}{Nichtlineare Optimierung}
+    \list{location}{1}{%
+      {Berlin, Heidelberg}%
+    }
+    \verb{file}
+    \verb 978-3-8274-2949-0:Attachments/978-3-8274-2949-0.pdf:application/pdf
+    \endverb
+    \field{year}{2013}
+  \endentry
+
+  \entry{Rieber.2022}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=RJM}{%
+         family={Rieber},
+         familyi={R\bibinitperiod},
+         given={Jochen\bibnamedelima M.},
+         giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{RJM1}
+    \strng{fullhash}{RJM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Rie22}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{title}{Einf{\"u}hrung in die Robotik: Vorlesung im Studium
+  Elektrotechnik / Vorlesung im Studium Elektrotechnik / Automation Kapitel 4b}
+    \list{location}{1}{%
+      {Ravensburg/Friedrichshafen}%
+    }
+    \list{institution}{1}{%
+      {{Duale Hochschule Baden-W{\"u}rttemberg}}%
+    }
+    \verb{file}
+    \verb Robotik{\_}TEA{\_}Teil3:Attachments/Robotik{\_}TEA{\_}Teil3.pdf:appli
+    \verb cation/pdf
+    \endverb
+    \field{year}{2022}
+  \endentry
+
+  \entry{Roth.2016}{book}{}
+    \name{author}{2}{}{%
+      {{hash=RS}{%
+         family={Roth},
+         familyi={R\bibinitperiod},
+         given={Stefan},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=SA}{%
+         family={Stahl},
+         familyi={S\bibinitperiod},
+         given={Achim},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {{Springer Berlin Heidelberg}}%
+    }
+    \strng{namehash}{RSSA1}
+    \strng{fullhash}{RSSA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{RS16}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \verb{doi}
+    \verb 10.1007/978-3-662-45304-9
+    \endverb
+    \field{isbn}{978-3-662-45303-2}
+    \field{title}{Mechanik und W{\"a}rmelehre}
+    \list{location}{1}{%
+      {Berlin, Heidelberg}%
+    }
+    \verb{file}
+    \verb 978-3-662-45304-9:Attachments/978-3-662-45304-9.pdf:application/pdf
+    \endverb
+    \field{year}{2016}
+  \endentry
+
+  \entry{Spong.2020}{book}{}
+    \name{author}{3}{}{%
+      {{hash=SMW}{%
+         family={Spong},
+         familyi={S\bibinitperiod},
+         given={Mark\bibnamedelima W.},
+         giveni={M\bibinitperiod\bibinitdelim W\bibinitperiod},
+      }}%
+      {{hash=HS}{%
+         family={Hutchinson},
+         familyi={H\bibinitperiod},
+         given={Seth},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=VM}{%
+         family={Vidyasagar},
+         familyi={V\bibinitperiod},
+         given={Mathukumalli},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Wiley}%
+    }
+    \strng{namehash}{SMWHSVM1}
+    \strng{fullhash}{SMWHSVM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{SHV20}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{abstract}{%
+    {\textquotedbl}A New Edition Featuring Case Studies and Examples of the
+  Fundamentals of Robot Kinematics, Dynamics, and Control. In the 2nd Edition
+  of Robot Modeling and Control, students will cover the theoretical
+  fundamentals and the latest technological advances in robot kinematics. With
+  so much advancement in technology, from robotics to motion planning, society
+  can implement more powerful and dynamic algorithms than ever before. This
+  in-depth reference guide educates readers in four distinct parts; the first
+  two serve as a guide to the fundamentals of robotics and motion control,
+  while the last two dive more in-depth into control theory and nonlinear
+  system analysis. With the new edition, readers gain access to new case
+  studies and thoroughly researched information covering topics such as:
+  Motion-planning, collision avoidance, trajectory optimization, and control of
+  robots. Popular topics within the robotics industry and how they apply to
+  various technologies. An expanded set of examples, simulations, problems, and
+  case studies. Open-ended suggestions for students to apply the knowledge to
+  real-life situations. A four-part reference essential for both undergraduate
+  and graduate students, Robot Modeling and Control serves as a foundation for
+  a solid education in robotics and motion planning{\textquotedbl}--%
+    }
+    \field{edition}{Second edition}
+    \field{isbn}{978-1119523994}
+    \field{title}{Robot modeling and control}
+    \list{location}{1}{%
+      {Hoboken, NJ}%
+    }
+    \verb{file}
+    \verb Spong-RobotmodelingandControl:Attachments/Spong-RobotmodelingandContr
+    \verb ol.pdf:application/pdf
+    \endverb
+    \field{year}{2020}
+  \endentry
+
+  \entry{Grimble.2009}{book}{}
+    \name{author}{4}{}{%
+      {{hash=SB}{%
+         family={Siciliano},
+         familyi={S\bibinitperiod},
+         given={Bruno},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=SL}{%
+         family={Sciavicco},
+         familyi={S\bibinitperiod},
+         given={Lorenzo},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=VL}{%
+         family={Villani},
+         familyi={V\bibinitperiod},
+         given={Luigi},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=OG}{%
+         family={Oriolo},
+         familyi={O\bibinitperiod},
+         given={Giuseppe},
+         giveni={G\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {{Springer London}}%
+    }
+    \strng{namehash}{SB+1}
+    \strng{fullhash}{SBSLVLOG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Sic+09}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \verb{doi}
+    \verb 10.1007/978-1-84628-642-1
+    \endverb
+    \field{isbn}{978-1-84628-641-4}
+    \field{title}{Robotics: Modelling, Planning and Control}
+    \list{location}{1}{%
+      {London}%
+    }
+    \verb{file}
+    \verb Siciliano:Attachments/Siciliano.pdf:application/pdf
+    \endverb
+    \field{year}{2009}
+  \endentry
+
+  \entry{Saravanan.2008}{article}{}
+    \name{author}{3}{}{%
+      {{hash=SR}{%
+         family={Saravanan},
+         familyi={S\bibinitperiod},
+         given={R.},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=RS}{%
+         family={Ramabalan},
+         familyi={R\bibinitperiod},
+         given={S.},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=BC}{%
+         family={Balamurugan},
+         familyi={B\bibinitperiod},
+         given={C.},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SRRSBC1}
+    \strng{fullhash}{SRRSBC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{SRB08}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \verb{doi}
+    \verb 10.1007/s00170-007-1169-7
+    \endverb
+    \field{issn}{0268-3768}
+    \field{number}{11-12}
+    \field{pages}{1213\bibrangedash 1226}
+    \field{title}{Evolutionary optimal trajectory planning for industrial robot
+  with payload constraints}
+    \field{volume}{38}
+    \verb{file}
+    \verb s00170-007-1169-7:Attachments/s00170-007-1169-7.pdf:application/pdf
+    \endverb
+    \field{journaltitle}{The International Journal of Advanced Manufacturing
+  Technology}
+    \field{year}{2008}
+  \endentry
+
+  \entry{Sergaki.2002}{article}{}
+    \name{author}{3}{}{%
+      {{hash=SES}{%
+         family={Sergaki},
+         familyi={S\bibinitperiod},
+         given={Eleftheria\bibnamedelima S.},
+         giveni={E\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=SGS}{%
+         family={Stavrakakis},
+         familyi={S\bibinitperiod},
+         given={George\bibnamedelima S.},
+         giveni={G\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=PAD}{%
+         family={Pouliezos},
+         familyi={P\bibinitperiod},
+         given={Anastasios\bibnamedelima D.},
+         giveni={A\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SESSGSPAD1}
+    \strng{fullhash}{SESSGSPAD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{SSP02}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \verb{doi}
+    \verb 10.1023/A:1014643401778
+    \endverb
+    \field{issn}{09210296}
+    \field{number}{2}
+    \field{pages}{187\bibrangedash 207}
+    \field{title}{Optimal Robot Speed Trajectory by Minimization of the
+  Actuator Motor Electromechanical Losses Eleftheria S. Sergaki, George S.
+  Stavrakakis {\&} Anastasios D. Pouliezos}
+    \field{volume}{33}
+    \verb{file}
+    \verb A{\_}1014643401778:Attachments/A{\_}1014643401778.pdf:application/pdf
+    \endverb
+    \field{journaltitle}{Journal of Intelligent and Robotic Systems}
+    \field{year}{2002}
+  \endentry
+
+  \entry{Winsock.2023}{misc}{}
+    \name{author}{5}{}{%
+      {{hash=WS}{%
+         family={White},
+         familyi={W\bibinitperiod},
+         given={Steven},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=SK}{%
+         family={Sharkey},
+         familyi={S\bibinitperiod},
+         given={Kent},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=CD}{%
+         family={Coulter},
+         familyi={C\bibinitperiod},
+         given={David},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=BD}{%
+         family={Batchelor},
+         familyi={B\bibinitperiod},
+         given={Drew},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=SM}{%
+         family={Satran},
+         familyi={S\bibinitperiod},
+         given={Michael},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WS+1}
+    \strng{fullhash}{WSSKCDBDSM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Whi+06}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \field{title}{Windows Sockets 2}
+    \verb{url}
+    \verb https://learn.microsoft.com/de-de/windows/win32/winsock/windows-socke
+    \verb ts-start-page-2
+    \endverb
+    \field{year}{13.06.2023}
+    \warn{\item Invalid format of field 'urldate'}
+  \endentry
+
+  \entry{Ziaukas.2017}{inproceedings}{}
+    \name{author}{4}{}{%
+      {{hash=ZZ}{%
+         family={Ziaukas},
+         familyi={Z\bibinitperiod},
+         given={Zygimantas},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=EK}{%
+         family={Eggers},
+         familyi={E\bibinitperiod},
+         given={Kai},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=KJ}{%
+         family={Kotlarski},
+         familyi={K\bibinitperiod},
+         given={Jens},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=OT}{%
+         family={Ortmaier},
+         familyi={O\bibinitperiod},
+         given={Tobias},
+         giveni={T\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {{SCITEPRESS - Science and Technology Publications}}%
+    }
+    \strng{namehash}{ZZ+1}
+    \strng{fullhash}{ZZEKKJOT1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Zia+17}
+    \field{sortinit}{Z}
+    \field{sortinithash}{Z}
+    \field{booktitle}{Proceedings of the 14th International Conference on
+  Informatics in Control, Automation and Robotics}
+    \field{isbn}{978-989-758-263-9}
+    \field{pages}{527\bibrangedash 538}
+    \field{title}{Optimizing PTP Motions of Industrial Robots through Addition
+  of Via-points}
+    \verb{file}
+    \verb 2017{\_}Zygimantas{\_}Paper{\_}Optimizing PTP Motions Via-points:Atta
+    \verb chments/2017{\_}Zygimantas{\_}Paper{\_}Optimizing PTP Motions Via-poi
+    \verb nts.pdf:application/pdf
+    \endverb
+    \field{year}{2017}
+  \endentry
+\enddatalist
+\endinput

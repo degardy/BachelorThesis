@@ -201,8 +201,10 @@ marginal
 
 \include{pages/titelseite} 				% erzeugt die Titelseite
 \pagenumbering{roman}					% kleine, römische Seitenzahlen für Titelei
-\include{pages/erklaerung} 				% Einbinden der eidestattlichen Erklärung
+\include{pages/erklaerung} 	
+\include{chapter/kurzfassung}			% Einbinden der eidestattlichen Erklärung
 \include{chapter/abstract}   			% Einbinden des Abstracts
+
 
 \tableofcontents						% Erzeugen des Inhalsverzeichnisses
 \cleardoublepage
@@ -213,7 +215,6 @@ marginal
 \pagenumbering{arabic}					% arabische Seitenzahlen für den Hauptteil
 
 \rmfamily
-%\include{chapter/vorlagen}
 \include{chapter/einleitung}
 \include{chapter/modellbildung}
 \include{chapter/Bahnplanung}

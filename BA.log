@@ -1,0 +1,3107 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.6)  25 SEP 2023 00:06
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**./BA.tex
+(BA.tex
+LaTeX2e <2022-06-01> patch level 5
+L3 programming layer <2022-10-26>
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrbook.cls
+Document Class: scrbook 2022/10/12 v3.38 KOMA-Script document class (book)
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrkbase.st
+y
+Package: scrkbase 2022/10/12 v3.38 KOMA-Script package (KOMA-Script-dependent b
+asics and keyval usage)
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrbase.sty
+Package: scrbase 2022/10/12 v3.38 KOMA-Script package (KOMA-Script-independent 
+basics and keyval usage)
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlfile.st
+y
+Package: scrlfile 2022/10/12 v3.38 KOMA-Script package (file load hooks)
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlfile-ho
+ok.sty
+Package: scrlfile-hook 2022/10/12 v3.38 KOMA-Script package (using LaTeX hooks)
+
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlogo.sty
+Package: scrlogo 2022/10/12 v3.38 KOMA-Script package (logo)
+))) (C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+Applying: [2021/05/01] Usage of raw or classic option list on input line 252.
+Already applied: [0000/00/00] Usage of raw or classic option list on input line
+ 368.
+))
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\tocbasic.st
+y
+Package: tocbasic 2022/10/12 v3.38 KOMA-Script package (handling toc-files)
+\scr@dte@tocline@numberwidth=\skip47
+\scr@dte@tocline@numbox=\box51
+)
+Package tocbasic Info: omitting babel extension for `toc'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `toc' on input line 137.
+Class scrbook Info: File `scrsize12pt.clo' used to setup font sizes on input li
+ne 2617.
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrsize12pt
+.clo
+File: scrsize12pt.clo 2022/10/12 v3.38 KOMA-Script font size class option (12pt
+)
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\typearea.st
+y
+Package: typearea 2022/10/12 v3.38 KOMA-Script package (type area)
+\ta@bcor=\skip48
+\ta@div=\count185
+\ta@hblk=\skip49
+\ta@vblk=\skip50
+\ta@temp=\skip51
+\footheight=\skip52
+Package typearea Info: These are the values describing the layout:
+(typearea)             DIV  = 12
+(typearea)             BCOR = 0.0pt
+(typearea)             \paperwidth      = 597.50793pt
+(typearea)              \textwidth      = 448.13095pt
+(typearea)              DIV departure   = -6%
+(typearea)              \evensidemargin = 2.4185pt
+(typearea)              \oddsidemargin  = 2.4185pt
+(typearea)             \paperheight     = 845.04694pt
+(typearea)              \textheight     = 606.5pt
+(typearea)              \topmargin      = -1.84941pt
+(typearea)              \headheight     = 18.125pt
+(typearea)              \headsep        = 21.75pt
+(typearea)              \topskip        = 12.0pt
+(typearea)              \footskip       = 50.75pt
+(typearea)              \baselineskip   = 14.5pt
+(typearea)              on input line 1767.
+)
+\c@part=\count186
+\c@chapter=\count187
+\c@section=\count188
+\c@subsection=\count189
+\c@subsubsection=\count190
+\c@paragraph=\count191
+\c@subparagraph=\count192
+\scr@dte@chapter@maxnumwidth=\skip53
+Class scrbook Info: using compatibility default `afterindent=bysign'
+(scrbook)           for `\chapter on input line 5898.
+\scr@dte@section@maxnumwidth=\skip54
+Class scrbook Info: using compatibility default `runin=bysign'
+(scrbook)           for `\section on input line 5909.
+Class scrbook Info: using compatibility default `afterindent=bysign'
+(scrbook)           for `\section on input line 5909.
+\scr@dte@part@maxnumwidth=\skip55
+Class scrbook Info: using compatibility default `afterindent=true'
+(scrbook)           for `\part on input line 5918.
+\scr@dte@subsection@maxnumwidth=\skip56
+Class scrbook Info: using compatibility default `runin=bysign'
+(scrbook)           for `\subsection on input line 5928.
+Class scrbook Info: using compatibility default `afterindent=bysign'
+(scrbook)           for `\subsection on input line 5928.
+\scr@dte@subsubsection@maxnumwidth=\skip57
+Class scrbook Info: using compatibility default `runin=bysign'
+(scrbook)           for `\subsubsection on input line 5938.
+Class scrbook Info: using compatibility default `afterindent=bysign'
+(scrbook)           for `\subsubsection on input line 5938.
+\scr@dte@paragraph@maxnumwidth=\skip58
+Class scrbook Info: using compatibility default `runin=bysign'
+(scrbook)           for `\paragraph on input line 5949.
+Class scrbook Info: using compatibility default `afterindent=bysign'
+(scrbook)           for `\paragraph on input line 5949.
+\scr@dte@subparagraph@maxnumwidth=\skip59
+Class scrbook Info: using compatibility default `runin=bysign'
+(scrbook)           for `\subparagraph on input line 5959.
+Class scrbook Info: using compatibility default `afterindent=bysign'
+(scrbook)           for `\subparagraph on input line 5959.
+\abovecaptionskip=\skip60
+\belowcaptionskip=\skip61
+\c@pti@nb@sid@b@x=\box52
+Package tocbasic Info: omitting babel extension for `lof'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `lof' on input line 7142.
+\scr@dte@figure@maxnumwidth=\skip62
+\c@figure=\count193
+Package tocbasic Info: omitting babel extension for `lot'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `lot' on input line 7159.
+\scr@dte@table@maxnumwidth=\skip63
+\c@table=\count194
+Class scrbook Info: Redefining `\numberline' on input line 7330.
+\bibindent=\dimen138
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrhack.sty
+Package: scrhack 2022/10/12 v3.38 KOMA-Script package (hacking other packages)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/xpatch\xpatch.sty
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+Package: expl3 2022-10-26 L3 programming layer (loader) 
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+tex.def
+File: l3backend-pdftex.def 2022-10-26 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count195
+\l__pdf_internal_box=\box53
+))
+Package: xpatch 2020/03/25 v0.3a Extending etoolbox patching commands
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xpars
+e.sty
+Package: xparse 2022-06-22 L3 Experimental document command parser
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count196
+))) (C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
+Package: inputenc 2021/02/14 v1.3d Input encoding file
+\inpenc@prehook=\toks17
+\inpenc@posthook=\toks18
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
+Package: babel 2022/10/23 3.82 The Babel package
+\babel@savecnt=\count197
+\U@D=\dimen139
+\l@unhyphenated=\language84
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count198
+
+*************************************
+* Local config file bblopts.cfg used
+*
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/babel-german\ngerman.ld
+f
+Language: ngerman 2021/02/27 v2.13 German support for babel (post-1996 orthogra
+phy)
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/babel-german\ngermanb.l
+df
+Language: ngermanb 2021/02/27 v2.13 German support for babel (post-1996 orthogr
+aphy)
+Package babel Info: Making " an active character on input line 122.
+)))
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/de\babel
+-ngerman.tex
+Package babel Info: Importing font and identification data for ngerman
+(babel)             from babel-de.ini. Reported on input line 11.
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/siunitx\siunitx.sty
+Package: siunitx 2022-10-23 v3.1.9 A comprehensive (SI) units package
+\l__siunitx_angle_tmp_dim=\dimen140
+\l__siunitx_angle_marker_box=\box54
+\l__siunitx_angle_unit_box=\box55
+\l__siunitx_compound_count_int=\count199
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/translations\translatio
+ns.sty
+Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages
+ (CN)
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds
+.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.s
+ty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+) (C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+))
+\l__siunitx_number_exponent_fixed_int=\count266
+\l__siunitx_number_min_decimal_int=\count267
+\l__siunitx_number_min_integer_int=\count268
+\l__siunitx_number_round_precision_int=\count269
+\l__siunitx_number_group_first_int=\count270
+\l__siunitx_number_group_size_int=\count271
+\l__siunitx_number_group_minimum_int=\count272
+ (C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks19
+\ex@=\dimen141
+))
+\l__siunitx_table_tmp_box=\box56
+\l__siunitx_table_tmp_dim=\dimen142
+\l__siunitx_table_column_width_dim=\dimen143
+\l__siunitx_table_integer_box=\box57
+\l__siunitx_table_decimal_box=\box58
+\l__siunitx_table_before_box=\box59
+\l__siunitx_table_after_box=\box60
+\l__siunitx_table_before_dim=\dimen144
+\l__siunitx_table_carry_dim=\dimen145
+\l__siunitx_unit_tmp_int=\count273
+\l__siunitx_unit_position_int=\count274
+\l__siunitx_unit_total_int=\count275
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+Package: array 2022/03/10 v2.5f Tabular extension package (FMi)
+\col@sep=\dimen146
+\ar@mcellbox=\box61
+\extrarowheight=\dimen147
+\NC@list=\toks20
+\extratabsurround=\skip64
+\backup@length=\skip65
+\ar@cellbox=\box62
+))
+
+Package siunitx Info: Option "number-unit-product" has been deprecated in this
+(siunitx)             release.
+(siunitx)             
+(siunitx)             Use "quantity-product = \;" as a replacement.
+
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
+fg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+\stockwidth=\dimen148
+\stockheight=\dimen149
+))
+\Gin@req@height=\dimen150
+\Gin@req@width=\dimen151
+) (C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+Package: caption 2022/03/01 v3.6b Customizing captions (AR)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+Package: caption3 2022/03/17 v2.3b caption3 kernel (AR)
+\caption@tempdima=\dimen152
+\captionmargin=\dimen153
+\caption@leftmargin=\dimen154
+\caption@rightmargin=\dimen155
+\caption@width=\dimen156
+\caption@indent=\dimen157
+\caption@parindent=\dimen158
+\caption@hangindent=\dimen159
+Package caption Info: KOMA-Script document class detected.
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption-koma.st
+o
+File: caption-koma.sto 2020/09/21 v2.0b Adaption of the caption package to the 
+KOMA-Script document classes (AR)
+))
+\c@caption@flags=\count276
+\c@continuedfloat=\count277
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.sty
+Package: biblatex 2022/07/12 v3.18b programmable bibliographies (PK/MW)
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)) (C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count278
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+\c@tabx@nest=\count279
+\c@listtotal=\count280
+\c@listcount=\count281
+\c@liststart=\count282
+\c@liststop=\count283
+\c@citecount=\count284
+\c@citetotal=\count285
+\c@multicitecount=\count286
+\c@multicitetotal=\count287
+\c@instcount=\count288
+\c@maxnames=\count289
+\c@minnames=\count290
+\c@maxitems=\count291
+\c@minitems=\count292
+\c@citecounter=\count293
+\c@maxcitecounter=\count294
+\c@savedcitecounter=\count295
+\c@uniquelist=\count296
+\c@uniquename=\count297
+\c@refsection=\count298
+\c@refsegment=\count299
+\c@maxextratitle=\count300
+\c@maxextratitleyear=\count301
+\c@maxextraname=\count302
+\c@maxextradate=\count303
+\c@maxextraalpha=\count304
+\c@abbrvpenalty=\count305
+\c@highnamepenalty=\count306
+\c@lownamepenalty=\count307
+\c@maxparens=\count308
+\c@parenlevel=\count309
+\blx@tempcnta=\count310
+\blx@tempcntb=\count311
+\blx@tempcntc=\count312
+\c@blx@maxsection=\count313
+\blx@maxsegment@0=\count314
+\blx@notetype=\count315
+\blx@parenlevel@text=\count316
+\blx@parenlevel@foot=\count317
+\blx@sectionciteorder@0=\count318
+\blx@sectionciteorderinternal@0=\count319
+\blx@entrysetcounter=\count320
+\blx@biblioinstance=\count321
+\labelnumberwidth=\skip66
+\labelalphawidth=\skip67
+\biblabelsep=\skip68
+\bibitemsep=\skip69
+\bibnamesep=\skip70
+\bibinitsep=\skip71
+\bibparsep=\skip72
+\bibhang=\skip73
+\blx@bcfin=\read3
+\blx@bcfout=\write3
+\blx@langwohyphens=\language85
+\c@mincomprange=\count322
+\c@maxcomprange=\count323
+\c@mincompwidth=\count324
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-dm.def
+File: blx-dm.def 2022/07/12 v3.18b biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'alphabetic.dbx' not found.
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count325
+\c@savedafterword=\count326
+\c@annotator=\count327
+\c@savedannotator=\count328
+\c@author=\count329
+\c@savedauthor=\count330
+\c@bookauthor=\count331
+\c@savedbookauthor=\count332
+\c@commentator=\count333
+\c@savedcommentator=\count334
+\c@editor=\count335
+\c@savededitor=\count336
+\c@editora=\count337
+\c@savededitora=\count338
+\c@editorb=\count339
+\c@savededitorb=\count340
+\c@editorc=\count341
+\c@savededitorc=\count342
+\c@foreword=\count343
+\c@savedforeword=\count344
+\c@holder=\count345
+\c@savedholder=\count346
+\c@introduction=\count347
+\c@savedintroduction=\count348
+\c@namea=\count349
+\c@savednamea=\count350
+\c@nameb=\count351
+\c@savednameb=\count352
+\c@namec=\count353
+\c@savednamec=\count354
+\c@translator=\count355
+\c@savedtranslator=\count356
+\c@shortauthor=\count357
+\c@savedshortauthor=\count358
+\c@shorteditor=\count359
+\c@savedshorteditor=\count360
+\c@labelname=\count361
+\c@savedlabelname=\count362
+\c@institution=\count363
+\c@savedinstitution=\count364
+\c@lista=\count365
+\c@savedlista=\count366
+\c@listb=\count367
+\c@savedlistb=\count368
+\c@listc=\count369
+\c@savedlistc=\count370
+\c@listd=\count371
+\c@savedlistd=\count372
+\c@liste=\count373
+\c@savedliste=\count374
+\c@listf=\count375
+\c@savedlistf=\count376
+\c@location=\count377
+\c@savedlocation=\count378
+\c@organization=\count379
+\c@savedorganization=\count380
+\c@origlocation=\count381
+\c@savedoriglocation=\count382
+\c@origpublisher=\count383
+\c@savedorigpublisher=\count384
+\c@publisher=\count385
+\c@savedpublisher=\count386
+\c@language=\count387
+\c@savedlanguage=\count388
+\c@origlanguage=\count389
+\c@savedoriglanguage=\count390
+\c@pageref=\count391
+\c@savedpageref=\count392
+\shorthandwidth=\skip74
+\shortjournalwidth=\skip75
+\shortserieswidth=\skip76
+\shorttitlewidth=\skip77
+\shortauthorwidth=\skip78
+\shorteditorwidth=\skip79
+\locallabelnumberwidth=\skip80
+\locallabelalphawidth=\skip81
+\localshorthandwidth=\skip82
+\localshortjournalwidth=\skip83
+\localshortserieswidth=\skip84
+\localshorttitlewidth=\skip85
+\localshortauthorwidth=\skip86
+\localshorteditorwidth=\skip87
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-compat.def
+File: blx-compat.def 2022/07/12 v3.18b biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load BibTeX backend compatibility...
+Package biblatex Info: ... file 'blx-bibtex.def' found.
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-bibtex.def
+File: blx-bibtex.def 2022/07/12 v3.18b biblatex compatibility (PK/MW)
+
+Package biblatex Warning: Using fall-back BibTeX(8) backend:
+(biblatex)                functionality may be reduced/unavailable.
+
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+ (C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.def
+File: biblatex.def 2022/07/12 v3.18b biblatex compatibility (PK/MW)
+\c@textcitecount=\count393
+\c@textcitetotal=\count394
+\c@textcitemaxnames=\count395
+\c@biburlbigbreakpenalty=\count396
+\c@biburlbreakpenalty=\count397
+\c@biburlnumpenalty=\count398
+\c@biburlucpenalty=\count399
+\c@biburllcpenalty=\count400
+\biburlbigskip=\muskip17
+\biburlnumskip=\muskip18
+\biburlucskip=\muskip19
+\biburllcskip=\muskip20
+\c@smartand=\count401
+)
+Package biblatex Info: Trying to load natbib compatibility...
+Package biblatex Info: ... file 'blx-natbib.def' found.
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-natbib.def
+File: blx-natbib.def 2022/07/12 v3.18b biblatex compatibility (PK/MW)
+Package biblatex Info: Delimiter 'nameyeardelim' in context '' already defined,
+ overwriting.
+)
+Package biblatex Info: Trying to load bibliography style 'alphabetic'...
+Package biblatex Info: ... file 'alphabetic.bbx' found.
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\alphabetic
+.bbx
+File: alphabetic.bbx 2022/07/12 v3.18b biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\standard.b
+bx
+File: standard.bbx 2022/07/12 v3.18b biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count402
+\c@bbx:relatedtotal=\count403
+))
+Package biblatex Info: Trying to load citation style 'alphabetic'...
+Package biblatex Info: ... file 'alphabetic.cbx' found.
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/cbx\alphabetic
+.cbx
+File: alphabetic.cbx 2022/07/12 v3.18b biblatex citation style (PK/MW)
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\smartcites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.cfg
+File: biblatex.cfg 
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Document encoding is UTF8 ....
+Package biblatex Info: ... and expl3
+(biblatex)             2022-10-26 L3 programming layer (loader) 
+(biblatex)             is new enough (at least 2020/04/06),
+(biblatex)             setting 'casechanger=expl3'.
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-case-expl3
+.sty
+Package: blx-case-expl3 2022/07/12 v3.18b expl3 case changing code for biblatex
+
+))
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.sty
+Package: csquotes 2022-09-14 v5.2n context-sensitive quotations (JAW)
+\csq@reset=\count404
+\csq@gtype=\count405
+\csq@glevel=\count406
+\csq@qlevel=\count407
+\csq@maxlvl=\count408
+\csq@tshold=\count409
+\csq@ltx@everypar=\toks21
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.def
+File: csquotes.def 2022-09-14 v5.2n csquotes generic definitions (JAW)
+)
+Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
+Package csquotes Info: ... configuration file loaded successfully.
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.cfg
+File: csquotes.cfg 
+)) (C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/pdfpages\pdfpages.st
+y
+Package: pdfpages 2022/10/09 v0.5w Insert pages of external PDF documents (AM)
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count410
+\calc@Bcount=\count411
+\calc@Adimen=\dimen160
+\calc@Bdimen=\dimen161
+\calc@Askip=\skip88
+\calc@Bskip=\skip89
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count412
+\calc@Cskip=\skip90
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/eso-pic\eso-pic.sty
+Package: eso-pic 2020/10/14 v3.0a eso-pic (RN)
+\ESO@tempdima=\dimen162
+\ESO@tempdimb=\dimen163
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 227.
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1357.
+Package xcolor Info: Model `RGB' extended on input line 1369.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1371.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1374.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
+))
+\AM@pagewidth=\dimen164
+\AM@pageheight=\dimen165
+\AM@fboxrule=\dimen166
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/pdfpages\pppdftex.def
+File: pppdftex.def 2022/10/09 v0.5w Pdfpages driver for pdfTeX (AM)
+)
+\pdfpages@includegraphics@status=\count413
+\AM@pagebox=\box63
+\AM@global@opts=\toks22
+\AM@pagecnt=\count414
+\AM@toc@title=\toks23
+\c@AM@survey=\count415
+\AM@templatesizebox=\box64
+) (C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip91
+\enit@outerparindent=\dimen167
+\enit@toks=\toks24
+\enit@inbox=\box65
+\enit@count@id=\count416
+\enitdp@description=\count417
+) (C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+Package: amsmath 2022/04/08 v2.17n AMS math features
+\@mathmargin=\skip92
+
+For additional information on amsmath, use the `?' option.
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen168
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count418
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count419
+\leftroot@=\count420
+LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
+\classnum@=\count421
+\DOTSCASE@=\count422
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box66
+\strutbox@=\box67
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
+\big@size=\dimen169
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count423
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
+\c@MaxMatrixCols=\count424
+\dotsspace@=\muskip21
+\c@parentequation=\count425
+\dspbrk@lvl=\count426
+\tag@help=\toks25
+\row@=\count427
+\column@=\count428
+\maxfields@=\count429
+\andhelp@=\toks26
+\eqnshift@=\dimen170
+\alignsep@=\dimen171
+\tagshift@=\dimen172
+\tagwidth@=\dimen173
+\totwidth@=\dimen174
+\lineht@=\dimen175
+\@envbody=\toks27
+\multlinegap=\skip93
+\multlinetaggap=\skip94
+\mathdisplay@stack=\toks28
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/base\textcomp.sty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/eurosym\eurosym.sty
+Package: eurosym 1998/08/06 v1.1 European currency symbol ``Euro''
+\@eurobox=\box68
+)
+Package scrhack Info: hyperref hack deactivated because of
+(scrhack)             detection of KOMA-Script class, that doesn't
+(scrhack)             need that hack, on input line 80.
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+Package: hyperref 2022-09-22 v7.00t Hypertext links for LaTeX
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefine
+keys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.s
+ty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+) (C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/letltxmacro\letltxmacro
+.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/auxhook\auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+Package: nameref 2022-05-17 v2.50 Cross-referencing by name of section
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettit
+lestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count430
+)
+\@linkdim=\dimen176
+\Hy@linkcounter=\count431
+\Hy@pagecounter=\count432
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
+File: pd1enc.def 2022-09-22 v7.00t Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count433
+ (C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
+File: puenc.def 2022-09-22 v7.00t Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Option `hyperfootnotes' set `false' on input line 4045.
+Package hyperref Info: Hyper figures OFF on input line 4162.
+Package hyperref Info: Link nesting OFF on input line 4167.
+Package hyperref Info: Hyper index ON on input line 4170.
+Package hyperref Info: Plain pages OFF on input line 4177.
+Package hyperref Info: Backreferencing OFF on input line 4182.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4410.
+\c@Hy@tempcnt=\count434
+LaTeX Info: Redefining \url on input line 4748.
+\XeTeXLinkMargin=\dimen177
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc
+.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count435
+\Field@Width=\dimen178
+\Fld@charsize=\dimen179
+Package hyperref Info: Hyper figures OFF on input line 6027.
+Package hyperref Info: Link nesting OFF on input line 6032.
+Package hyperref Info: Hyper index ON on input line 6035.
+Package hyperref Info: backreferencing OFF on input line 6042.
+Package hyperref Info: Link coloring OFF on input line 6047.
+Package hyperref Info: Link coloring with OCG OFF on input line 6052.
+Package hyperref Info: PDF/A mode OFF on input line 6057.
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/base\atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count436
+\c@Item=\count437
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+File: hpdftex.def 2022-09-22 v7.00t Hyperref driver for pdfTeX
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/base\atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
+with kernel methods
+)
+\Fld@listcount=\count438
+\c@bookmark@seq@number=\count439
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
+echeck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquec
+ounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+85.
+)
+\Hy@SectionHShift=\skip95
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/base\makeidx.sty
+Package: makeidx 2021/10/04 v1.0m Standard LaTeX package
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/nomencl\nomencl.sty
+Package: nomencl 2021/11/10 v5.6 Nomenclature package
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/xkeyval\xkeyval.sty
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkeyval.tex
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkvutils.tex
+\XKV@toks=\toks29
+\XKV@tempa@toks=\toks30
+)
+\XKV@depth=\count440
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+Package tocbasic Info: setting babel extension for `nlo' on input line 187.
+Package tocbasic Info: setting babel extension for `nls' on input line 188.
+\nomlabelwidth=\dimen180
+\nom@tempdim=\dimen181
+\nomitemsep=\skip96
+)
+Package scrhack Info: loading nomencl hack on input line 83.
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\nomencl.hak
+File: nomencl.hak 2022/10/12 v3.38 KOMA-Script scrhack part (hacking package no
+mencl)
+Package scrhack Info: only `tocbasic' loaded for `nomencl' on input line 79.
+) (C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/footmisc\footmisc.sty
+Package: footmisc 2022/03/08 v6.0d a miscellany of footnote facilities
+\FN@temptoken=\toks31
+\footnotemargin=\dimen182
+\@outputbox@depth=\dimen183
+Package footmisc Info: Declaring symbol style bringhurst on input line 695.
+Package footmisc Info: Declaring symbol style chicago on input line 703.
+Package footmisc Info: Declaring symbol style wiley on input line 712.
+Package footmisc Info: Declaring symbol style lamport-robust on input line 723.
+
+Package footmisc Info: Declaring symbol style lamport* on input line 743.
+Package footmisc Info: Declaring symbol style lamport*-robust on input line 764
+.
+) (C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
+\lst@mode=\count441
+\lst@gtempboxa=\box69
+\lst@token=\toks32
+\lst@length=\count442
+\lst@currlwidth=\dimen184
+\lst@column=\count443
+\lst@pos=\count444
+\lst@lostspace=\dimen185
+\lst@width=\dimen186
+\lst@newlines=\count445
+\lst@lineno=\count446
+\lst@maxwidth=\dimen187
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count447
+\lst@skipnumbers=\count448
+\lst@framebox=\box70
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package scrhack Info: loading listings hack on input line 100.
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\listings.ha
+k
+File: listings.hak 2022/10/12 v3.38 KOMA-Script scrhack part (hacking package l
+istings)
+Package tocbasic Info: setting babel extension for `lol' on input line 143.
+Package scrhack Info: redefining \lstlistoflistings on input line 143.
+)
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang2.sty
+File: lstlang2.sty 2020/03/24 1.8d listings language file
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang3.sty
+File: lstlang3.sty 2020/03/24 1.8d listings language file
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang2.sty
+File: lstlang2.sty 2020/03/24 1.8d listings language file
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang3.sty
+File: lstlang3.sty 2020/03/24 1.8d listings language file
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang2.sty
+File: lstlang2.sty 2020/03/24 1.8d listings language file
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang3.sty
+File: lstlang3.sty 2020/03/24 1.8d listings language file
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xfrac\xfrac.
+sty
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/l3keys2e\l3k
+eys2e.sty
+Package: l3keys2e 2022-06-22 LaTeX2e option processing using LaTeX3 keys
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xtemplate\xt
+emplate.sty
+Package: xtemplate 2022-06-22 L3 Experimental prototype document functions
+\l__xtemplate_tmp_dim=\dimen188
+\l__xtemplate_tmp_int=\count449
+\l__xtemplate_tmp_muskip=\muskip22
+\l__xtemplate_tmp_skip=\skip97
+)
+Package: xfrac 2022-06-22 L3 Experimental split-level fractions
+\l__xfrac_slash_box=\box71
+\l__xfrac_tmp_box=\box72
+\l__xfrac_denominator_bot_sep_dim=\dimen189
+\l__xfrac_numerator_bot_sep_dim=\dimen190
+\l__xfrac_numerator_top_sep_dim=\dimen191
+\l__xfrac_slash_left_sep_dim=\dimen192
+\l__xfrac_slash_right_sep_dim=\dimen193
+\l__xfrac_slash_left_muskip=\muskip23
+\l__xfrac_slash_right_muskip=\muskip24
+
+Package xtemplate Info: Declaring object type 'xfrac' taking 3 argument(s) on
+(xtemplate)             line 80.
+
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/pgfplots\pgfplots.sty
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.rev
+ision.tex)
+Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.
+sty
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.st
+y
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
+-common.tex
+\pgfutil@everybye=\toks33
+\pgfutil@tempdima=\dimen194
+\pgfutil@tempdimb=\dimen195
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
+-common-lists.tex))
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
+-latex.def
+\pgfutil@abb=\box73
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.
+code.tex
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex)
+Package: pgfrcs 2021/05/15 v3.1.9a (3.1.9a)
+))
+Package: pgf 2021/05/15 v3.1.9a (3.1.9a)
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.
+sty
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.
+sty
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s.code.tex
+Package: pgfsys 2021/05/15 v3.1.9a (3.1.9a)
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+.code.tex
+\pgfkeys@pathtoks=\toks34
+\pgfkeys@temptoks=\toks35
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+filtered.code.tex
+\pgfkeys@tmptoks=\toks36
+))
+\pgf@x=\dimen196
+\pgf@y=\dimen197
+\pgf@xa=\dimen198
+\pgf@ya=\dimen199
+\pgf@xb=\dimen256
+\pgf@yb=\dimen257
+\pgf@xc=\dimen258
+\pgf@yc=\dimen259
+\pgf@xd=\dimen260
+\pgf@yd=\dimen261
+\w@pgf@writea=\write4
+\r@pgf@reada=\read4
+\c@pgf@counta=\count450
+\c@pgf@countb=\count451
+\c@pgf@countc=\count452
+\c@pgf@countd=\count453
+\t@pgf@toka=\toks37
+\t@pgf@tokb=\toks38
+\t@pgf@tokc=\toks39
+\pgf@sys@id@count=\count454
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.c
+fg
+File: pgf.cfg 2021/05/15 v3.1.9a (3.1.9a)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s-pdftex.def
+File: pgfsys-pdftex.def 2021/05/15 v3.1.9a (3.1.9a)
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s-common-pdf.def
+File: pgfsys-common-pdf.def 2021/05/15 v3.1.9a (3.1.9a)
+)))
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+ssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfsyssoftpath@smallbuffer@items=\count455
+\pgfsyssoftpath@bigbuffer@items=\count456
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+sprotocol.code.tex
+File: pgfsysprotocol.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+))
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+e.code.tex
+Package: pgfcore 2021/05/15 v3.1.9a (3.1.9a)
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code
+.tex
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcalc.
+code.tex
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathutil.
+code.tex)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparse
+r.code.tex
+\pgfmath@dimen=\dimen262
+\pgfmath@count=\count457
+\pgfmath@box=\box74
+\pgfmath@toks=\toks40
+\pgfmath@stack@operand=\toks41
+\pgfmath@stack@operation=\toks42
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.code.tex
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.basic.code.tex)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.trigonometric.code.tex)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.random.code.tex)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.comparison.code.tex)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.base.code.tex)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.round.code.tex)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.misc.code.tex)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.integerarithmetics.code.tex)))
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat
+.code.tex
+\c@pgfmathroundto@lastzeros=\count458
+))
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.
+tex)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epoints.code.tex
+File: pgfcorepoints.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@picminx=\dimen263
+\pgf@picmaxx=\dimen264
+\pgf@picminy=\dimen265
+\pgf@picmaxy=\dimen266
+\pgf@pathminx=\dimen267
+\pgf@pathmaxx=\dimen268
+\pgf@pathminy=\dimen269
+\pgf@pathmaxy=\dimen270
+\pgf@xx=\dimen271
+\pgf@xy=\dimen272
+\pgf@yx=\dimen273
+\pgf@yy=\dimen274
+\pgf@zx=\dimen275
+\pgf@zy=\dimen276
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@path@lastx=\dimen277
+\pgf@path@lasty=\dimen278
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathusage.code.tex
+File: pgfcorepathusage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@shorten@end@additional=\dimen279
+\pgf@shorten@start@additional=\dimen280
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+escopes.code.tex
+File: pgfcorescopes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfpic=\box75
+\pgf@hbox=\box76
+\pgf@layerbox@main=\box77
+\pgf@picture@serial@count=\count459
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+egraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgflinewidth=\dimen281
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+etransformations.code.tex
+File: pgfcoretransformations.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@pt@x=\dimen282
+\pgf@pt@y=\dimen283
+\pgf@pt@temp=\dimen284
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+equick.code.tex
+File: pgfcorequick.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eobjects.code.tex
+File: pgfcoreobjects.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+earrows.code.tex
+File: pgfcorearrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfarrowsep=\dimen285
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eshade.code.tex
+File: pgfcoreshade.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@max=\dimen286
+\pgf@sys@shading@range@num=\count460
+\pgf@shadingcount=\count461
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eimage.code.tex
+File: pgfcoreimage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eexternal.code.tex
+File: pgfcoreexternal.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfexternal@startupbox=\box78
+))
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+elayers.code.tex
+File: pgfcorelayers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+etransparency.code.tex
+File: pgfcoretransparency.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epatterns.code.tex
+File: pgfcorepatterns.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+erdf.code.tex
+File: pgfcorerdf.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)))
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+shapes.code.tex
+File: pgfmoduleshapes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfnodeparttextbox=\box79
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+plot.code.tex
+File: pgfmoduleplot.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
+mp-version-0-65.sty
+Package: pgfcomp-version-0-65 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@nodesepstart=\dimen287
+\pgf@nodesepend=\dimen288
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
+mp-version-1-18.sty
+Package: pgfcomp-version-1-18 2021/05/15 v3.1.9a (3.1.9a)
+))
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.st
+y
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.s
+ty
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+.code.tex))
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code
+.tex))
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.
+code.tex
+Package: pgffor 2021/05/15 v3.1.9a (3.1.9a)
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code
+.tex)
+\pgffor@iter=\dimen289
+\pgffor@skip=\dimen290
+\pgffor@stack=\toks43
+\pgffor@toks=\toks44
+))
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z\tikz.code.tex
+Package: tikz 2021/05/15 v3.1.9a (3.1.9a)
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@plot@mark@count=\count462
+\pgfplotmarksize=\dimen291
+)
+\tikz@lastx=\dimen292
+\tikz@lasty=\dimen293
+\tikz@lastxsaved=\dimen294
+\tikz@lastysaved=\dimen295
+\tikz@lastmovetox=\dimen296
+\tikz@lastmovetoy=\dimen297
+\tikzleveldistance=\dimen298
+\tikzsiblingdistance=\dimen299
+\tikz@figbox=\box80
+\tikz@figbox@bg=\box81
+\tikz@tempbox=\box82
+\tikz@tempbox@bg=\box83
+\tikztreelevel=\count463
+\tikznumberofchildren=\count464
+\tikznumberofcurrentchild=\count465
+\tikz@fig@count=\count466
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+matrix.code.tex
+File: pgfmodulematrix.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfmatrixcurrentrow=\count467
+\pgfmatrixcurrentcolumn=\count468
+\pgf@matrix@numberofcolumns=\count469
+)
+\tikz@expandcount=\count470
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)))
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.cod
+e.tex
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotscore
+.code.tex
+\t@pgfplots@toka=\toks45
+\t@pgfplots@tokb=\toks46
+\t@pgfplots@tokc=\toks47
+\pgfplots@tmpa=\dimen300
+\c@pgfplots@coordindex=\count471
+\c@pgfplots@scanlineindex=\count472
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgfplots
+sysgeneric.code.tex))
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\pgfplot
+slibrary.code.tex)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/oldpgfcompat
+ib\pgfplotsoldpgfsupp_loader.code.tex
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryfpu.code.tex))
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplot
+sutil.code.tex
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructur
+e\pgfplotsliststructure.code.tex)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructur
+e\pgfplotsliststructureext.code.tex)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructur
+e\pgfplotsarray.code.tex
+\c@pgfplotsarray@tmp=\count473
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructur
+e\pgfplotsmatrix.code.tex)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/numtable\pgf
+plotstableshared.code.tex
+\c@pgfplotstable@counta=\count474
+\t@pgfplotstable@a=\toks48
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructur
+e\pgfplotsdeque.code.tex)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplot
+sbinary.code.tex
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplot
+sbinary.data.code.tex))
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplot
+sutil.verb.code.tex)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\pgflibr
+arypgfplots.surfshading.code.tex
+\c@pgfplotslibrarysurf@no=\count475
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgflibra
+rypgfplots.surfshading.pgfsys-pdftex.def)))
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplot
+scolormap.code.tex
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplot
+scolor.code.tex))
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsstac
+kedplots.code.tex)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsplot
+handlers.code.tex
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsmesh
+plothandler.code.tex
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsmesh
+plotimage.code.tex)))
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.sca
+ling.code.tex)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotscoor
+dprocessing.code.tex)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.err
+orbars.code.tex)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.mar
+kers.code.tex)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotstick
+s.code.tex)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.pat
+hs.code.tex)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarydecorations.code.tex
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+decorations.code.tex
+\pgfdecoratedcompleteddistance=\dimen301
+\pgfdecoratedremainingdistance=\dimen302
+\pgfdecoratedinputsegmentcompleteddistance=\dimen303
+\pgfdecoratedinputsegmentremainingdistance=\dimen304
+\pgf@decorate@distancetomove=\dimen305
+\pgf@decorate@repeatstate=\count476
+\pgfdecorationsegmentamplitude=\dimen306
+\pgfdecorationsegmentlength=\dimen307
+)
+\tikz@lib@dec@box=\box84
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarydecorations.pathmorphing.code.tex
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/decorat
+ions\pgflibrarydecorations.pathmorphing.code.tex))
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarydecorations.pathreplacing.code.tex
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/decorat
+ions\pgflibrarydecorations.pathreplacing.code.tex))
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\tikzlib
+rarypgfplots.contourlua.code.tex)
+\pgfplots@numplots=\count477
+\pgfplots@xmin@reg=\dimen308
+\pgfplots@xmax@reg=\dimen309
+\pgfplots@ymin@reg=\dimen310
+\pgfplots@ymax@reg=\dimen311
+\pgfplots@zmin@reg=\dimen312
+\pgfplots@zmax@reg=\dimen313
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibraryplotmarks.code.tex
+File: tikzlibraryplotmarks.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryplotmarks.code.tex
+File: pgflibraryplotmarks.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)))
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/pgfplots\pgfplotstable.
+sty
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.rev
+ision.tex)
+Package: pgfplotstable 2021/05/15 v1.18.1 Table typesetting and Pretty-printing
+ (1.18.1)
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/numtable\pgf
+plotstable.code.tex
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/numtable\pgf
+plotstable.coltype.code.tex)))
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\tikzlib
+rarypgfplots.smithchart.code.tex)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibraryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryarrows.code.tex
+File: pgflibraryarrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\arrowsize=\dimen314
+))
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/tools\bm.sty
+Package: bm 2022/01/05 v1.2f Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup4
+\symboldletters=\mathgroup5
+\symboldsymbols=\mathgroup6
+Package bm Info: No bold for \OMX/cmex/m/n, using \pmb.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 149.
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/spverbatim\spverbatim.s
+ty
+Package: spverbatim 2009/08/10 v1.0 Verbatim with breakable spaces
+)
+Package csquotes Info: Checking for multilingual support...
+Package csquotes Info: ... found 'babel' package.
+Package csquotes Info: Adjusting default style.
+Package csquotes Info: Redefining alias 'default' -> 'ngerman'.
+ (BA.aux (pages/titelseite.aux) (pages/erklaerung.aux)
+(chapter/kurzfassung.aux) (chapter/abstract.aux) (chapter/einleitung.aux)
+(chapter/modellbildung.aux) (chapter/Bahnplanung.aux)
+(chapter/modellvalidierung.aux
+
+LaTeX Warning: Label `eqn:mugrav' multiply defined.
+
+) (chapter/Optimierer.aux) (chapter/Validierung.aux) (chapter/Bewertung.aux)
+(chapter/ZusammenfassungAusblick.aux) (chapter/anhang.aux))
+\openout1 = `BA.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 196.
+LaTeX Font Info:    ... okay on input line 196.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 196.
+LaTeX Font Info:    ... okay on input line 196.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 196.
+LaTeX Font Info:    ... okay on input line 196.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 196.
+LaTeX Font Info:    ... okay on input line 196.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 196.
+LaTeX Font Info:    ... okay on input line 196.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 196.
+LaTeX Font Info:    ... okay on input line 196.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 196.
+LaTeX Font Info:    ... okay on input line 196.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 196.
+LaTeX Font Info:    ... okay on input line 196.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 196.
+LaTeX Font Info:    ... okay on input line 196.
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\tran
+slations-basic-dictionary-german.trsl
+File: translations-basic-dictionary-german.trsl (german translation file `trans
+lations-basic-dictionary')
+)
+Package translations Info: loading dictionary `translations-basic-dictionary' f
+or `german'. on input line 196.
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
+ii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count478
+\scratchdimen=\dimen315
+\scratchbox=\box85
+\nofMPsegments=\count479
+\nofMParguments=\count480
+\everyMPshowfont=\toks49
+\MPscratchCnt=\count481
+\MPscratchDim=\dimen316
+\MPnumerator=\count482
+\makeMPintoPDFobject=\count483
+\everyMPtoPDFconversion=\toks50
+)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
+ase.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
+fg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: Option `justification=RaggedRight' requires the `ragged2e
+' package on input line 196.
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/ragged2e\ragged2e.sty
+Package: ragged2e 2021/12/15 v3.1 ragged2e Package
+\CenteringLeftskip=\skip98
+\RaggedLeftLeftskip=\skip99
+\RaggedRightLeftskip=\skip100
+\CenteringRightskip=\skip101
+\RaggedLeftRightskip=\skip102
+\RaggedRightRightskip=\skip103
+\CenteringParfillskip=\skip104
+\RaggedLeftParfillskip=\skip105
+\RaggedRightParfillskip=\skip106
+\JustifyingParfillskip=\skip107
+\CenteringParindent=\skip108
+\RaggedLeftParindent=\skip109
+\RaggedRightParindent=\skip110
+\JustifyingParindent=\skip111
+)
+Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
+Package caption Info: End \AtBeginDocument code.
+Package biblatex Info: Trying to load language 'ngerman'...
+Package biblatex Info: ... file 'ngerman.lbx' found.
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\ngerman.lb
+x
+File: ngerman.lbx 2022/07/12 v3.18b biblatex localization (PK/MW)
+Package biblatex Info: Trying to load language 'german'...
+Package biblatex Info: ... file 'german.lbx' found.
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\german.lbx
+File: german.lbx 2022/07/12 v3.18b biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load language 'german'...
+Package biblatex Info: ... file 'german.lbx' found.
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\german.lbx
+File: german.lbx 2022/07/12 v3.18b biblatex localization (PK/MW)
+))
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Data encoding 'utf8' specified.
+(biblatex)             No need to reencode data.
+\openout3 = `BA-blx.bib'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'BA.bbl' found.
+ (BA.bbl
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'Carabin.2017':
+(biblatex)                - Invalid format of field 'urldate'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'Patent.2016':
+(biblatex)                - Invalid format of field 'urldate'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'Eggers.2019':
+(biblatex)                - Invalid format of field 'urldate'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'RCS.2019':
+(biblatex)                - Invalid format of field 'urldate'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'RSI.2020':
+(biblatex)                - Invalid format of field 'urldate'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'Stapmanns.2022':
+(biblatex)                - Invalid format of field 'urldate'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'KSS.2023':
+(biblatex)                - Invalid format of field 'urldate'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'Winsock.2023':
+(biblatex)                - Invalid format of field 'urldate'.
+
+)
+Package biblatex Info: Reference section=0 on input line 196.
+Package biblatex Info: Reference segment=0 on input line 196.
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape.sty
+Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/graphics\lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+)
+Package scrhack Info: loading lscape hack on input line 77.
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\lscape.hak
+File: lscape.hak 2022/10/12 v3.38 KOMA-Script scrhack part (hacking package lsc
+ape)
+Package scrhack Info: \landscape patched to make \textheight change optional on
+ input line 90.
+\scrh@LT@textheight=\skip112
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+)
+Package hyperref Info: Link coloring OFF on input line 196.
+ (BA.out) (BA.out)
+\@outlinefile=\write5
+\openout5 = `BA.out'.
+
+Class scrbook Info: loading recommended package `bookmark'.
+(scrbook)           Using `bookmark' together with `hyperref' is recommended,
+(scrbook)           because of handling of possible bookmark level gaps.
+(scrbook)           You can avoid loading `bookmark' with KOMA-Script option
+(scrbook)           `bookmarkpackage=false' before \begin{document} and
+(scrbook)           you can avoid this message adding:
+(scrbook)             \usepackage{bookmark}
+(scrbook)           before \begin{document} on input line 196.
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bookmark.sty
+Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
+
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bkm-pdftex.def
+File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
+\BKM@id=\count484
+))
+\c@lstlisting=\count485
+Package scrhack Info: undefining \float@addtolists on input line 196.
+
+Package pgfplots notification 'compat/show suggested version=true': document ha
+s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
+
+LaTeX Font Info:    Trying to load font information for T1+cmss on input line 2
+00.
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmss.fd
+File: t1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+\openout2 = `pages/titelseite.aux'.
+
+
+(pages/titelseite.tex
+Package hyperref Info: Option `pageanchor' set `false' on input line 2.
+<images/DHBW_d_R_FN_46mm_4c.pdf, id=6, 133.19662pt x 73.51465pt>
+File: images/DHBW_d_R_FN_46mm_4c.pdf Graphic file (type pdf)
+<use images/DHBW_d_R_FN_46mm_4c.pdf>
+Package pdftex.def Info: images/DHBW_d_R_FN_46mm_4c.pdf  used on input line 16.
+
+(pdftex.def)             Requested size: 89.62482pt x 49.46655pt.
+
+Overfull \hbox (14.35762pt too wide) in paragraph at lines 11--17
+[]$[]$ $[]$ 
+ []
+
+[1
+
+
+
+
+{C:/Users/denni/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./images/DHB
+W_d_R_FN_46mm_4c.pdf>]
+Package hyperref Info: Option `pageanchor' set `true' on input line 64.
+)
+\openout2 = `pages/erklaerung.aux'.
+
+ (pages/erklaerung.tex
+Underfull \hbox (badness 10000) in paragraph at lines 7--8
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--10
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
+
+ []
+
+[1
+
+
+
+
+
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 23--24
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--26
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--28
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--30
+
+ []
+
+[2
+
+
+] [3])
+\openout2 = `chapter/kurzfassung.aux'.
+
+ (chapter/kurzfassung.tex [4
+
+
+
+
+
+
+
+])
+\openout2 = `chapter/abstract.aux'.
+
+ (chapter/abstract.tex [5
+
+
+
+
+
+
+
+]) (BA.toc
+[6
+
+
+
+
+
+
+]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[7]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[8]
+Overfull \hbox (51.11397pt too wide) in paragraph at lines 97--97
+ [][] [][]\T1/cmr/m/n/12 Vergleich der si-mu-lier-ten Ver-läu-fe für den in-iti
+a-len und justierten-energieoptimierten 
+ []
+
+)
+\tf@toc=\write6
+\openout6 = `BA.toc'.
+
+
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[9] (pages/abkuerzungen.tex) (BA.nls
+Overfull \hbox (5.71634pt too wide) in paragraph at lines 19--20
+[]\T1/cmr/m/n/12 Lineare Be-schleu-ni-gung im Mas-se-schwer-punkt $\OML/cmm/m/i
+t/12 C[]$ \T1/cmr/m/n/12 aus-ge-drückt in KS$[]$ 
+ []
+
+
+Overfull \hbox (1.29037pt too wide) in paragraph at lines 22--23
+[]\T1/cmr/m/n/12 Lineare Ge-schwin-dig-keit im Ur-sprung des KS$[]$ aus-ge-drüc
+kt in KS$[]$ 
+ []
+
+[10
+
+
+
+
+]
+Overfull \hbox (9.55148pt too wide) in paragraph at lines 23--24
+[]\T1/cmr/m/n/12 Lineare Ge-schwin-dig-keit im Mas-se-schwer-punkt $\OML/cmm/m/
+it/12 C[]$ \T1/cmr/m/n/12 aus-ge-drückt in KS$[]$ 
+ []
+
+
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[11]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[12]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[13])
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[14]
+\openout2 = `chapter/einleitung.aux'.
+
+ (chapter/einleitung.tex
+chapter 1.
+[1
+
+
+
+
+
+]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[2]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[3]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[4])
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[5]
+\openout2 = `chapter/modellbildung.aux'.
+
+ (chapter/modellbildung.tex
+chapter 2.
+[6
+
+
+
+
+
+]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[7]
+<images/KR210.pdf, id=393, 740.7675pt x 573.14125pt>
+File: images/KR210.pdf Graphic file (type pdf)
+<use images/KR210.pdf>
+Package pdftex.def Info: images/KR210.pdf  used on input line 60.
+(pdftex.def)             Requested size: 358.50612pt x 277.37848pt.
+
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[8 <./images/KR210.pdf>]
+<images/zAchsen.pdf, id=408, 853.1875pt x 603.25375pt>
+File: images/zAchsen.pdf Graphic file (type pdf)
+<use images/zAchsen.pdf>
+Package pdftex.def Info: images/zAchsen.pdf  used on input line 71.
+(pdftex.def)             Requested size: 224.06548pt x 158.4255pt.
+<images/KS.pdf, id=409, 1066.98625pt x 842.14626pt>
+File: images/KS.pdf Graphic file (type pdf)
+<use images/KS.pdf>
+Package pdftex.def Info: images/KS.pdf  used on input line 78.
+(pdftex.def)             Requested size: 224.06548pt x 176.84308pt.
+
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[9 <./images/zAchsen.pdf> <./images/KS.pdf>]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[10]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[11]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[12]
+<images/rnea.pdf, id=469, 2717.15125pt x 1555.8125pt>
+File: images/rnea.pdf Graphic file (type pdf)
+<use images/rnea.pdf>
+Package pdftex.def Info: images/rnea.pdf  used on input line 189.
+(pdftex.def)             Requested size: 448.13095pt x 256.57928pt.
+
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[13 <./images/rnea.pdf>]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[14]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[15]
+<images/zk.png, id=514, 714.41907pt x 277.035pt>
+File: images/zk.png Graphic file (type png)
+<use images/zk.png>
+Package pdftex.def Info: images/zk.png  used on input line 274.
+(pdftex.def)             Requested size: 448.13095pt x 173.77629pt.
+)
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[16]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[17 <./images/zk.png>]
+\openout2 = `chapter/Bahnplanung.aux'.
+
+ (chapter/Bahnplanung.tex
+chapter 3.
+[18
+
+
+
+
+
+]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[19]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[20]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 79.
+
+<images/posmat.png, id=556, 1445.4pt x 697.10437pt>
+File: images/posmat.png Graphic file (type png)
+<use images/posmat.png>
+Package pdftex.def Info: images/posmat.png  used on input line 81.
+(pdftex.def)             Requested size: 448.13095pt x 216.13202pt.
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 86.
+
+<images/pos.png, id=557, 1110.0672pt x 544.9158pt>
+File: images/pos.png Graphic file (type png)
+<use images/pos.png>
+Package pdftex.def Info: images/pos.png  used on input line 88.
+(pdftex.def)             Requested size: 448.13095pt x 219.97461pt.
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 94.
+
+<images/velmat.png, id=558, 1445.4pt x 697.10437pt>
+File: images/velmat.png Graphic file (type png)
+<use images/velmat.png>
+Package pdftex.def Info: images/velmat.png  used on input line 96.
+(pdftex.def)             Requested size: 448.13095pt x 216.13202pt.
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 101.
+
+<images/vel.png, id=559, 1110.0672pt x 544.9158pt>
+File: images/vel.png Graphic file (type png)
+<use images/vel.png>
+Package pdftex.def Info: images/vel.png  used on input line 103.
+(pdftex.def)             Requested size: 448.13095pt x 219.97461pt.
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 109.
+
+<images/accmat.png, id=560, 1445.4pt x 697.10437pt>
+File: images/accmat.png Graphic file (type png)
+<use images/accmat.png>
+Package pdftex.def Info: images/accmat.png  used on input line 111.
+(pdftex.def)             Requested size: 448.13095pt x 216.13202pt.
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 116.
+
+<images/acc.png, id=561, 1110.0672pt x 544.9158pt>
+File: images/acc.png Graphic file (type png)
+<use images/acc.png>
+Package pdftex.def Info: images/acc.png  used on input line 118.
+(pdftex.def)             Requested size: 448.13095pt x 219.97461pt.
+)
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[21 <./images/posmat.png (PNG copy)> <./images/pos.png>]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[22 <./images/velmat.png (PNG copy)> <./images/vel.png>]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[23 <./images/accmat.png (PNG copy)> <./images/acc.png>]
+\openout2 = `chapter/modellvalidierung.aux'.
+
+
+(chapter/modellvalidierung.tex
+chapter 4.
+[24
+
+
+
+
+
+]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[25]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[26]
+<images/Gewichtskraft.png, id=618, 1445.4pt x 697.10437pt>
+File: images/Gewichtskraft.png Graphic file (type png)
+<use images/Gewichtskraft.png>
+Package pdftex.def Info: images/Gewichtskraft.png  used on input line 74.
+(pdftex.def)             Requested size: 448.13095pt x 216.13202pt.
+
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[27 <./images/Gewichtskraft.png (PNG copy)>]
+<images/taumat.png, id=631, 1445.4pt x 697.10437pt>
+File: images/taumat.png Graphic file (type png)
+<use images/taumat.png>
+Package pdftex.def Info: images/taumat.png  used on input line 86.
+(pdftex.def)             Requested size: 448.13095pt x 216.13202pt.
+<images/taumat-fg.png, id=632, 1445.4pt x 809.27344pt>
+File: images/taumat-fg.png Graphic file (type png)
+<use images/taumat-fg.png>
+Package pdftex.def Info: images/taumat-fg.png  used on input line 93.
+(pdftex.def)             Requested size: 448.13095pt x 250.90921pt.
+<images/tau.png, id=633, 1110.0672pt x 544.9158pt>
+File: images/tau.png Graphic file (type png)
+<use images/tau.png>
+Package pdftex.def Info: images/tau.png  used on input line 100.
+(pdftex.def)             Requested size: 448.13095pt x 219.97461pt.
+
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[28]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[29 <./images/taumat.png (PNG copy)> <./images/taumat-fg.png (PNG copy)>]
+<images/pmat.png, id=645, 1445.4pt x 809.27344pt>
+File: images/pmat.png Graphic file (type png)
+<use images/pmat.png>
+Package pdftex.def Info: images/pmat.png  used on input line 110.
+(pdftex.def)             Requested size: 448.13095pt x 250.90921pt.
+<images/p.png, id=646, 1110.0672pt x 544.9158pt>
+File: images/p.png Graphic file (type png)
+<use images/p.png>
+Package pdftex.def Info: images/p.png  used on input line 117.
+(pdftex.def)             Requested size: 448.13095pt x 219.97461pt.
+)
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[30 <./images/tau.png>]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[31 <./images/pmat.png (PNG copy)> <./images/p.png>]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[32]
+\openout2 = `chapter/Optimierer.aux'.
+
+ (chapter/Optimierer.tex
+chapter 5.
+[33
+
+
+
+
+
+]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[34]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[35]
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+)
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[36]
+<images/optimization_01.png, id=734, 578.16pt x 514.92375pt>
+File: images/optimization_01.png Graphic file (type png)
+<use images/optimization_01.png>
+Package pdftex.def Info: images/optimization_01.png  used on input line 108.
+(pdftex.def)             Requested size: 289.07999pt x 257.46124pt.
+
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[37]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[38 <./images/optimization_01.png (PNG copy)>]
+<images/Optimierungsergebnisse_up/popt.png, id=747, 1445.4pt x 809.27344pt>
+File: images/Optimierungsergebnisse_up/popt.png Graphic file (type png)
+<use images/Optimierungsergebnisse_up/popt.png>
+Package pdftex.def Info: images/Optimierungsergebnisse_up/popt.png  used on inp
+ut line 143.
+(pdftex.def)             Requested size: 448.13095pt x 250.90921pt.
+
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[39 <./images/Optimierungsergebnisse_up/popt.png (PNG copy)>]
+<images/Optimierungsergebnisse_up/posopt.png, id=758, 1445.4pt x 809.27344pt>
+File: images/Optimierungsergebnisse_up/posopt.png Graphic file (type png)
+<use images/Optimierungsergebnisse_up/posopt.png>
+Package pdftex.def Info: images/Optimierungsergebnisse_up/posopt.png  used on i
+nput line 152.
+(pdftex.def)             Requested size: 448.13095pt x 250.90921pt.
+<images/Optimierungsergebnisse_up/velopt.png, id=759, 1445.4pt x 809.27344pt>
+File: images/Optimierungsergebnisse_up/velopt.png Graphic file (type png)
+<use images/Optimierungsergebnisse_up/velopt.png>
+Package pdftex.def Info: images/Optimierungsergebnisse_up/velopt.png  used on i
+nput line 159.
+(pdftex.def)             Requested size: 448.13095pt x 250.90921pt.
+<images/Optimierungsergebnisse_up/veloptedit.png, id=762, 1445.4pt x 809.27344p
+t>
+File: images/Optimierungsergebnisse_up/veloptedit.png Graphic file (type png)
+<use images/Optimierungsergebnisse_up/veloptedit.png>
+Package pdftex.def Info: images/Optimierungsergebnisse_up/veloptedit.png  used 
+on input line 178.
+(pdftex.def)             Requested size: 448.13095pt x 250.90921pt.
+
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[40 <./images/Optimierungsergebnisse_up/posopt.png (PNG copy)>]
+<images/Optimierungsergebnisse_up/poptfinal.png, id=772, 1445.4pt x 809.27344pt
+>
+File: images/Optimierungsergebnisse_up/poptfinal.png Graphic file (type png)
+<use images/Optimierungsergebnisse_up/poptfinal.png>
+Package pdftex.def Info: images/Optimierungsergebnisse_up/poptfinal.png  used o
+n input line 194.
+(pdftex.def)             Requested size: 448.13095pt x 250.90921pt.
+)
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[41 <./images/Optimierungsergebnisse_up/velopt.png (PNG copy)>]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[42 <./images/Optimierungsergebnisse_up/veloptedit.png (PNG copy)>]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[43 <./images/Optimierungsergebnisse_up/poptfinal.png (PNG copy)>]
+\openout2 = `chapter/Validierung.aux'.
+
+
+(chapter/Validierung.tex
+chapter 6.
+[44
+
+
+
+
+
+]
+<images/P_up.png, id=795, 1110.0672pt x 544.9158pt>
+File: images/P_up.png Graphic file (type png)
+<use images/P_up.png>
+Package pdftex.def Info: images/P_up.png  used on input line 33.
+(pdftex.def)             Requested size: 448.13095pt x 219.97461pt.
+
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[45]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[46 <./images/P_up.png>]
+<images/e_up500.png, id=818, 1110.0672pt x 544.9158pt>
+File: images/e_up500.png Graphic file (type png)
+<use images/e_up500.png>
+Package pdftex.def Info: images/e_up500.png  used on input line 50.
+(pdftex.def)             Requested size: 448.13095pt x 219.97461pt.
+)
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[47 <./images/e_up500.png>]
+\openout2 = `chapter/Bewertung.aux'.
+
+ (chapter/Bewertung.tex
+chapter 7.
+
+Overfull \hbox (0.82454pt too wide) in paragraph at lines 43--47
+\T1/cmr/m/n/12 SQP-Algorithmus nicht, ein glo-ba-les Op-ti-mum zu fin-den Klebe
+n-Seitenwandte[S. 535]No-
+ []
+
+[48
+
+
+
+
+
+])
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[49]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[50]
+\openout2 = `chapter/ZusammenfassungAusblick.aux'.
+
+ (chapter/ZusammenfassungAusblick.tex
+chapter 8.
+[51
+
+
+
+
+
+]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[52])
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[53]
+chapter without number
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 2
+53.
+(C:\Users\denni\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
+File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+[54
+
+
+
+
+]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[55]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[56]
+Overfull \hbox (6.77725pt too wide) in paragraph at lines 254--254
+\T1/cmr/m/it/12 In-ter-na-tio-nal Jour-nal of Ad-van-ced Ma-nu-fac-tu-ring Tech
+-no-lo-gy \T1/cmr/m/n/12 38.11-12 (2008),
+ []
+
+
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[57] (BA.lof
+Overfull \hbox (12.93234pt too wide) in paragraph at lines 18--18
+ [][] [][]\T1/cmr/m/n/12 Simulierter Dreh-mo-ment-ver-lauf in-kl. nä-he-rungs-w
+ei-se mo-del-lier-ten Ge-wichts- 
+ []
+
+[58
+
+
+]
+Overfull \hbox (6.6317pt too wide) in paragraph at lines 28--28
+ \T1/cmr/m/n/12 letz-ten Pro-zess-punkt auf die Ho-me Po-si-ti-on im Pro-gramm 
+Kleben-Seitenwand[] [][]  
+ []
+
+
+Overfull \hbox (4.45291pt too wide) in paragraph at lines 41--41
+ [][] [][]\T1/cmr/m/n/12 Simulierte Win-kel-ge-schwin-dig-keit der In-iti-al-be
+-we-gung und jus-tier-ten, ener- 
+ []
+
+
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[59]
+Overfull \hbox (2.49507pt too wide) in paragraph at lines 42--42
+ [][] [][]\T1/cmr/m/n/12 Simulierte Win-kel-be-schleu-ni-gung der In-iti-al-be-
+we-gung und jus-tier-ten, ener- 
+ []
+
+)
+\tf@lof=\write7
+\openout7 = `BA.lof'.
+
+
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[60] (BA.lot)
+\tf@lot=\write8
+\openout8 = `BA.lot'.
+
+ [61
+
+
+
+
+]
+\openout2 = `chapter/anhang.aux'.
+
+ (chapter/anhang.tex
+chapter without number
+<C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis/literature/Anhang/planu
+ng.pdf, id=1039, 598.15468pt x 846.0408pt>
+File: C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis/literature/Anhang/
+planung.pdf Graphic file (type pdf)
+<use C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis/literature/Anhang/p
+lanung.pdf>
+Package pdftex.def Info: C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis
+/literature/Anhang/planung.pdf  used on input line 7.
+(pdftex.def)             Requested size: 598.15321pt x 846.03874pt.
+File: C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis/literature/Anhang/
+planung.pdf Graphic file (type pdf)
+<use C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis/literature/Anhang/p
+lanung.pdf>
+Package pdftex.def Info: C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis
+/literature/Anhang/planung.pdf  used on input line 7.
+(pdftex.def)             Requested size: 598.15321pt x 846.03874pt.
+<C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis/literature/Anhang/planu
+ng.pdf, id=1042, page=1, 598.15468pt x 846.0408pt>
+File: C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis/literature/Anhang/
+planung.pdf Graphic file (type pdf)
+<use C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis/literature/Anhang/p
+lanung.pdf, page 1>
+Package pdftex.def Info: C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis
+/literature/Anhang/planung.pdf , page1 used on input line 7.
+(pdftex.def)             Requested size: 598.15321pt x 846.03874pt.
+File: C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis/literature/Anhang/
+planung.pdf Graphic file (type pdf)
+<use C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis/literature/Anhang/p
+lanung.pdf, page 1>
+Package pdftex.def Info: C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis
+/literature/Anhang/planung.pdf , page1 used on input line 7.
+(pdftex.def)             Requested size: 597.4778pt x 845.08344pt.
+[62
+
+
+
+
+
+
+]
+File: C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis/literature/Anhang/
+planung.pdf Graphic file (type pdf)
+<use C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis/literature/Anhang/p
+lanung.pdf, page 1>
+Package pdftex.def Info: C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis
+/literature/Anhang/planung.pdf , page1 used on input line 7.
+(pdftex.def)             Requested size: 597.4778pt x 845.08344pt.
+File: C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis/literature/Anhang/
+planung.pdf Graphic file (type pdf)
+<use C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis/literature/Anhang/p
+lanung.pdf, page 1>
+Package pdftex.def Info: C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis
+/literature/Anhang/planung.pdf , page1 used on input line 7.
+(pdftex.def)             Requested size: 597.4778pt x 845.08344pt.
+File: C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis/literature/Anhang/
+planung.pdf Graphic file (type pdf)
+<use C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis/literature/Anhang/p
+lanung.pdf, page 1>
+Package pdftex.def Info: C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis
+/literature/Anhang/planung.pdf , page1 used on input line 7.
+(pdftex.def)             Requested size: 597.4778pt x 845.08344pt.
+ [63 <C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis/literature/Anhang/
+planung.pdf>]
+chapter without number
+[64
+
+
+]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[65]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[66]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[67]
+chapter without number
+
+
+pdfTeX warning: pdflatex.exe (file C:/Users/denni/Documents/Bachelorarbeit/Bach
+elorThesis/literature/Anhang/DatenblattKR2102700-2.pdf): PDF inclusion: found P
+DF version <1.6>, but at most version <1.5> allowed
+<C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis/literature/Anhang/Daten
+blattKR2102700-2.pdf, id=1126, 597.50786pt x 845.04686pt>
+File: C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis/literature/Anhang/
+DatenblattKR2102700-2.pdf Graphic file (type pdf)
+<use C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis/literature/Anhang/D
+atenblattKR2102700-2.pdf>
+Package pdftex.def Info: C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis
+/literature/Anhang/DatenblattKR2102700-2.pdf  used on input line 203.
+(pdftex.def)             Requested size: 597.5064pt x 845.0448pt.
+
+
+pdfTeX warning: pdflatex.exe (file C:/Users/denni/Documents/Bachelorarbeit/Bach
+elorThesis/literature/Anhang/DatenblattKR2102700-2.pdf): PDF inclusion: found P
+DF version <1.6>, but at most version <1.5> allowed
+File: C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis/literature/Anhang/
+DatenblattKR2102700-2.pdf Graphic file (type pdf)
+<use C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis/literature/Anhang/D
+atenblattKR2102700-2.pdf>
+Package pdftex.def Info: C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis
+/literature/Anhang/DatenblattKR2102700-2.pdf  used on input line 203.
+(pdftex.def)             Requested size: 597.5064pt x 845.0448pt.
+
+
+pdfTeX warning: pdflatex.exe (file C:/Users/denni/Documents/Bachelorarbeit/Bach
+elorThesis/literature/Anhang/DatenblattKR2102700-2.pdf): PDF inclusion: found P
+DF version <1.6>, but at most version <1.5> allowed
+
+
+pdfTeX warning: pdflatex.exe (file C:/Users/denni/Documents/Bachelorarbeit/Bach
+elorThesis/literature/Anhang/DatenblattKR2102700-2.pdf): PDF inclusion: found P
+DF version <1.6>, but at most version <1.5> allowed
+<C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis/literature/Anhang/Daten
+blattKR2102700-2.pdf, id=1129, page=1, 597.50786pt x 845.04686pt>
+File: C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis/literature/Anhang/
+DatenblattKR2102700-2.pdf Graphic file (type pdf)
+<use C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis/literature/Anhang/D
+atenblattKR2102700-2.pdf, page 1>
+Package pdftex.def Info: C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis
+/literature/Anhang/DatenblattKR2102700-2.pdf , page1 used on input line 203.
+(pdftex.def)             Requested size: 597.5064pt x 845.0448pt.
+File: C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis/literature/Anhang/
+DatenblattKR2102700-2.pdf Graphic file (type pdf)
+<use C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis/literature/Anhang/D
+atenblattKR2102700-2.pdf, page 1>
+Package pdftex.def Info: C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis
+/literature/Anhang/DatenblattKR2102700-2.pdf , page1 used on input line 203.
+(pdftex.def)             Requested size: 597.53374pt x 845.08348pt.
+[68
+
+
+]
+File: C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis/literature/Anhang/
+DatenblattKR2102700-2.pdf Graphic file (type pdf)
+<use C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis/literature/Anhang/D
+atenblattKR2102700-2.pdf, page 1>
+Package pdftex.def Info: C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis
+/literature/Anhang/DatenblattKR2102700-2.pdf , page1 used on input line 203.
+(pdftex.def)             Requested size: 597.53374pt x 845.08348pt.
+File: C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis/literature/Anhang/
+DatenblattKR2102700-2.pdf Graphic file (type pdf)
+<use C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis/literature/Anhang/D
+atenblattKR2102700-2.pdf, page 1>
+Package pdftex.def Info: C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis
+/literature/Anhang/DatenblattKR2102700-2.pdf , page1 used on input line 203.
+(pdftex.def)             Requested size: 597.53374pt x 845.08348pt.
+File: C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis/literature/Anhang/
+DatenblattKR2102700-2.pdf Graphic file (type pdf)
+<use C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis/literature/Anhang/D
+atenblattKR2102700-2.pdf, page 1>
+Package pdftex.def Info: C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis
+/literature/Anhang/DatenblattKR2102700-2.pdf , page1 used on input line 203.
+(pdftex.def)             Requested size: 597.53374pt x 845.08348pt.
+ [69 <C:/Users/denni/Documents/Bachelorarbeit/BachelorThesis/literature/Anhang/
+DatenblattKR2102700-2.pdf>]
+Overfull \hbox (14.70534pt too wide) in paragraph at lines 226--241
+ [][] 
+ []
+
+
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[70]
+chapter without number
+[71
+
+
+]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[72]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[73]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 402.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 402.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 402.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 402.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 402.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<def>-command' on input line 402.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<def>-command' on input line 402.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@tempb' on input line 402.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 402.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 402.
+
+
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[74]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[75]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[76]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 518.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 518.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 518.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 518.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 518.
+
+
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[77]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 530.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 530.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 530.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 530.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 542.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 542.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 542.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 554.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 554.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 554.
+
+
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[78]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 595.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 595.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 595.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 595.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 595.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 595.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 595.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 595.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 595.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 595.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 595.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 595.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 595.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 595.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 595.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 595.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 595.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 595.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 595.
+
+
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[79]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 601.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\omega' on input line 601.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 601.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 601.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 601.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 613.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 613.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 613.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 613.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 625.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 625.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 625.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 625.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 625.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 625.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 625.
+
+
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[80]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 637.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 637.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 637.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 637.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 637.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 637.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 637.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 637.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 665.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 665.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 665.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 665.
+
+
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[81]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 679.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mu' on input line 679.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 679.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 679.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 679.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 695.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\tau' on input line 695.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 695.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 695.
+
+
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[82]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[83]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 743.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 743.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 743.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 743.
+
+
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[84]
+Overfull \hbox (27.25677pt too wide) in paragraph at lines 775--777
+\T1/cmr/m/n/12 % Start-wert Ge-lenk-win-kel qs1 = deg2rad(-7.61); qs2 = deg2rad
+(-119.27); qs3 = deg2rad(88.49-
+ []
+
+
+Overfull \hbox (33.91354pt too wide) in paragraph at lines 778--780
+[]\T1/cmr/m/n/12 % Ziel-wert Ge-lenk-win-kel qe1 = deg2rad(-14.83); qe2 = deg2r
+ad(-105.81); qe3 = deg2rad(136.16-
+ []
+
+
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[85]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[86]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[87]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[88]
+Overfull \hbox (27.25677pt too wide) in paragraph at lines 943--945
+\T1/cmr/m/n/12 % Start-wert Ge-lenk-win-kel qs1 = deg2rad(-7.61); qs2 = deg2rad
+(-119.27); qs3 = deg2rad(88.49-
+ []
+
+
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[89]
+Overfull \hbox (33.91354pt too wide) in paragraph at lines 946--949
+[]\T1/cmr/m/n/12 % Ziel-wert Ge-lenk-win-kel qe1 = deg2rad(-14.83); qe2 = deg2r
+ad(-105.81); qe3 = deg2rad(136.16-
+ []
+
+
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[90]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[91]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[92]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[93]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[94]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[95]
+chapter without number
+<images/Optimierungsergebnisse_up/posoptfinal.png, id=1937, 1445.4pt x 809.2734
+4pt>
+File: images/Optimierungsergebnisse_up/posoptfinal.png Graphic file (type png)
+<use images/Optimierungsergebnisse_up/posoptfinal.png>
+Package pdftex.def Info: images/Optimierungsergebnisse_up/posoptfinal.png  used
+ on input line 1154.
+(pdftex.def)             Requested size: 448.13095pt x 250.90921pt.
+<images/Optimierungsergebnisse_up/veloptfinal.png, id=1938, 1445.4pt x 809.2734
+4pt>
+File: images/Optimierungsergebnisse_up/veloptfinal.png Graphic file (type png)
+<use images/Optimierungsergebnisse_up/veloptfinal.png>
+Package pdftex.def Info: images/Optimierungsergebnisse_up/veloptfinal.png  used
+ on input line 1161.
+(pdftex.def)             Requested size: 448.13095pt x 250.90921pt.
+<images/Optimierungsergebnisse_up/accoptfinal.png, id=1939, 1445.4pt x 809.2734
+4pt>
+File: images/Optimierungsergebnisse_up/accoptfinal.png Graphic file (type png)
+<use images/Optimierungsergebnisse_up/accoptfinal.png>
+Package pdftex.def Info: images/Optimierungsergebnisse_up/accoptfinal.png  used
+ on input line 1168.
+(pdftex.def)             Requested size: 448.13095pt x 250.90921pt.
+<images/Optimierungsergebnisse_up/tauoptfinal.png, id=1940, 1445.4pt x 809.2734
+4pt>
+File: images/Optimierungsergebnisse_up/tauoptfinal.png Graphic file (type png)
+<use images/Optimierungsergebnisse_up/tauoptfinal.png>
+Package pdftex.def Info: images/Optimierungsergebnisse_up/tauoptfinal.png  used
+ on input line 1177.
+(pdftex.def)             Requested size: 448.13095pt x 250.90921pt.
+) [96
+
+
+]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[97 <./images/Optimierungsergebnisse_up/posoptfinal.png (PNG copy)> <./images/O
+ptimierungsergebnisse_up/veloptfinal.png (PNG copy)>]
+Overfull \vbox (1.76944pt too high) has occurred while \output is active []
+
+
+[98 <./images/Optimierungsergebnisse_up/accoptfinal.png (PNG copy)> <./images/O
+ptimierungsergebnisse_up/tauoptfinal.png (PNG copy)>] (BA.aux
+(pages/titelseite.aux) (pages/erklaerung.aux) (chapter/kurzfassung.aux)
+(chapter/abstract.aux) (chapter/einleitung.aux) (chapter/modellbildung.aux)
+(chapter/Bahnplanung.aux) (chapter/modellvalidierung.aux)
+(chapter/Optimierer.aux) (chapter/Validierung.aux) (chapter/Bewertung.aux)
+(chapter/ZusammenfassungAusblick.aux) (chapter/anhang.aux))
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package rerunfilecheck Info: File `BA.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+Package logreq Info: Writing requests to 'BA.run.xml'.
+\openout1 = `BA.run.xml'.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 57004 strings out of 475342
+ 1309952 string characters out of 2775071
+ 2521485 words of memory out of 3000000
+ 76460 multiletter control sequences out of 15000+600000
+ 496566 words of font info for 90 fonts, out of 8000000 for 9000
+ 1144 hyphenation exceptions out of 8191
+ 108i,17n,122p,10635b,3288s stack positions out of 10000i,1000n,20000p,200000b,80000s
+{C:/Users/denni/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm-super/cm-sup
+er-ts1.enc}{C:/Users/denni/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm-sup
+er/cm-super-t1.enc}<C:/Users/denni/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/amsfonts/cm/cmbx12.pfb><C:/Users/denni/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/denni/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/denni/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/denni/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/denni/
+AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/User
+s/denni/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb>
+<C:/Users/denni/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
+mi8.pfb><C:/Users/denni/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmmib10.pfb><C:/Users/denni/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/amsfonts/cmextra/cmmib6.pfb><C:/Users/denni/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/amsfonts/cmextra/cmmib8.pfb><C:/Users/denni/AppData/Local/Pro
+grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/denni/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/denni/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/
+denni/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:
+/Users/denni/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy1
+0.pfb><C:/Users/denni/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
+/cm/cmsy8.pfb><C:/Users/denni/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+cm-super/sfbx1200.pfb><C:/Users/denni/AppData/Local/Programs/MiKTeX/fonts/type1
+/public/cm-super/sfcc1200.pfb><C:/Users/denni/AppData/Local/Programs/MiKTeX/fon
+ts/type1/public/cm-super/sfrm0700.pfb><C:/Users/denni/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/cm-super/sfrm0800.pfb><C:/Users/denni/AppData/Local/Pro
+grams/MiKTeX/fonts/type1/public/cm-super/sfrm1000.pfb><C:/Users/denni/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm1200.pfb><C:/Users/denni/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfsi1200.pfb><C:/Users
+/denni/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfsl1200.pfb><
+C:/Users/denni/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfss12
+00.pfb><C:/Users/denni/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-supe
+r/sfss1440.pfb><C:/Users/denni/AppData/Local/Programs/MiKTeX/fonts/type1/public
+/cm-super/sfsx1200.pfb><C:/Users/denni/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/cm-super/sfsx1440.pfb><C:/Users/denni/AppData/Local/Programs/MiKTeX/fo
+nts/type1/public/cm-super/sfsx1728.pfb><C:/Users/denni/AppData/Local/Programs/M
+iKTeX/fonts/type1/public/cm-super/sfsx2074.pfb><C:/Users/denni/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/public/cm-super/sfsx2488.pfb><C:/Users/denni/AppData/
+Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfti1200.pfb><C:/Users/denni/
+AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sftt1200.pfb>
+Output written on BA.pdf (113 pages, 63898064 bytes).
+PDF statistics:
+ 2593 PDF objects out of 2984 (max. 8388607)
+ 990 named destinations out of 1000 (max. 500000)
+ 971 words of extra memory for PDF output out of 10000 (max. 10000000)
+
